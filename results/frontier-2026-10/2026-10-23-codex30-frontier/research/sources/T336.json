@@ -1,0 +1,22 @@
+{
+  "rank": 314,
+  "problem_id": "T336",
+  "title": "Transformers as amortized Bayesian inference: approximation and generalization",
+  "domain": "NNA",
+  "domain_name": "Deep learning: approximation, expressivity, attention and architectures",
+  "statement": "Müller et al. train transformers on datasets sampled from a prior over data-generating processes so that the network outputs the posterior predictive distribution (prior-data fitted networks). Give quantitative guarantees: for a given prior (e.g. a Gaussian process prior), bound the size of transformer needed to approximate the posterior predictive within epsilon in KL uniformly over datasets of size N, and the number of pretraining datasets needed, and show that the pretrained network's predictions converge to the Bayes predictor as both grow.",
+  "statement_caveat": "Empirical results are strong (e.g. TabPFN); theory is limited to consistency-type arguments (to verify).",
+  "source": "S. Müller, N. Hollmann, S. Pineda Arango, J. Grabocka and F. Hutter, Transformers Can Do Bayesian Inference, arXiv:2112.10510 (2021)",
+  "locator": "to verify: Müller et al., discussion of theory.",
+  "url": "https://arxiv.org/abs/2112.10510",
+  "why_important": "Amortized inference by sequence models is how in-context learning is used in practice; its guarantees are a question about approximating posterior maps.",
+  "where_it_stands": "Open as far as the writer knows.",
+  "where_it_stands_checked": false,
+  "note": "Fame: ICLR 2022; TabPFN (Nature 2025, to verify) made the approach widely used.",
+  "ledger_status": "unverified",
+  "retired_reason": "",
+  "list": "TOP200_DL",
+  "list_version": "2026-10-14",
+  "audit": {},
+  "changed_since_audit": false
+}

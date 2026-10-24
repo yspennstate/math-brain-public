@@ -1,0 +1,337 @@
+--- a02/lit.json
++++ campaign/sources/recovered/a02/lit.json
+@@ -1,18 +1,18 @@
+-{
+- "at": "2026-10-16T08:22:58+03:00",
+- "by": "claude-99aebc7f",
+- "verdict": "open",
+- "queries": [],
+- "newest": [],
+- "note": "2112.10510 PFNs; 2305.11097 frequentist account; 2610.14989 separability gap; 2306.04637 in-context ridge with size bounds. No quantitative approximation bound for GP posterior predictive in KL found.",
+- "history": [
+-  {
+-   "at": "2026-10-16T08:22:58+03:00",
+-   "by": "claude-99aebc7f",
+-   "verdict": "open",
+-   "queries": [],
+-   "newest": [],
+-   "note": "2112.10510 PFNs; 2305.11097 frequentist account; 2610.14989 separability gap; 2306.04637 in-context ridge with size bounds. No quantitative approximation bound for GP posterior predictive in KL found."
+-  }
+- ]
+-}
++{
++ "at": "2026-10-16T08:22:58+03:00",
++ "by": "claude-99aebc7f",
++ "verdict": "open",
++ "queries": [],
++ "newest": [],
++ "note": "2112.10510 PFNs; 2305.11097 frequentist account; 2610.14989 separability gap; 2306.04637 in-context ridge with size bounds. No quantitative approximation bound for GP posterior predictive in KL found.",
++ "history": [
++  {
++   "at": "2026-10-16T08:22:58+03:00",
++   "by": "claude-99aebc7f",
++   "verdict": "open",
++   "queries": [],
++   "newest": [],
++   "note": "2112.10510 PFNs; 2305.11097 frequentist account; 2610.14989 separability gap; 2306.04637 in-context ridge with size bounds. No quantitative approximation bound for GP posterior predictive in KL found."
++  }
++ ]
++}--- a02/moves.jsonl
++++ campaign/sources/recovered/a02/moves.jsonl
+@@ -1,3 +1,2 @@
+-{"at": "2026-10-16T08:22:58+03:00", "by": "claude-99aebc7f", "kind": "bound", "claim": "", "text": "Sketch: finite-rank GP, sigma^2>0, |y|<=B: posterior predictive mean/variance are ridge quantities; 2306.04637's in-context GD gives them, forward KL <= dm^2/(2 sigma^2)+C dv^2/sigma^4, depth O(kappa log(.)) with kappa <= 1+n R^2 tau^2/sigma^2. Statement repaired per audit."}
+-{"at": "2026-10-21T00:43:27+03:00", "by": "claude-5693aca3", "kind": "moved", "claim": "T336-w727-C002", "text": "Chebyshev-accelerated in-context solver in normalized ReLU attention (Bai et al. Def 1): GP noisy predictive mean+variance for supplied rank-p features, depth T+2 with T=ceil(sqrt(kappa)/2 log(2/delta)), width 7p+4, <=5 heads, uniform forward KL<=eps over contexts <=n, |y|<=B (C002 v1, reviewer PASS + literal-matrix run). Raw-input: continuous finite-rank kernels on compact X via modulus+net encoder (C005 v2 PASS); C003 shows continuity is needed. Target 1 closed in both readings; prior art on in-context Newton (log kappa depth) to be compared before a novelty claim."}
+-
++{"at": "2026-10-16T08:22:58+03:00", "by": "claude-99aebc7f", "kind": "bound", "claim": "", "text": "Sketch: finite-rank GP, sigma^2>0, |y|<=B: posterior predictive mean/variance are ridge quantities; 2306.04637's in-context GD gives them, forward KL <= dm^2/(2 sigma^2)+C dv^2/sigma^4, depth O(kappa log(.)) with kappa <= 1+n R^2 tau^2/sigma^2. Statement repaired per audit."}
++{"at": "2026-10-21T00:43:27+03:00", "by": "claude-5693aca3", "kind": "moved", "claim": "T336-w727-C002", "text": "Chebyshev-accelerated in-context solver in normalized ReLU attention (Bai et al. Def 1): GP noisy predictive mean+variance for supplied rank-p features, depth T+2 with T=ceil(sqrt(kappa)/2 log(2/delta)), width 7p+4, <=5 heads, uniform forward KL<=eps over contexts <=n, |y|<=B (C002 v1, reviewer PASS + literal-matrix run). Raw-input: continuous finite-rank kernels on compact X via modulus+net encoder (C005 v2 PASS); C003 shows continuity is needed. Target 1 closed in both readings; prior art on in-context Newton (log kappa depth) to be compared before a novelty claim."}
+--- a02/C005_v2.md
++++ campaign/sources/recovered/a02/C005_v2.md
+@@ -1,117 +1,116 @@
+-# Target 1 for continuous finite-rank kernels on compact raw domains
+-
+-Claim T336-w727-C005 v2. Status: proof (unaudited), dependent on C002 v1 and the deterministic perturbation/encoder constructions in C004 v1. The entire result is not Lean-checked. No independent review or novelty certification is claimed.
+-
+-The hardest step is removing the supplied-feature oracle without adding a hidden feature-computation cost. A finite Gram factorization fixes the encoder weights; a kernel modulus controls its error. The size explicitly includes the resulting encoder.
+-
+-## 1. Statement and all parameters
+-
+-Let X be a nonempty compact subset of R^d, d>=1. Let k:X times X -> R be a continuous real symmetric positive-semidefinite kernel of rank at most p, p>=1, with k(x,x)<=R^2 for R>=0. The prior is the zero-mean GP with kernel k. Observation noise is independent N(0,s), s>0. Labels are bounded by B>=0, contexts have length <=n with n>=0 an integer, and eps>0. The prediction concerns a new noisy observation.
+-
+-Define the canonical kernel modulus in the ambient L1 metric by
+-
+-    Omega(r)=sup_{x,y in X, ||x-y||_1<=r}
+-                sqrt(k(x,x)+k(y,y)-2k(x,y)).
+-
+-The expression is nonnegative by positive semidefiniteness. Omega(r) tends to zero as r decreases to zero, as proved below.
+-
+-Retain the following explicit constants from C004's deterministic perturbation bound:
+-
+-    S=R+1, C_A=n(2R+1),
+-    C_m=nB[(R+S)/s+S C_A R/s^2],
+-    C_v=R+S+S^2 C_A/s>0,
+-    eta=min(1,sqrt(s eps)/(2(1+C_m)),s sqrt(eps)/(2C_v),s/(4C_v)),
+-    eps0=min(eps/4,1/16), e=eta/sqrt(p)>0.
+-
+-Choose any **fixed admissible** r>0 with Omega(r)<=e/2. An explicit upper modulus for k can be used to choose r; continuity guarantees existence, not an algorithm for computing a modulus of an arbitrary black-box kernel. Put
+-
+-    A_cone=(2R+e)/r>0, h=e/(2A_cone)>0.
+-
+-Choose a finite h-net G contained in X, of cardinality J>=1. The size bound is explicit in J (or in a known upper bound for the covering number). For X=[0,1]^d one may take the regular grid with
+-
+-    m=max(1,ceil(d A_cone/e)), J=(m+1)^d.
+-
+-For the attention solver define
+-
+-    kappa=1+max(1,n)S^2/s, M=nS^2B/s,
+-    delta0=min(1/2,s/(2S^2),sqrt(s eps0)/(1+M),s sqrt(eps0)/S^2),
+-    T=ceil(sqrt(kappa) log(2/delta0)/2).
+-
+-There is a transformer, using normalized residual ReLU attention and tokenwise residual ReLU MLPs, with
+-
+-    D=7p+6+d+Jd+pJ,
+-    H=2Jd+pJ+4p+1,
+-    L_total=T+5+ceil(log_2 J),
+-    at most five attention heads per layer,
+-    at most L_total(15D^2+2DH)+2D dense scalar parameters,
+-
+-whose positive-variance Gaussian output has forward KL<=eps from the exact noisy GP predictive, uniformly over all admissible raw-input contexts and queries. Its input contains only raw coordinates, labels, fixed context/query flags, and constants. The encoder is counted. These are arbitrary-real-weight size bounds; no finite-bit, kernel-evaluation, offline factorization-time, SGD, or ERM-generalization bound is asserted.
+-
+-## 2. Canonical finite-dimensional features and the kernel modulus
+-
+-Form the vector space of finite formal combinations of symbols delta_x with bilinear form
+-
+-    <sum_i a_i delta_{x_i},sum_j b_j delta_{y_j}>
+-       =sum_{i,j}a_i b_j k(x_i,y_j).
+-
+-Positive semidefiniteness makes this a nonnegative quadratic form. The Cauchy-Schwarz inequality follows by applying nonnegativity to u+t v for all real t; in particular a zero-norm vector is orthogonal to every vector. Quotient by the zero-norm subspace. For any finite list of symbols, the dimension of their quotient span is the rank of their Gram matrix. Every finite list of quotient vectors is contained in the span of finitely many symbols. Thus the dimension of the resulting inner-product space is the supremum of these Gram ranks, which is the kernel rank and is at most p. It is finite dimensional, so no completion issue remains.
+-
+-Choose an orthonormal basis and pad with zeros in R^p. The coordinates z(x) of delta_x then satisfy
+-
+-    k(x,y)=z(x)^T z(y), ||z(x)||<=R,
+-    ||z(x)-z(y)||^2=k(x,x)+k(y,y)-2k(x,y).
+-
+-Thus z is continuous and ||z(x)-z(y)||<=Omega(r) whenever ||x-y||_1<=r. To justify Omega(r)->0 directly, suppose the contrary. There are sequences r_j->0 and x_j,y_j in X at distance <=r_j with feature distance bounded away from zero. Compactness supplies a subsequence x_j->x; then y_j->x as well. Continuity of k makes the squared feature distance tend to k(x,x)+k(x,x)-2k(x,x)=0, a contradiction. The supremum is finite because the kernel is continuous on the compact product. In particular every fixed positive e admits the required r.
+-
+-The factorization at the finite net does not require evaluating any feature map on runtime inputs. Form the fixed J-by-J Gram matrix K_G=(k(a,b))_{a,b in G}. It is PSD of rank <=p, so a finite spectral factorization gives vectors v_a in R^p with v_a^T v_b=k(a,b). There is an isometry between the spans of z(a) and v_a: the map sum c_a z(a) -> sum c_a v_a is well defined and norm preserving because both squared norms equal c^T K_G c. Extend orthonormal bases of the two spans to R^p. The isometry extends to an orthogonal map on R^p. Applying it to all z(x) gives a representation, still called z, with z(a)=v_a for every a in G and with the same norm and modulus bounds.
+-
+-Consequently **all feature values used as weights below can be obtained from the finite prior Gram matrix on G**. Computing this fixed factorization is preprocessing of the fixed prior, not an input-dependent inverse hidden in the predictive head. Its real entries are included in the encoder's parameter count.
+-
+-## 3. Cone envelope for a general continuous feature map
+-
+-Define, using the finite Gram feature values,
+-
+-    ztilde_j(x)=min_{a in G}[v_{a,j}+A_cone ||x-a||_1].
+-
+-This formula is valid even though z_j need not be Lipschitz. We claim |ztilde_j(x)-z_j(x)|<=e for every j,x.
+-
+-For a with ||x-a||_1<=r, the modulus gives v_{a,j}>=z_j(x)-Omega(r)>=z_j(x)-e/2. Adding a nonnegative cone term preserves this lower bound. For a with ||x-a||_1>r, the coordinate bound |z_j|<=R gives
+-
+-    v_{a,j}+A_cone ||x-a||_1
+-      >z_j(x)-2R+A_cone r=z_j(x)+e.
+-
+-So every candidate is >=z_j(x)-e/2, and the finite minimum is too.
+-
+-For the upper bound choose a net point with ||x-a||_1<=h. Since h=e r/(2(2R+e))<=r/2, the modulus bound applies. Therefore
+-
+-    ztilde_j(x)<=z_j(x)+Omega(r)+A_cone h
+-                  <=z_j(x)+e/2+e/2=z_j(x)+e.
+-
+-It follows that sup_x ||ztilde(x)-z(x)||<=sqrt(p)e=eta and ||ztilde(x)||<=R+eta<=S. All denominators above are positive, including R=0. For a cube grid, coordinate rounding gives L1 distance <=d/(2m)<=e/(2A_cone)=h, which verifies the displayed grid size.
+-
+-## 4. Exact network realization and original-posterior KL
+-
+-Use C004 Section 4's explicit register construction, with the J centers now the net points a and with the slope K in the cone layer replaced by A_cone. Layer 1 computes all Jd absolute differences with 2Jd ReLUs. Layer 2 forms the pJ affine cone values using these nonnegative absolute registers and the constant register. A balanced residual-min tournament takes ceil(log_2 J) layers, including zero layers when J=1. The last gating layer, using the binary context/query flags and |ztilde_j|<=S, writes the context/query feature registers exactly. For padding choose a fixed anchor point in X as its raw coordinates, rather than assuming the ambient origin belongs to X. Its flags are zero, so the computed features are gated to zero.
+-
+-This uses E=3+ceil(log_2 J) encoder layers and precisely the width and hidden-width bounds in Section 1. This invokes the exact algebraic encoder construction, **not the Lipschitz-error assertion** of C004 Section 3. Section 3 above supplies the replacement uniform approximation guarantee.
+-
+-C004 Section 2's perturbation proof uses only ||ztilde-z||<=eta<=1, not feature Lipschitzness. It therefore gives original-versus-encoded predictive errors
+-
+-    |mu-mutilde|<=sqrt(s eps)/2,
+-    |v-vtilde|<=min(s/4,s sqrt(eps)/2).
+-
+-Apply C002 v1 to the encoded features with bound S and accuracy eps0. The one-head query broadcast, T five-head Chebyshev layers, and four-head readout produce muhat,vhat with vhat>=s and errors
+-
+-    |mutilde-muhat|<=sqrt(s eps)/2,
+-    |vtilde-vhat|<=min(s/4,s sqrt(eps)/2).
+-
+-The original predictive variance is also >=s. Adding scalar errors gives |mu-muhat|<=sqrt(s eps) and |v-vhat|<=min(s/2,s sqrt(eps)). The Gaussian calculation in C002 Section 5 then yields forward KL<=eps from the **original kernel** predictive distribution to the transformer output. No triangle inequality for KL is used.
+-
+-Combining the E encoder layers with the T+2 solver layers gives the depth. Count three D-by-D matrices for each of at most five heads, two MLP matrices of dimensions H-by-D and D-by-H per layer (even counting zeros), and a two-coordinate linear readout. This proves the displayed parameter bound.
+-
+-## 5. Exact scope
+-
+-C005 covers every continuous bounded finite-rank kernel on a nonempty compact Euclidean domain, with an explicit bound in terms of a kernel modulus and a finite covering number. It includes continuous kernels whose features are not Lipschitz. C004 gives the simpler closed grid formula when a coordinatewise Lipschitz feature bound is available. C002 is smaller when features are supplied directly.
+-
+-C003 proves that the bounded-kernel statement without continuity can fail for continuous raw-input Gaussian-output architectures. Thus these results distinguish the feature-input interpretation from the regularity needed for a raw-input theorem. They do not claim that a raw-input size bound can ignore the fixed kernel's modulus or its feature-computation complexity. All three constructive claims remain independently unaudited.
+-
++# Target 1 for continuous finite-rank kernels on compact raw domains
++
++Claim T336-w727-C005 v2. Status: proof (unaudited), dependent on C002 v1 and the deterministic perturbation/encoder constructions in C004 v1. The entire result is not Lean-checked. No independent review or novelty certification is claimed.
++
++The hardest step is removing the supplied-feature oracle without adding a hidden feature-computation cost. A finite Gram factorization fixes the encoder weights; a kernel modulus controls its error. The size explicitly includes the resulting encoder.
++
++## 1. Statement and all parameters
++
++Let X be a nonempty compact subset of R^d, d>=1. Let k:X times X -> R be a continuous real symmetric positive-semidefinite kernel of rank at most p, p>=1, with k(x,x)<=R^2 for R>=0. The prior is the zero-mean GP with kernel k. Observation noise is independent N(0,s), s>0. Labels are bounded by B>=0, contexts have length <=n with n>=0 an integer, and eps>0. The prediction concerns a new noisy observation.
++
++Define the canonical kernel modulus in the ambient L1 metric by
++
++    Omega(r)=sup_{x,y in X, ||x-y||_1<=r}
++                sqrt(k(x,x)+k(y,y)-2k(x,y)).
++
++The expression is nonnegative by positive semidefiniteness. Omega(r) tends to zero as r decreases to zero, as proved below.
++
++Retain the following explicit constants from C004's deterministic perturbation bound:
++
++    S=R+1, C_A=n(2R+1),
++    C_m=nB[(R+S)/s+S C_A R/s^2],
++    C_v=R+S+S^2 C_A/s>0,
++    eta=min(1,sqrt(s eps)/(2(1+C_m)),s sqrt(eps)/(2C_v),s/(4C_v)),
++    eps0=min(eps/4,1/16), e=eta/sqrt(p)>0.
++
++Choose any **fixed admissible** r>0 with Omega(r)<=e/2. An explicit upper modulus for k can be used to choose r; continuity guarantees existence, not an algorithm for computing a modulus of an arbitrary black-box kernel. Put
++
++    A_cone=(2R+e)/r>0, h=e/(2A_cone)>0.
++
++Choose a finite h-net G contained in X, of cardinality J>=1. The size bound is explicit in J (or in a known upper bound for the covering number). For X=[0,1]^d one may take the regular grid with
++
++    m=max(1,ceil(d A_cone/e)), J=(m+1)^d.
++
++For the attention solver define
++
++    kappa=1+max(1,n)S^2/s, M=nS^2B/s,
++    delta0=min(1/2,s/(2S^2),sqrt(s eps0)/(1+M),s sqrt(eps0)/S^2),
++    T=ceil(sqrt(kappa) log(2/delta0)/2).
++
++There is a transformer, using normalized residual ReLU attention and tokenwise residual ReLU MLPs, with
++
++    D=7p+6+d+Jd+pJ,
++    H=2Jd+pJ+4p+1,
++    L_total=T+5+ceil(log_2 J),
++    at most five attention heads per layer,
++    at most L_total(15D^2+2DH)+2D dense scalar parameters,
++
++whose positive-variance Gaussian output has forward KL<=eps from the exact noisy GP predictive, uniformly over all admissible raw-input contexts and queries. Its input contains only raw coordinates, labels, fixed context/query flags, and constants. The encoder is counted. These are arbitrary-real-weight size bounds; no finite-bit, kernel-evaluation, offline factorization-time, SGD, or ERM-generalization bound is asserted.
++
++## 2. Canonical finite-dimensional features and the kernel modulus
++
++Form the vector space of finite formal combinations of symbols delta_x with bilinear form
++
++    <sum_i a_i delta_{x_i},sum_j b_j delta_{y_j}>
++       =sum_{i,j}a_i b_j k(x_i,y_j).
++
++Positive semidefiniteness makes this a nonnegative quadratic form. The Cauchy-Schwarz inequality follows by applying nonnegativity to u+t v for all real t; in particular a zero-norm vector is orthogonal to every vector. Quotient by the zero-norm subspace. For any finite list of symbols, the dimension of their quotient span is the rank of their Gram matrix. Every finite list of quotient vectors is contained in the span of finitely many symbols. Thus the dimension of the resulting inner-product space is the supremum of these Gram ranks, which is the kernel rank and is at most p. It is finite dimensional, so no completion issue remains.
++
++Choose an orthonormal basis and pad with zeros in R^p. The coordinates z(x) of delta_x then satisfy
++
++    k(x,y)=z(x)^T z(y), ||z(x)||<=R,
++    ||z(x)-z(y)||^2=k(x,x)+k(y,y)-2k(x,y).
++
++Thus z is continuous and ||z(x)-z(y)||<=Omega(r) whenever ||x-y||_1<=r. To justify Omega(r)->0 directly, suppose the contrary. There are sequences r_j->0 and x_j,y_j in X at distance <=r_j with feature distance bounded away from zero. Compactness supplies a subsequence x_j->x; then y_j->x as well. Continuity of k makes the squared feature distance tend to k(x,x)+k(x,x)-2k(x,x)=0, a contradiction. The supremum is finite because the kernel is continuous on the compact product. In particular every fixed positive e admits the required r.
++
++The factorization at the finite net does not require evaluating any feature map on runtime inputs. Form the fixed J-by-J Gram matrix K_G=(k(a,b))_{a,b in G}. It is PSD of rank <=p, so a finite spectral factorization gives vectors v_a in R^p with v_a^T v_b=k(a,b). There is an isometry between the spans of z(a) and v_a: the map sum c_a z(a) -> sum c_a v_a is well defined and norm preserving because both squared norms equal c^T K_G c. Extend orthonormal bases of the two spans to R^p. The isometry extends to an orthogonal map on R^p. Applying it to all z(x) gives a representation, still called z, with z(a)=v_a for every a in G and with the same norm and modulus bounds.
++
++Consequently **all feature values used as weights below can be obtained from the finite prior Gram matrix on G**. Computing this fixed factorization is preprocessing of the fixed prior, not an input-dependent inverse hidden in the predictive head. Its real entries are included in the encoder's parameter count.
++
++## 3. Cone envelope for a general continuous feature map
++
++Define, using the finite Gram feature values,
++
++    ztilde_j(x)=min_{a in G}[v_{a,j}+A_cone ||x-a||_1].
++
++This formula is valid even though z_j need not be Lipschitz. We claim |ztilde_j(x)-z_j(x)|<=e for every j,x.
++
++For a with ||x-a||_1<=r, the modulus gives v_{a,j}>=z_j(x)-Omega(r)>=z_j(x)-e/2. Adding a nonnegative cone term preserves this lower bound. For a with ||x-a||_1>r, the coordinate bound |z_j|<=R gives
++
++    v_{a,j}+A_cone ||x-a||_1
++      >z_j(x)-2R+A_cone r=z_j(x)+e.
++
++So every candidate is >=z_j(x)-e/2, and the finite minimum is too.
++
++For the upper bound choose a net point with ||x-a||_1<=h. Since h=e r/(2(2R+e))<=r/2, the modulus bound applies. Therefore
++
++    ztilde_j(x)<=z_j(x)+Omega(r)+A_cone h
++                  <=z_j(x)+e/2+e/2=z_j(x)+e.
++
++It follows that sup_x ||ztilde(x)-z(x)||<=sqrt(p)e=eta and ||ztilde(x)||<=R+eta<=S. All denominators above are positive, including R=0. For a cube grid, coordinate rounding gives L1 distance <=d/(2m)<=e/(2A_cone)=h, which verifies the displayed grid size.
++
++## 4. Exact network realization and original-posterior KL
++
++Use C004 Section 4's explicit register construction, with the J centers now the net points a and with the slope K in the cone layer replaced by A_cone. Layer 1 computes all Jd absolute differences with 2Jd ReLUs. Layer 2 forms the pJ affine cone values using these nonnegative absolute registers and the constant register. A balanced residual-min tournament takes ceil(log_2 J) layers, including zero layers when J=1. The last gating layer, using the binary context/query flags and |ztilde_j|<=S, writes the context/query feature registers exactly. For padding choose a fixed anchor point in X as its raw coordinates, rather than assuming the ambient origin belongs to X. Its flags are zero, so the computed features are gated to zero.
++
++This uses E=3+ceil(log_2 J) encoder layers and precisely the width and hidden-width bounds in Section 1. This invokes the exact algebraic encoder construction, **not the Lipschitz-error assertion** of C004 Section 3. Section 3 above supplies the replacement uniform approximation guarantee.
++
++C004 Section 2's perturbation proof uses only ||ztilde-z||<=eta<=1, not feature Lipschitzness. It therefore gives original-versus-encoded predictive errors
++
++    |mu-mutilde|<=sqrt(s eps)/2,
++    |v-vtilde|<=min(s/4,s sqrt(eps)/2).
++
++Apply C002 v1 to the encoded features with bound S and accuracy eps0. The one-head query broadcast, T five-head Chebyshev layers, and four-head readout produce muhat,vhat with vhat>=s and errors
++
++    |mutilde-muhat|<=sqrt(s eps)/2,
++    |vtilde-vhat|<=min(s/4,s sqrt(eps)/2).
++
++The original predictive variance is also >=s. Adding scalar errors gives |mu-muhat|<=sqrt(s eps) and |v-vhat|<=min(s/2,s sqrt(eps)). The Gaussian calculation in C002 Section 5 then yields forward KL<=eps from the **original kernel** predictive distribution to the transformer output. No triangle inequality for KL is used.
++
++Combining the E encoder layers with the T+2 solver layers gives the depth. Count three D-by-D matrices for each of at most five heads, two MLP matrices of dimensions H-by-D and D-by-H per layer (even counting zeros), and a two-coordinate linear readout. This proves the displayed parameter bound.
++
++## 5. Exact scope
++
++C005 covers every continuous bounded finite-rank kernel on a nonempty compact Euclidean domain, with an explicit bound in terms of a kernel modulus and a finite covering number. It includes continuous kernels whose features are not Lipschitz. C004 gives the simpler closed grid formula when a coordinatewise Lipschitz feature bound is available. C002 is smaller when features are supplied directly.
++
++C003 proves that the bounded-kernel statement without continuity can fail for continuous raw-input Gaussian-output architectures. Thus these results distinguish the feature-input interpretation from the regularity needed for a raw-input theorem. They do not claim that a raw-input size bound can ignore the fixed kernel's modulus or its feature-computation complexity. All three constructive claims remain independently unaudited.
+--- a02/PRIOR_CLAIMS.jsonl
++++ campaign/sources/recovered/a02/PRIOR_CLAIMS.jsonl
+@@ -1,7 +1,6 @@
+ {"id":"T336-w727-C001","version":1,"kind":"moved","target":1,"statement":"Candidate construction: paired ReLU-attention heads implement simultaneous Richardson solves for GP predictive mean and variance; explicit readout and KL error bounds remain to be completed.","assumptions":["Finite-dimensional feature vectors are supplied as inputs","positive observation noise","bounded feature norm and labels","bidirectional ReLU attention without layer normalization"],"status":"sketch","proof_file":"proofs/C001.md","sources":["arxiv:2306.04637; source download pending"],"gap":"Need source architecture verification, explicit output multiplication, and full error budget.","audits":[]}
+-{"id": "T336-w727-C002", "version": 1, "kind": "moved", "target": 1, "statement": "For a rank-p GP with supplied features bounded by R, independent observation-noise variance s>0, and labels bounded by B, normalized bidirectional ReLU attention approximates the noisy posterior predictive uniformly in forward KL <= eps. Width 7p+4, at most five heads, depth T+2 where kappa=1+max(1,n)R^2/s, M=nR^2B/s, delta=min(1/2,s/(2R^2),sqrt(s eps)/(1+M),s sqrt(eps)/R^2), T=ceil(sqrt(kappa) log(2/delta)/2). R=0 has an exact constant output.", "assumptions": ["p>=1,n>=0,s>0,B>=0,eps>0", "zero-mean GP kernel k(x,xprime)=z(x)^T z(xprime), ||z||<=R", "feature vectors supplied as role-encoded tokens; cost of computing arbitrary z from raw x excluded", "noisy predictive output, not latent posterior", "bidirectional normalized ReLU attention, no layer norm, fixed zero padding to n+1 tokens, arbitrary real weights"], "status": "proof (unaudited)", "proof_file": "proofs/C002.md", "sources": ["arxiv:2306.04637v2 Definition 1 p5, Theorem 4 p7, Appendix D.1 pp41-42", "arxiv:2610.08578v1 Section 3: recent related feature-space GP module; scope distinction in LITERATURE.md"], "gap": "No mathematical gap identified under stated architecture and feature-input assumptions. Raw-input feature complexity and softmax architectures remain outside scope. Novelty and target-scope acceptance require reviewer judgment.", "audits": [], "checks": ["logs/exact_checks.json: 108 exact rational cases PASS", "proofs/signed_relu.lean attempted; logs/lean_check.txt timeout, no Lean certification"], "proof_sha256": "f367eed1f9fb01baee0dabd6f699b418c16bcc3a5ecdfc7182dae660291f3339"}
+-{"id": "T336-w727-C003", "version": 1, "kind": "route-failure", "target": 1, "statement": "A rank-one bounded PSD kernel on [-1,1], k(x,xprime)=1{x>=0}1{xprime>=0}, with observation noise variance 1, prevents every continuous raw-input Gaussian predictor from achieving uniform forward KL below log(9/8)/4 > 1/36. An empty context, or one observation (-1,0), yields predictive variances 1 left of zero and 2 at zero.", "assumptions": ["Raw-input mean and positive variance are continuous", "Kernel continuity is not assumed in the literal target", "A new noisy observation is predicted"], "status": "proof (unaudited)", "proof_file": "proofs/C003.md", "sources": ["Self-contained Gaussian KL identity and continuity argument in C003.md"], "gap": "No identified gap in the stated continuous-output raw-input obstruction; not a contradiction of supplied-feature C002. Independent review remains open.", "audits": [], "checks": ["logs/raw_scope_checks.json: 1512 exact rational identities and six PSD checks; continuity/log inequalities in proof"], "proof_sha256": "871d621cbc24aaa88e57770194527ceb78d17debf276473333b5cce6d7414821"}
+-{"id": "T336-w727-C004", "version": 1, "kind": "narrowed", "target": 1, "statement": "For raw inputs in [0,1]^d, every bounded rank-at-most-p GP with coordinatewise K-Lipschitz feature map has an explicit residual ReLU-attention transformer attaining uniform noisy predictive forward KL <= eps over contexts of length <=n and labels bounded by B. Unlike C002, feature computation is counted. The constants, grid size, width, heads, hidden width, and depth are explicit in C004 Sections 1-5.", "assumptions": ["d,p>=1,n>=0,s>0,B>=0,R>=0,K>=0,eps>0", "zero-mean GP k(x,xprime)=z(x)^T z(xprime), ||z||<=R, |z_j(x)-z_j(xprime)|<=K||x-xprime||_1", "independent N(0,s) observation noise and a new noisy predictive observation", "raw coordinate inputs plus fixed context/query flags, zero padding, arbitrary real weights", "residual normalized ReLU attention with tokenwise residual ReLU MLPs; no layer normalization or softmax"], "status": "proof (unaudited)", "proof_file": "proofs/C004.md", "sources": ["C002 v1 (unaudited), explicit accelerated GP solver", "Self-contained finite-grid envelope and perturbation proof in C004.md", "arxiv:2306.04637v2 Definitions 1-2"], "gap": "Dependent on C002 v1; no independent audit. Real-weight size theorem only. No arbitrary discontinuous-kernel raw-input theorem.", "audits": [], "checks": ["logs/encoder_checks.json"], "proof_sha256": "ac56184efa730025dd3c81b11d4fced2712fb1d3290a9bc2a089ca9a9af705a5"}
+-{"id": "T336-w727-C005", "version": 1, "kind": "narrowed", "target": 1, "statement": "Every continuous real symmetric PSD kernel of rank <=p and diagonal <=R^2 on a nonempty compact X subset R^d admits an explicit raw-input normalized-ReLU-attention transformer for uniform noisy predictive forward KL <=eps, with positive noise s, labels bounded by B, and contexts <=n. The complete width/depth/MLP/head bound is given in C005 Section 1 in terms of the canonical kernel modulus Omega(r), a finite h-net cardinality J, and the solver constants. A fixed finite Gram factorization supplies all encoder feature values; no feature computation is hidden outside the count.", "assumptions": ["nonempty compact X subset R^d; d,p>=1; n>=0 integer; eps,s>0; B,R>=0", "continuous symmetric PSD kernel, rank <=p, k(x,x)<=R^2, zero-mean GP", "independent N(0,s) observation noise; new noisy predictive observation", "an admissible r>0 with Omega(r)<=eta/(2sqrt(p)), and a fixed h-net G subset X, are specified or bounded from a known modulus and covering bound", "normalized bidirectional residual ReLU attention plus residual ReLU tokenwise MLPs; arbitrary real weights; raw coordinates and role flags"], "status": "proof (unaudited)", "proof_file": "proofs/C005.md", "sources": ["C002 v1 and C004 v1 (both independently unaudited)", "Self-contained canonical finite-rank feature construction, cone approximation and scalar-error KL proof in C005.md", "arxiv:2306.04637v2 Definitions 1-2"], "gap": "No identified mathematical gap under stated assumptions. Dependent C002/C004 proofs and exact target-scope interpretation require independent review. No finite-bit complexity, training or ERM claim.", "audits": [], "checks": ["logs/modulus_checks.json", "logs/encoder_checks.json", "logs/exact_checks.json"], "proof_sha256": "94536ac64cf8ad917d090b2455012613b0cf89bd394a7baf58fac8ca5e5d9a1d"}
+-{"id": "T336-w727-C005", "version": 2, "kind": "narrowed", "target": 1, "statement": "Every continuous real symmetric PSD kernel of rank <=p and diagonal <=R^2 on a nonempty compact X subset R^d admits an explicit raw-input normalized-ReLU-attention transformer for uniform noisy predictive forward KL <=eps, with positive noise s, labels bounded by B, and contexts <=n. The complete width/depth/MLP/head bound is given in C005 Section 1 in terms of the canonical kernel modulus Omega(r), a finite h-net cardinality J, and the solver constants. A fixed finite Gram factorization supplies all encoder feature values; no feature computation is hidden outside the count.", "assumptions": ["nonempty compact X subset R^d; d,p>=1; n>=0 integer; eps,s>0; B,R>=0", "continuous symmetric PSD kernel, rank <=p, k(x,x)<=R^2, zero-mean GP", "independent N(0,s) observation noise; new noisy predictive observation", "an admissible r>0 with Omega(r)<=eta/(2sqrt(p)), and a fixed h-net G subset X, are specified or bounded from a known modulus and covering bound", "normalized bidirectional residual ReLU attention plus residual ReLU tokenwise MLPs; arbitrary real weights; raw coordinates and role flags"], "status": "proof (unaudited)", "proof_file": "proofs/C005_v2.md", "sources": ["C002 v1 and C004 v1 (both independently unaudited)", "Self-contained canonical finite-rank feature construction, cone approximation and scalar-error KL proof in C005.md", "arxiv:2306.04637v2 Definitions 1-2"], "gap": "No identified mathematical gap under stated assumptions. Dependent C002/C004 proofs and exact target-scope interpretation require independent review. No finite-bit complexity, training or ERM claim.", "audits": [], "checks": ["logs/modulus_checks.json", "logs/encoder_checks.json", "logs/exact_checks.json"], "proof_sha256": "22df67c6b2aaec99499aac6bf3440e8d5d6305204deedcc98fe9b4a621583b40", "version_note": "Adds the explicit finite-Gram-rank argument for the feature-space dimension; theorem and numerical checks unchanged."}
+-
++{"id": "T336-w727-C002", "version": 1, "kind": "moved", "target": 1, "statement": "For a rank-p GP with supplied features bounded by R, independent observation-noise variance s>0, and labels bounded by B, normalized bidirectional ReLU attention approximates the noisy posterior predictive uniformly in forward KL <= eps. Width 7p+4, at most five heads, depth T+2 where kappa=1+max(1,n)R^2/s, M=nR^2B/s, delta=min(1/2,s/(2R^2),sqrt(s eps)/(1+M),s sqrt(eps)/R^2), T=ceil(sqrt(kappa) log(2/delta)/2). R=0 has an exact constant output.", "assumptions": ["p>=1,n>=0,s>0,B>=0,eps>0", "zero-mean GP kernel k(x,xprime)=z(x)^T z(xprime), ||z||<=R", "feature vectors supplied as role-encoded tokens; cost of computing arbitrary z from raw x excluded", "noisy predictive output, not latent posterior", "bidirectional normalized ReLU attention, no layer norm, fixed zero padding to n+1 tokens, arbitrary real weights"], "status": "proof (unaudited)", "proof_file": "proofs/C002.md", "sources": ["arxiv:2306.04637v2 Definition 1 p5, Theorem 4 p7, Appendix D.1 pp41-42", "arxiv:2610.08578v1 Section 3: recent related feature-space GP module; scope distinction in LITERATURE.md"], "gap": "No mathematical gap identified under stated architecture and feature-input assumptions. Raw-input feature complexity and softmax architectures remain outside scope. Novelty and target-scope acceptance require reviewer judgment.", "audits": [], "checks": ["logs/exact_checks.json: 108 exact rational cases PASS", "proofs/signed_relu.lean attempted; logs/lean_check.txt timeout, no Lean certification"], "proof_sha256": "f367eed1f9fb01baee0dabd6f699b418c16bcc3a5ecdfc7182dae660291f3339"}
++{"id": "T336-w727-C003", "version": 1, "kind": "route-failure", "target": 1, "statement": "A rank-one bounded PSD kernel on [-1,1], k(x,xprime)=1{x>=0}1{xprime>=0}, with observation noise variance 1, prevents every continuous raw-input Gaussian predictor from achieving uniform forward KL below log(9/8)/4 > 1/36. An empty context, or one observation (-1,0), yields predictive variances 1 left of zero and 2 at zero.", "assumptions": ["Raw-input mean and positive variance are continuous", "Kernel continuity is not assumed in the literal target", "A new noisy observation is predicted"], "status": "proof (unaudited)", "proof_file": "proofs/C003.md", "sources": ["Self-contained Gaussian KL identity and continuity argument in C003.md"], "gap": "No identified gap in the stated continuous-output raw-input obstruction; not a contradiction of supplied-feature C002. Independent review remains open.", "audits": [], "checks": ["logs/raw_scope_checks.json: 1512 exact rational identities and six PSD checks; continuity/log inequalities in proof"], "proof_sha256": "871d621cbc24aaa88e57770194527ceb78d17debf276473333b5cce6d7414821"}
++{"id": "T336-w727-C004", "version": 1, "kind": "narrowed", "target": 1, "statement": "For raw inputs in [0,1]^d, every bounded rank-at-most-p GP with coordinatewise K-Lipschitz feature map has an explicit residual ReLU-attention transformer attaining uniform noisy predictive forward KL <= eps over contexts of length <=n and labels bounded by B. Unlike C002, feature computation is counted. The constants, grid size, width, heads, hidden width, and depth are explicit in C004 Sections 1-5.", "assumptions": ["d,p>=1,n>=0,s>0,B>=0,R>=0,K>=0,eps>0", "zero-mean GP k(x,xprime)=z(x)^T z(xprime), ||z||<=R, |z_j(x)-z_j(xprime)|<=K||x-xprime||_1", "independent N(0,s) observation noise and a new noisy predictive observation", "raw coordinate inputs plus fixed context/query flags, zero padding, arbitrary real weights", "residual normalized ReLU attention with tokenwise residual ReLU MLPs; no layer normalization or softmax"], "status": "proof (unaudited)", "proof_file": "proofs/C004.md", "sources": ["C002 v1 (unaudited), explicit accelerated GP solver", "Self-contained finite-grid envelope and perturbation proof in C004.md", "arxiv:2306.04637v2 Definitions 1-2"], "gap": "Dependent on C002 v1; no independent audit. Real-weight size theorem only. No arbitrary discontinuous-kernel raw-input theorem.", "audits": [], "checks": ["logs/encoder_checks.json"], "proof_sha256": "ac56184efa730025dd3c81b11d4fced2712fb1d3290a9bc2a089ca9a9af705a5"}
++{"id": "T336-w727-C005", "version": 1, "kind": "narrowed", "target": 1, "statement": "Every continuous real symmetric PSD kernel of rank <=p and diagonal <=R^2 on a nonempty compact X subset R^d admits an explicit raw-input normalized-ReLU-attention transformer for uniform noisy predictive forward KL <=eps, with positive noise s, labels bounded by B, and contexts <=n. The complete width/depth/MLP/head bound is given in C005 Section 1 in terms of the canonical kernel modulus Omega(r), a finite h-net cardinality J, and the solver constants. A fixed finite Gram factorization supplies all encoder feature values; no feature computation is hidden outside the count.", "assumptions": ["nonempty compact X subset R^d; d,p>=1; n>=0 integer; eps,s>0; B,R>=0", "continuous symmetric PSD kernel, rank <=p, k(x,x)<=R^2, zero-mean GP", "independent N(0,s) observation noise; new noisy predictive observation", "an admissible r>0 with Omega(r)<=eta/(2sqrt(p)), and a fixed h-net G subset X, are specified or bounded from a known modulus and covering bound", "normalized bidirectional residual ReLU attention plus residual ReLU tokenwise MLPs; arbitrary real weights; raw coordinates and role flags"], "status": "proof (unaudited)", "proof_file": "proofs/C005.md", "sources": ["C002 v1 and C004 v1 (both independently unaudited)", "Self-contained canonical finite-rank feature construction, cone approximation and scalar-error KL proof in C005.md", "arxiv:2306.04637v2 Definitions 1-2"], "gap": "No identified mathematical gap under stated assumptions. Dependent C002/C004 proofs and exact target-scope interpretation require independent review. No finite-bit complexity, training or ERM claim.", "audits": [], "checks": ["logs/modulus_checks.json", "logs/encoder_checks.json", "logs/exact_checks.json"], "proof_sha256": "94536ac64cf8ad917d090b2455012613b0cf89bd394a7baf58fac8ca5e5d9a1d"}
++{"id": "T336-w727-C005", "version": 2, "kind": "narrowed", "target": 1, "statement": "Every continuous real symmetric PSD kernel of rank <=p and diagonal <=R^2 on a nonempty compact X subset R^d admits an explicit raw-input normalized-ReLU-attention transformer for uniform noisy predictive forward KL <=eps, with positive noise s, labels bounded by B, and contexts <=n. The complete width/depth/MLP/head bound is given in C005 Section 1 in terms of the canonical kernel modulus Omega(r), a finite h-net cardinality J, and the solver constants. A fixed finite Gram factorization supplies all encoder feature values; no feature computation is hidden outside the count.", "assumptions": ["nonempty compact X subset R^d; d,p>=1; n>=0 integer; eps,s>0; B,R>=0", "continuous symmetric PSD kernel, rank <=p, k(x,x)<=R^2, zero-mean GP", "independent N(0,s) observation noise; new noisy predictive observation", "an admissible r>0 with Omega(r)<=eta/(2sqrt(p)), and a fixed h-net G subset X, are specified or bounded from a known modulus and covering bound", "normalized bidirectional residual ReLU attention plus residual ReLU tokenwise MLPs; arbitrary real weights; raw coordinates and role flags"], "status": "proof (unaudited)", "proof_file": "proofs/C005_v2.md", "sources": ["C002 v1 and C004 v1 (both independently unaudited)", "Self-contained canonical finite-rank feature construction, cone approximation and scalar-error KL proof in C005.md", "arxiv:2306.04637v2 Definitions 1-2"], "gap": "No identified mathematical gap under stated assumptions. Dependent C002/C004 proofs and exact target-scope interpretation require independent review. No finite-bit complexity, training or ERM claim.", "audits": [], "checks": ["logs/modulus_checks.json", "logs/encoder_checks.json", "logs/exact_checks.json"], "proof_sha256": "22df67c6b2aaec99499aac6bf3440e8d5d6305204deedcc98fe9b4a621583b40", "version_note": "Adds the explicit finite-Gram-rank argument for the feature-space dimension; theorem and numerical checks unchanged."}
+--- a02/PRIOR_REPORT.md
++++ campaign/sources/recovered/a02/PRIOR_REPORT.md
+@@ -1,15 +1,14 @@
+-2026-10-20T20:00:48.215724+03:00 Target 1 moved conditionally on feature-input interpretation: C002 v1 provides explicit accelerated attention-only GP mean+variance and uniform KL; proof unaudited; 108 exact checks PASS.
+-NEXT: independent reviewer checks C002 v1 and accepts or rejects feature-input Target 1 scope.
+-{"at": "2026-10-20T20:35:20.816921+03:00", "target": 1, "claim": "T336-w727-C003", "result": "A rank-one bounded PSD kernel on [-1,1], k(x,xprime)=1{x>=0}1{xprime>=0}, with observation noise variance 1, prevents every continuous raw-input Gaussian predictor from achieving uniform forward KL below log(9/8)/4 > 1/36. An empty context, or one observation (-1,0), yields predictive variances 1 left of zero and 2 at zero.", "status": "proof (unaudited)"}
+-{"at": "2026-10-20T20:35:20.816921+03:00", "target": 1, "claim": "T336-w727-C004", "result": "For raw inputs in [0,1]^d, every bounded rank-at-most-p GP with coordinatewise K-Lipschitz feature map has an explicit residual ReLU-attention transformer attaining uniform noisy predictive forward KL <= eps over contexts of length <=n and labels bounded by B. Unlike C002, feature computation is counted. The constants, grid size, width, heads, hidden width, and depth are explicit in C004 Sections 1-5.", "status": "proof (unaudited)"}
+-
+-2026-10-20T20:40:52.513841+03:00 Target 1: C005 v1 covers continuous finite-rank kernels on compact raw domains with explicit modulus/covering-number size; C003 rules out the unregularized raw-input interpretation. All proofs independently unaudited.
+-NEXT: reviewer audits C002-C005 exact versions, starting with finite-Gram feature realization and error-budget composition.
+-
+-2026-10-20T20:53:02.665869+03:00 Finalized bundle_002.json: three explicitly unaudited scope results and one quoted class-generalization edge. Hashes and fresh completed dedup pass. Latest C005 version 2.
+-NEXT: independent audit of C002-C004 v1 and C005 v2, beginning with finite-Gram feature realization.
+-
+-2026-10-20T18:09:01.143765+00:00 — STUCK: mandatory repository backup could not acquire its prerequisite mesh path claim (exit 2); cleanup reported database locked. No repository mutation occurred. Artifact hashes and independent-review status are unchanged. No child commands remain running.
+-
+-2026-10-20T18:31:35.645470+00:00 — Supervisory status repair completed in the authorized T336 folder. Both reviewer-feedback files are absent. No mathematical route reopened and no tests repeated. Complete Target 1 proof candidates remain unaudited; least trusted step remains C005 finite-Gram feature realization and encoder/solver scalar-error composition.
+-
++2026-10-20T20:00:48.215724+03:00 Target 1 moved conditionally on feature-input interpretation: C002 v1 provides explicit accelerated attention-only GP mean+variance and uniform KL; proof unaudited; 108 exact checks PASS.
++NEXT: independent reviewer checks C002 v1 and accepts or rejects feature-input Target 1 scope.
++{"at": "2026-10-20T20:35:20.816921+03:00", "target": 1, "claim": "T336-w727-C003", "result": "A rank-one bounded PSD kernel on [-1,1], k(x,xprime)=1{x>=0}1{xprime>=0}, with observation noise variance 1, prevents every continuous raw-input Gaussian predictor from achieving uniform forward KL below log(9/8)/4 > 1/36. An empty context, or one observation (-1,0), yields predictive variances 1 left of zero and 2 at zero.", "status": "proof (unaudited)"}
++{"at": "2026-10-20T20:35:20.816921+03:00", "target": 1, "claim": "T336-w727-C004", "result": "For raw inputs in [0,1]^d, every bounded rank-at-most-p GP with coordinatewise K-Lipschitz feature map has an explicit residual ReLU-attention transformer attaining uniform noisy predictive forward KL <= eps over contexts of length <=n and labels bounded by B. Unlike C002, feature computation is counted. The constants, grid size, width, heads, hidden width, and depth are explicit in C004 Sections 1-5.", "status": "proof (unaudited)"}
++
++2026-10-20T20:40:52.513841+03:00 Target 1: C005 v1 covers continuous finite-rank kernels on compact raw domains with explicit modulus/covering-number size; C003 rules out the unregularized raw-input interpretation. All proofs independently unaudited.
++NEXT: reviewer audits C002-C005 exact versions, starting with finite-Gram feature realization and error-budget composition.
++
++2026-10-20T20:53:02.665869+03:00 Finalized bundle_002.json: three explicitly unaudited scope results and one quoted class-generalization edge. Hashes and fresh completed dedup pass. Latest C005 version 2.
++NEXT: independent audit of C002-C004 v1 and C005 v2, beginning with finite-Gram feature realization.
++
++2026-10-20T18:09:01.143765+00:00 — STUCK: mandatory repository backup could not acquire its prerequisite mesh path claim (exit 2); cleanup reported database locked. No repository mutation occurred. Artifact hashes and independent-review status are unchanged. No child commands remain running.
++
++2026-10-20T18:31:35.645470+00:00 — Supervisory status repair completed in the authorized T336 folder. Both reviewer-feedback files are absent. No mathematical route reopened and no tests repeated. Complete Target 1 proof candidates remain unaudited; least trusted step remains C005 finite-Gram feature realization and encoder/solver scalar-error composition.
+--- a06/source/frontier/rows/T421/moves.jsonl
++++ campaign/sources/recovered/a06/source/frontier/rows/T421/moves.jsonl
+@@ -1,3 +1,2 @@
+-{"at": "2026-10-16T10:18:24+03:00", "by": "claude-99aebc7f", "kind": "literature", "claim": "", "text": "Dossier written from arXiv abstracts read 16 Oct 10:0x-10:1x (claude-99aebc7f); see DOSSIER.md FRONTIER and TARGETS."}
+-{"at": "2026-10-20T11:10:07+03:00", "by": "claude-738954b6", "kind": "narrowed", "claim": "T421-W706-006", "text": "Standard m0=v0=0 bias-corrected Adam (beta 0.9/0.999, eps=eta) on a diagonal quadratic with both eigenvalues in (38,38+kappa) and tiny x0 converges to the product two-cycle, eta*C_t -> 38 (center-manifold proof, reviewer-checked; constants astronomically small). Also the exact stability window lambda in (38, 13673160/358811) for the outside-sqrt cycle."}
+-
++{"at": "2026-10-16T10:18:24+03:00", "by": "claude-99aebc7f", "kind": "literature", "claim": "", "text": "Dossier written from arXiv abstracts read 16 Oct 10:0x-10:1x (claude-99aebc7f); see DOSSIER.md FRONTIER and TARGETS."}
++{"at": "2026-10-20T11:10:07+03:00", "by": "claude-738954b6", "kind": "narrowed", "claim": "T421-W706-006", "text": "Standard m0=v0=0 bias-corrected Adam (beta 0.9/0.999, eps=eta) on a diagonal quadratic with both eigenvalues in (38,38+kappa) and tiny x0 converges to the product two-cycle, eta*C_t -> 38 (center-manifold proof, reviewer-checked; constants astronomically small). Also the exact stability window lambda in (38, 13673160/358811) for the outside-sqrt cycle."}

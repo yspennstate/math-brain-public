@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "scope": "A13 scalar numerical certificate; no renewal/tail-theorem audit",
+  "source_hashes": {
+    "historical_script": "f3b81bb6b7b3520c842e21dfa7faa919c104e0ff21b68e44d85864b66d359ff4",
+    "guarded_script": "ce9e6b42e901d7ffa06c11cbc6e35e6f2ad8b3216e957896374a9e4527a0bb58",
+    "author_json": "4e7aecd1c9c5f0f74461105ed874da598713dcff4aa41f1e62a863074a05844b",
+    "proof": "a1dbdbb1e99a85749143f44dd8b7d7e264fb550d285c5667f69f1a35ff87c38f"
+  },
+  "full_normal_replay_byte_identical_to_original_json": true,
+  "guard_only_change_to_original_numerical_source": true,
+  "normalizer_checked_by_independent_80_term_Machin_rationals": true,
+  "machin_branch_lower_exact": "70369/89625",
+  "derivative_L1_terms_exact": [
+    "12",
+    "132613/12500",
+    "395213/25000",
+    "660439/12500",
+    "1978717/50000"
+  ],
+  "derivative_L1_sum_exact": "6541351/50000",
+  "tail_bound_exact": "7396502967189157222099875447/7136238463529799405291429847247475681913733120",
+  "strict_signs": [
+    {
+      "eta": "99/100",
+      "bracket": [
+        "1.10928",
+        "1.10929"
+      ],
+      "lower_endpoint_gap_below_one_exact": "25784993382068060081637116493820037/10000000000000000000000000000000000000000",
+      "upper_endpoint_gap_above_one_exact": "260086694361091860974789738254591/250000000000000000000000000000000000000"
+    },
+    {
+      "eta": "1",
+      "bracket": [
+        "1.09082",
+        "1.09083"
+      ],
+      "lower_endpoint_gap_below_one_exact": "2969976080742680050892109754880811/1250000000000000000000000000000000000000",
+      "upper_endpoint_gap_above_one_exact": "1213995067919440498980583385520633/1000000000000000000000000000000000000000"
+    },
+    {
+      "eta": "101/100",
+      "bracket": [
+        "1.07272",
+        "1.07273"
+      ],
+      "lower_endpoint_gap_below_one_exact": "5669778498130145128401917242658089/2500000000000000000000000000000000000000",
+      "upper_endpoint_gap_above_one_exact": "1293202660976760481395208726828709/1000000000000000000000000000000000000000"
+    }
+  ],
+  "historical_false_pass_reproduced": true,
+  "guard_tests": [
+    {
+      "mode": "-O",
+      "returncode": 1,
+      "stdout_empty": true,
+      "rejected": true
+    },
+    {
+      "mode": "-OO",
+      "returncode": 1,
+      "stdout_empty": true,
+      "rejected": true
+    },
+    {
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 1,
+      "stdout_empty": true,
+      "rejected": true
+    },
+    {
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 1,
+      "stdout_empty": true,
+      "rejected": true
+    }
+  ],
+  "normal_coarse_grid_rejected": true,
+  "arithmetic_trust_boundary": "Audited analytic inequalities; Python int/Fraction; documented Decimal arithmetic and correctly rounded ln/exp; runtime/hardware. Not proof-assistant verified."
+}

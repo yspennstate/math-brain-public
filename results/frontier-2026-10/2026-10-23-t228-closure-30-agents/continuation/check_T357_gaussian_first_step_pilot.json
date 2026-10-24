@@ -1,0 +1,348 @@
+{
+  "status": "COMPLETE",
+  "scope": "Finite-dimensional Monte Carlo moment sanity checks, not proof or fitted theory",
+  "script_sha256": "8a9f4ce02198d3f12c61ed0c7d8a3407b3b768b3fdefab41bca354a844230816",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "rng": "NumPy default_rng / PCG64 with recorded SeedSequence entropy per replication",
+  "blas_threads_requested": 1,
+  "seeds": [
+    1729,
+    2027,
+    4211,
+    8089
+  ],
+  "pilot": true,
+  "reference_integrals": {
+    "0": {
+      "beta": 0,
+      "a": 0.605705509602159,
+      "b": 0.39429449039784126,
+      "mu": 0.0,
+      "quad_reported_errors": {
+        "a": 1.9987956889602344e-14,
+        "b": 8.62821560607119e-14,
+        "mu": 0.0
+      },
+      "independent_256_point_gauss_hermite": {
+        "a": 0.6057055096021526,
+        "b": 0.39429449039783726,
+        "mu": 0.0
+      },
+      "max_quad_gauss_hermite_difference": 6.328271240363392e-15
+    },
+    "1": {
+      "beta": 1,
+      "a": 0.605705509602159,
+      "b": 0.39429449039784126,
+      "mu": 0.20662096414190706,
+      "quad_reported_errors": {
+        "a": 1.9987956889602344e-14,
+        "b": 8.62821560607119e-14,
+        "mu": 1.9967810449065967e-13
+      },
+      "independent_256_point_gauss_hermite": {
+        "a": 0.6057055096021526,
+        "b": 0.39429449039783726,
+        "mu": 0.20662096414190484
+      },
+      "max_quad_gauss_hermite_difference": 6.328271240363392e-15
+    },
+    "2": {
+      "beta": 2,
+      "a": 0.605705509602159,
+      "b": 0.39429449039784126,
+      "mu": 0.3028527548010794,
+      "quad_reported_errors": {
+        "a": 1.9987956889602344e-14,
+        "b": 8.62821560607119e-14,
+        "mu": 1.7955308800226341e-13
+      },
+      "independent_256_point_gauss_hermite": {
+        "a": 0.6057055096021526,
+        "b": 0.39429449039783726,
+        "mu": 0.3028527548010763
+      },
+      "max_quad_gauss_hermite_difference": 6.328271240363392e-15
+    },
+    "4": {
+      "beta": 4,
+      "a": 0.605705509602159,
+      "b": 0.39429449039784126,
+      "mu": 0.36473876574306013,
+      "quad_reported_errors": {
+        "a": 1.9987956889602344e-14,
+        "b": 8.62821560607119e-14,
+        "mu": 1.7371335488894495e-13
+      },
+      "independent_256_point_gauss_hermite": {
+        "a": 0.6057055096021526,
+        "b": 0.39429449039783726,
+        "mu": 0.3647387657589175
+      },
+      "max_quad_gauss_hermite_difference": 1.5857370971872342e-11
+    }
+  },
+  "uncertainty": "Student-t intervals across independent training/features replications; pointwise approximate Monte Carlo intervals, no finite-d asymptotic-bias allowance and no simultaneous coverage claim",
+  "means": "E[Z]=E[S]=0 exactly by symmetric independent test inputs and odd tanh; ZS and S^2 estimate covariance and variance without fitting or centering",
+  "configurations": [
+    {
+      "dimension": 64,
+      "alpha": 1,
+      "gamma": 1,
+      "beta": 2,
+      "c": 1.0,
+      "n": 64,
+      "m": 64,
+      "replicates_per_seed": 2,
+      "independent_queries_per_cluster": 512,
+      "prediction": {
+        "covariance": 0.1111103656062742,
+        "variance": 0.09813067121349785,
+        "variance_terms": {
+          "signal_square": 0.01234551334515992,
+          "feature_signal": 0.013268041267999332,
+          "sample_linear": 0.03365008031081526,
+          "sample_feature": 0.03886703628952333
+        }
+      },
+      "estimates": {
+        "covariance_query": {
+          "mean": 0.09761263650508266,
+          "cluster_standard_error": 0.00985058399689469,
+          "approximate_pointwise_95_percent_interval": [
+            0.0743197066936737,
+            0.12090556631649162
+          ],
+          "asymptotic_target": 0.1111103656062742,
+          "difference_from_target": -0.013497729101191541,
+          "relative_difference": -0.12148037698860159,
+          "difference_in_standard_errors": -1.3702465869482034,
+          "independent_train_feature_clusters": 8
+        },
+        "covariance_conditional_stein": {
+          "mean": 0.10245567399940826,
+          "cluster_standard_error": 0.008173954459516112,
+          "approximate_pointwise_95_percent_interval": [
+            0.08312734305302147,
+            0.12178400494579505
+          ],
+          "asymptotic_target": 0.1111103656062742,
+          "difference_from_target": -0.008654691606865939,
+          "relative_difference": -0.07789274708657086,
+          "difference_in_standard_errors": -1.0588132891773274,
+          "independent_train_feature_clusters": 8
+        },
+        "variance_query": {
+          "mean": 0.08225514705146299,
+          "cluster_standard_error": 0.0053642343981742955,
+          "approximate_pointwise_95_percent_interval": [
+            0.06957074830231183,
+            0.09493954580061414
+          ],
+          "asymptotic_target": 0.09813067121349785,
+          "difference_from_target": -0.01587552416203486,
+          "relative_difference": -0.1617794310964744,
+          "difference_in_standard_errors": -2.9595135081043544,
+          "independent_train_feature_clusters": 8
+        }
+      },
+      "per_seed_means": [
+        {
+          "seed": 1729,
+          "covariance_query": 0.10538615528173392,
+          "covariance_conditional_stein": 0.09404928043800045,
+          "variance_query": 0.08126395431886509
+        },
+        {
+          "seed": 2027,
+          "covariance_query": 0.10306957988433695,
+          "covariance_conditional_stein": 0.10433662819201607,
+          "variance_query": 0.08931869541889331
+        },
+        {
+          "seed": 4211,
+          "covariance_query": 0.07029187401755813,
+          "covariance_conditional_stein": 0.0933301830861159,
+          "variance_query": 0.07357574301789677
+        },
+        {
+          "seed": 8089,
+          "covariance_query": 0.11170293683670166,
+          "covariance_conditional_stein": 0.11810660428150062,
+          "variance_query": 0.08486219545019678
+        }
+      ],
+      "largest_conditional_covariance_quadrature_difference": 6.459277557269161e-13,
+      "feature_norm_range": [
+        0.6443442057924442,
+        1.2532805299779592
+      ],
+      "seconds": 0.008069822997640586,
+      "replications": [
+        {
+          "seed": 1729,
+          "replicate_index": 0,
+          "seed_sequence_entropy": [
+            1729,
+            64,
+            64,
+            64,
+            2000,
+            0
+          ],
+          "covariance_query": 0.08480444600360565,
+          "variance_query": 0.09486321934605692,
+          "covariance_conditional_stein": 0.06899013736796908,
+          "conditional_covariance_quadrature_difference": 4.3209880118411093e-13,
+          "feature_norm_min": 0.6443442057924442,
+          "feature_norm_max": 1.2111336720161652,
+          "unpaired_query_mean_z": 0.011562434245507437,
+          "unpaired_query_mean_score": 0.028658566857141066
+        },
+        {
+          "seed": 1729,
+          "replicate_index": 1,
+          "seed_sequence_entropy": [
+            1729,
+            64,
+            64,
+            64,
+            2000,
+            1
+          ],
+          "covariance_query": 0.1259678645598622,
+          "variance_query": 0.06766468929167326,
+          "covariance_conditional_stein": 0.11910842350803182,
+          "conditional_covariance_quadrature_difference": 4.872491299323656e-14,
+          "feature_norm_min": 0.8463318779421999,
+          "feature_norm_max": 1.1842955027288053,
+          "unpaired_query_mean_z": 0.045331236775807096,
+          "unpaired_query_mean_score": 0.0026556455851077087
+        },
+        {
+          "seed": 2027,
+          "replicate_index": 0,
+          "seed_sequence_entropy": [
+            2027,
+            64,
+            64,
+            64,
+            2000,
+            0
+          ],
+          "covariance_query": 0.07447408929312935,
+          "variance_query": 0.0743605504191683,
+          "covariance_conditional_stein": 0.07781760436622726,
+          "conditional_covariance_quadrature_difference": 5.3415605272277844e-14,
+          "feature_norm_min": 0.8011909300599759,
+          "feature_norm_max": 1.241591658158006,
+          "unpaired_query_mean_z": 0.04906881973205711,
+          "unpaired_query_mean_score": 0.013698605508431466
+        },
+        {
+          "seed": 2027,
+          "replicate_index": 1,
+          "seed_sequence_entropy": [
+            2027,
+            64,
+            64,
+            64,
+            2000,
+            1
+          ],
+          "covariance_query": 0.13166507047554454,
+          "variance_query": 0.10427684041861832,
+          "covariance_conditional_stein": 0.13085565201780489,
+          "conditional_covariance_quadrature_difference": 8.845701948700935e-14,
+          "feature_norm_min": 0.6866171725966017,
+          "feature_norm_max": 1.1081124219325444,
+          "unpaired_query_mean_z": -0.016756773350709447,
+          "unpaired_query_mean_score": -0.009217660784635404
+        },
+        {
+          "seed": 4211,
+          "replicate_index": 0,
+          "seed_sequence_entropy": [
+            4211,
+            64,
+            64,
+            64,
+            2000,
+            0
+          ],
+          "covariance_query": 0.0751655371388941,
+          "variance_query": 0.058982410710991376,
+          "covariance_conditional_stein": 0.1012616623086258,
+          "conditional_covariance_quadrature_difference": 1.9742540935396846e-13,
+          "feature_norm_min": 0.7597961335392933,
+          "feature_norm_max": 1.123903698313378,
+          "unpaired_query_mean_z": -0.003439002531399747,
+          "unpaired_query_mean_score": 0.006391162539952174
+        },
+        {
+          "seed": 4211,
+          "replicate_index": 1,
+          "seed_sequence_entropy": [
+            4211,
+            64,
+            64,
+            64,
+            2000,
+            1
+          ],
+          "covariance_query": 0.06541821089622217,
+          "variance_query": 0.08816907532480217,
+          "covariance_conditional_stein": 0.08539870386360601,
+          "conditional_covariance_quadrature_difference": 8.287814878826794e-14,
+          "feature_norm_min": 0.7959374806817816,
+          "feature_norm_max": 1.1529304480908205,
+          "unpaired_query_mean_z": -0.05199246781950945,
+          "unpaired_query_mean_score": -0.007502751200209071
+        },
+        {
+          "seed": 8089,
+          "replicate_index": 0,
+          "seed_sequence_entropy": [
+            8089,
+            64,
+            64,
+            64,
+            2000,
+            0
+          ],
+          "covariance_query": 0.0912891116315916,
+          "variance_query": 0.09200669723575183,
+          "covariance_conditional_stein": 0.10949152453995517,
+          "conditional_covariance_quadrature_difference": 6.459277557269161e-13,
+          "feature_norm_min": 0.7924364947573602,
+          "feature_norm_max": 1.2532805299779592,
+          "unpaired_query_mean_z": 0.023285165798207576,
+          "unpaired_query_mean_score": 0.026343051408816695
+        },
+        {
+          "seed": 8089,
+          "replicate_index": 1,
+          "seed_sequence_entropy": [
+            8089,
+            64,
+            64,
+            64,
+            2000,
+            1
+          ],
+          "covariance_query": 0.13211676204181172,
+          "variance_query": 0.07771769366464173,
+          "covariance_conditional_stein": 0.12672168402304607,
+          "conditional_covariance_quadrature_difference": 2.0472512574087887e-13,
+          "feature_norm_min": 0.8264947656023313,
+          "feature_norm_max": 1.2196747482448551,
+          "unpaired_query_mean_z": 0.023819144782646632,
+          "unpaired_query_mean_score": 0.025865264660774538
+        }
+      ]
+    }
+  ],
+  "elapsed_seconds": 0.009197991999826627
+}

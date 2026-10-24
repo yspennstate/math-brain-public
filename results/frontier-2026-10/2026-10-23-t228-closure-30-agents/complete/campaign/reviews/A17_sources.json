@@ -1,0 +1,244 @@
+{
+  "reviewer": "A17",
+  "date_utc": "2026-10-23",
+  "scope": "Exact T228 smooth scalar SGD candidate and nonzero-teacher extension; literature/application boundary",
+  "verdict": "Substantive explicit verification using preexisting general theorems; no first-priority claim certified",
+  "targets": [
+    {
+      "path": "campaign/proofs/T228_NONZERO_TEACHER.md",
+      "sha256": "f95fa6fade82ba0dca4dab8e311fc61bb57b3267f3953b465c94228cb1315933"
+    },
+    {
+      "path": "campaign/proofs/T228_EXPLICIT_CLOSURE.md",
+      "sha256": "a1dbdbb1e99a85749143f44dd8b7d7e264fb550d285c5667f69f1a35ff87c38f"
+    }
+  ],
+  "sources": [
+    {
+      "id": "mirek",
+      "arxiv": "0907.2261v2",
+      "authors": "Mariusz Mirek",
+      "title": "Heavy tail phenomenon and convergence to stable laws for iterated Lipschitz maps",
+      "primary_url": "https://arxiv.org/pdf/0907.2261v2",
+      "read_locators": "Printed pp.1,3-4: standing contraction/integrability; Assumptions 1.6-1.7; Theorem 1.8, (1.10)-(1.12); contrast Theorem 1.15",
+      "original_statement_read": true,
+      "read_method": "Primary PDF downloaded and pdftotext extraction; original primary web PDF/HTML statements cross-checked",
+      "pdf_sha256": "0645a0af6a1239c616c5af2c4289226cb50cc01fc90134cc6895753dfc146a43",
+      "pdf_bytes": 388915,
+      "temporary_local_pdf": "/tmp/a17_literature/0907.2261v2.pdf",
+      "finding": "Applies after checks; the extra positivity ratio follows with N=2(1+A^2+E^2). PDF authoritative; HTML theorem numbering differs.",
+      "browse_refs": [
+        "turn75view2",
+        "turn76view0",
+        "turn81view0"
+      ]
+    },
+    {
+      "id": "abb",
+      "arxiv": "2102.02299v2",
+      "authors": "Gerold Alsmeyer; Sara Brofferio; Dariusz Buraczewski",
+      "title": "Asymptotically linear iterated function systems on the real line",
+      "primary_url": "https://arxiv.org/pdf/2102.02299v2",
+      "read_locators": "Printed p.2 (1)-(3); pp.6-7 Theorem 2.1, (12)-(16); p.36 Proposition 8.1 and following paragraph",
+      "original_statement_read": true,
+      "read_method": "Primary PDF downloaded and pdftotext extraction; original primary web PDF/HTML statements cross-checked",
+      "pdf_sha256": "ec099b507ad64a6e7b6443d3bdc6d40612c2a553703480d18b359a87fa2c6044",
+      "pdf_bytes": 892340,
+      "temporary_local_pdf": "/tmp/a17_literature/2102.02299v2.pdf",
+      "finding": "Applies directly to equal half-line slopes M. Positive one-sided constants are equal even for nonzero teacher.",
+      "browse_refs": [
+        "turn65view0",
+        "turn68view2",
+        "turn68view3"
+      ]
+    },
+    {
+      "id": "gsz",
+      "arxiv": "2006.04740v5",
+      "authors": "Mert Gurbuzbalaban; Umut Simsekli; Lingjiong Zhu",
+      "title": "The Heavy-Tail Phenomenon in SGD",
+      "primary_url": "https://arxiv.org/pdf/2006.04740v5",
+      "read_locators": "Section 3.1 Theorem 1 printed p.4; Section 3.2 Theorems 2-3 printed pp.7-8",
+      "original_statement_read": true,
+      "read_method": "Primary PDF downloaded and pdftotext extraction; original primary web PDF/HTML statements cross-checked",
+      "pdf_sha256": "c329a19445f8682b1221f936b4801c121b05579c67f15f1cc10efc4d23502aec",
+      "pdf_bytes": 1616810,
+      "temporary_local_pdf": "/tmp/a17_literature/2006.04740v5.pdf",
+      "finding": "Nonlinear criterion restatement omits a needed positivity/nondegeneracy assumption; developed explicit analysis is quadratic.",
+      "browse_refs": [
+        "turn65view1",
+        "turn67view3"
+      ]
+    },
+    {
+      "id": "joc",
+      "arxiv": "1006.3295v5",
+      "authors": "Predrag Jelenkovic; Mariana Olvera-Cravioto",
+      "title": "Implicit Renewal Theory and Power Tails on Trees",
+      "primary_url": "https://arxiv.org/pdf/1006.3295v5",
+      "read_locators": "Section 3 Theorem 3.1 printed p.5; discrepancy condition (5); remark immediately after theorem",
+      "original_statement_read": true,
+      "read_method": "Primary PDF downloaded and pdftotext extraction; original primary web PDF/HTML statements cross-checked",
+      "pdf_sha256": "abbfbddf3b348a0c7bc2a27c20a4e17d879e8e67daf590920354969c1182bfce",
+      "pdf_bytes": 1017158,
+      "temporary_local_pdf": "/tmp/a17_literature/1006.3295v5.pdf",
+      "finding": "General discrepancy theorem, applicable with N=1. Gives finite nonnegative constant; positivity separate.",
+      "browse_refs": [
+        "turn65view3",
+        "turn68view4"
+      ]
+    },
+    {
+      "id": "dm",
+      "arxiv": "2403.13868v1",
+      "authors": "Ewa Damek; Sebastian Mentemeier",
+      "title": "Analysing heavy-tail properties of Stochastic Gradient Descent by means of Stochastic Recurrence Equations",
+      "primary_url": "https://arxiv.org/pdf/2403.13868v1",
+      "read_locators": "Section 1 printed p.3 equations (5)-(6); Section 3.1 Theorem 3.1 printed p.8",
+      "original_statement_read": true,
+      "read_method": "Primary PDF downloaded and pdftotext extraction; original primary web PDF/HTML statements cross-checked",
+      "pdf_sha256": "7994c63f767912050b4830a3b348d7af810a830e0e5367a5d0d1b255e2c0c01a",
+      "pdf_bytes": 538179,
+      "temporary_local_pdf": "/tmp/a17_literature/2403.13868v1.pdf",
+      "finding": "Affine recurrence theorem; nonlinear local Taylor expression does not itself cover fixed-step nonlinear stationary tails.",
+      "browse_refs": [
+        "turn67view0",
+        "turn70view3",
+        "turn73view2"
+      ]
+    },
+    {
+      "id": "hm",
+      "arxiv": "2006.06293",
+      "authors": "Liam Hodgkinson; Michael W. Mahoney",
+      "title": "Multiplicative noise and heavy tails in stochastic optimization",
+      "primary_url": "https://arxiv.org/pdf/2006.06293",
+      "read_locators": "Section 4 Theorem 1 printed pp.6-7, equation (6), conclusions 1-2",
+      "original_statement_read": true,
+      "read_method": "Primary PDF downloaded and pdftotext extraction; original primary web PDF/HTML statements cross-checked",
+      "pdf_sha256": "7a3894648bbb1c97fd90ecede3c1f30b9931f4a7a8ea51168152b6db4a05c35c",
+      "pdf_bytes": 1664237,
+      "temporary_local_pdf": "/tmp/a17_literature/2006.06293.pdf",
+      "finding": "General nonlinear power bounds and perturbed-exponent limsups; distinct from exact common-exponent limit.",
+      "browse_refs": [
+        "turn70view5",
+        "turn73view1"
+      ]
+    },
+    {
+      "id": "llww",
+      "arxiv": "2610.23750v1",
+      "authors": "Xiaoli Li; Qianqian Lei; Ziyang Wei; Wei Biao Wu",
+      "title": "Exact Tail Laws for Nonlinear SGD with Infinite-Variance Gradients",
+      "primary_url": "https://arxiv.org/pdf/2610.23750v1",
+      "read_locators": "Section 2 Assumptions 1-4; Theorem 1 equations (7)-(11); submitted 2026-10-16 16:55:33 UTC",
+      "original_statement_read": true,
+      "read_method": "Primary PDF downloaded and pdftotext extraction; original primary web PDF/HTML statements cross-checked",
+      "pdf_sha256": "1ad5ff2722d4f047ef554c04ea59a0ee7f41ecee4fda8b6eaac7fe0df26bc889",
+      "pdf_bytes": 5820453,
+      "temporary_local_pdf": "/tmp/a17_literature/2610.23750v1.pdf",
+      "finding": "Innovation regular variation with index (1,2), small-step/growing-horizon/shrinking-threshold limit. Does not apply to Gaussian innovation at teacher and fixed eta near 1.",
+      "browse_refs": [
+        "turn65view2",
+        "turn70view1",
+        "turn81view1"
+      ]
+    }
+  ],
+  "search": {
+    "engine": "system1_search_query",
+    "queries": [
+      {
+        "q": "\"heavy tails\" \"nonlinear\" \"SGD\" theorem asymptotically linear",
+        "recency": 365
+      },
+      {
+        "q": "\"2610.23750\"",
+        "recency": 30
+      },
+      {
+        "q": "\"2403.13868\""
+      },
+      {
+        "q": "\"stochastic gradient\" \"tanh\" \"tail\" stationary nonlinear",
+        "recency": 3650
+      },
+      {
+        "q": "\"SGD\" \"bounded perturbation\" \"tail\""
+      },
+      {
+        "q": "\"nonlinear regression\" \"SGD\" \"heavy\" tails"
+      },
+      {
+        "q": "\"Asymptotically linear iterated function systems\" stochastic gradient"
+      },
+      {
+        "q": "Mirek \"Heavy tail phenomenon\" \"Theorem 1.8\"",
+        "domains": [
+          "arxiv.org"
+        ]
+      },
+      {
+        "q": "\"stochastic gradient\" \"tanh\" \"asymptotically linear\"",
+        "domains": [
+          "arxiv.org"
+        ]
+      },
+      {
+        "q": "\"stochastic gradient\" \"exact\" \"stationary\" \"nonlinear\" \"tails\"",
+        "recency": 730,
+        "domains": [
+          "arxiv.org"
+        ]
+      }
+    ],
+    "search_date_utc": "2026-10-23",
+    "exhaustive": false,
+    "limitations": "No exhaustive citation graph, multilingual search, or audit of unpublished manuscripts; no explicit prior statement of this exact activation/rectangle located in bounded searches. General theorems applicability positively verified."
+  },
+  "prior_brain_provenance": {
+    "manifest": "a01/SOURCE_MANIFEST.json",
+    "entries": [
+      {
+        "repository": "<private-repo>",
+        "path": "06_math_research/frontier/rows/T228/DOSSIER.md",
+        "blob_sha": "5d95a5f8a9d830ca673e75321d66f66d9dccad45",
+        "url": "https://github.com/<private-repo>/blob/main/06_math_research/frontier/rows/T228/DOSSIER.md",
+        "local": "DOSSIER.md"
+      },
+      {
+        "repository": "<private-repo>",
+        "path": "06_math_research/frontier/rows/T228/claude_4af6ff1a/T228_B_v2.md",
+        "blob_sha": "b7b358985ff34a9ea3fa7b35339047f0fe793822",
+        "url": "https://github.com/<private-repo>/blob/main/06_math_research/frontier/rows/T228/claude_4af6ff1a/T228_B_v2.md",
+        "local": "claude_4af6ff1a/T228_B_v2.md"
+      },
+      {
+        "repository": "<private-repo>",
+        "path": "06_math_research/frontier/rows/T228/claude_b1e26540/T3_STEP3.md",
+        "blob_sha": "a3adfc7537b6a8f51b796539c5063b07a23fca39",
+        "url": "https://github.com/<private-repo>/blob/main/06_math_research/frontier/rows/T228/claude_b1e26540/T3_STEP3.md",
+        "local": "claude_b1e26540/T3_STEP3.md"
+      },
+      {
+        "repository": "<private-repo>",
+        "path": "06_math_research/frontier/rows/T228/w688_target1/proofs/T228_A_v1.md",
+        "blob_sha": "6056b253ff1d4b9eb2411d6dec7d25c5ce8d7523",
+        "url": "https://github.com/<private-repo>/blob/main/06_math_research/frontier/rows/T228/w688_target1/proofs/T228_A_v1.md",
+        "local": "w688_target1/proofs/T228_A_v1.md"
+      },
+      {
+        "repository": "<private-repo>",
+        "path": "06_math_research/frontier/rows/T228/w688_target1/AUDITS_FROM_REVIEWER.tsv",
+        "blob_sha": "0e98941b66685633143b2dd20f33f60e0ca70608",
+        "url": "https://github.com/<private-repo>/blob/main/06_math_research/frontier/rows/T228/w688_target1/AUDITS_FROM_REVIEWER.tsv",
+        "local": "w688_target1/AUDITS_FROM_REVIEWER.tsv"
+      }
+    ]
+  },
+  "mathematical_additions": [
+    "Original Mirek positivity condition: take N=2(1+A^2+E^2), then ||N||_s/||M||_s tends to 2/eta.",
+    "ABB equal-slope sign matrix has normalized left Perron vector (1/2,1/2), yielding equal positive one-sided tail constants for nonzero teachers."
+  ],
+  "review_file": "campaign/reviews/A17.md"
+}

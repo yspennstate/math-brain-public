@@ -1,0 +1,31 @@
+# Selected positive-correlation law for every mixed initial residual
+
+Status: internally proved restricted theorem, subject to the independent reviews in this package. Full T384 remains OPEN.
+
+Use precisely the setting, primitives and reflected Volterra equation (V) of GLOBAL_REFLECTION.md, but condition only on E={R1<0<R2}, with 0<rho<1. For each original atom (z,u), run the frozen strict-gate recursion v+=gamma z G D(v)R from v0=Xu. ALL_MIXED_ENTRANCE.md proves finite death or a finite strict persistent-support certificate. Define P2=int_{z>0}z²1{surviving}N and P1=int_{z<0}z²1{surviving}N by that classification. These masses are finite but may depend on gamma and R; independent stable marginal laws are NOT asserted in this generality.
+
+**Theorem.** For every fixed physical T, actual simultaneous GD outputs, conditional on the finite-width initial mixed event, converge in C([0,T];R²) to y-r, where r is the unique global solution of (V) with these orbit-selected masses. Matched surviving positive-z endpoints have q=z(u,v), negative-z endpoints have q=|z|(v_minus,u_minus), and dead endpoints have q=0. Mixed residual signs persist and ||r(t)||2<=exp[-lambda_min(C)t]||R||2. No L1/J1 pre-step kernel convergence is claimed.
+
+## Proof of actual-grid selection on the full horizon
+
+**1. Mixed signs before selection.** MACRO_COMPACTNESS gives every subsequential residual the action Q_eff=C+int z²Dtheta G Dtheta N. Because rho>0 and C12>=0, its off-diagonal is nonnegative and its norm is bounded by ||C||+||G||int z²N. Thus (-r1,r2) solves a bounded time-dependent Metzler system and each coordinate is bounded below by its initial value times exp(-K T). Every subsequential residual therefore remains strictly mixed, independently of any proposed selection. On joint subsequence couplings, uniform output convergence implies that actual residuals are mixed on the entire fixed horizon eventually, after localization of the positive limiting minimum. Localization can be removed by letting that lower cutoff tend to zero. The old energy bootstrap also bounds residuals and retained weights uniformly.
+
+**2. Certificates with a horizon-sized lower barrier.** Fix a finite cutoff epsilon<|z|<M and ||u||<B. Retained output weights keep their original signs by the old row-displacement estimate. Choose a deterministic D, on the bootstrap localization, strictly larger than every possible negative on-side normal drift for these retained rows on [0,T]; a bound for |z_n|(|r1_n|+rho|r2_n|) and its mirrored version suffices. For each frozen positive-z survivor, the entrance theorem gives a finite step N with x_N>-gamma D and eta_N=y_N-rho x_N>rho gamma D. The theorem works for arbitrarily large D, not just the initial attracting drift. Mirrored certificates hold for negative z. Every frozen dead row has a finite strictly negative pair certificate almost surely.
+
+Each finite history has no threshold equalities almost surely conditional on R,z. Thus certificates are robust under fixed-grid convergence of actual endpoint states and residuals. For the random maximum certificate time of a finite family, first restrict to N<=K and apply the fixed-K boundary theorem, then let K tend to infinity. This does not assert a common finite boundary-step bound over all Poisson atoms.
+
+**3. One-sided persistence, including release.** For z>0, while support y is active the exact boundary normal update is x+=gamma(c_n-a_n1{x>0}), with c_n=rho z_n r2_n>=0 and a_n=-z_n r1_n>0. The on-side negative drift is bounded by D. Therefore x>=-gamma D is forward invariant, regardless of whether c_n-a_n is negative or positive. Also eta+=gamma(1-rho²)z_n r2_n is nondecreasing. The transferred strict certificate implies y=eta+rho x>0 inductively for the entire horizon. No upper strip or strict attraction is required. Dead rows remain stationary exactly. The mirrored argument is identical.
+
+After division by L, the normal lower bound tends to zero and the state at the finite certificate step tends to zero; its physical time N gamma/L vanishes. Held coefficients converge in L1 along the joint subsequence to z r_boundary and rho z r_support. The run012528 monotone relay Euler theorem therefore identifies the normal path as the reflection in (V); the exact tangential identity identifies its support path. There is no hidden assumption that finite-width positive support has a positive limit: for each fixed t>0 the identity and lower barrier give
+
+q_support(t)>=(1-rho²)|z| integral_0^t |r_support(s)|ds>0
+
+in the limit, because the limiting residual is strictly mixed. The actual changing normalized output weight tends uniformly to its original mark, yielding the claimed signed row output. All finite transients have vanishing scaled contribution.
+
+**4. Cutoff removal and uniqueness.** The prior uniform small-initial-z square-mass estimate removes omitted endpoints, after which large mark and large-z truncations are removed using finite-intensity tightness. The selector is locally constant at each generic finite certificate, so selected mass convergence follows by the same cutoff argument. The exact macro output identity consequently becomes (V) with these P1,P2. Its Picard/Gronwall uniqueness, proved in GLOBAL_REFLECTION.md using the 2-Lipschitz reflection map, identifies every subsequence. Initial quadrant boundaries have probability zero under the full-dimensional stable law of R, which justifies conditioning. This proves the theorem.
+
+## Relationship to the double-cone theorem and remaining scope
+
+On rho R2<-R1<R2/rho the selector reduces to initial support positivity, and GLOBAL_REFLECTION.md supplies independent stable masses and gamma independence. Outside that cone the finite-grid race may depend on gamma; retain the algorithmic selector. The example rho=.5,z=1,R=(-3,1),v0=(1.1,.4) dies at gamma=1 and survives at gamma=.2. This is a selector counterexample, not by itself a marginal output-law distinction.
+
+Reflection is applied only after validating support from original marks. Imposing it on every atom collapsed to zero would retain rows that should die and is invalid. Same-sign initial residuals, remaining negative-correlation cases, more inputs, deep networks and test predictions remain unpaid. The theorem is an internal restricted result; external priority is unverified.

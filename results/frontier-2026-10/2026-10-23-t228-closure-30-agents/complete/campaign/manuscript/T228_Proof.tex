@@ -1,0 +1,1047 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=27mm,headheight=14pt]{geometry}
+\usepackage{microtype}
+\usepackage{booktabs,tabularx,array,longtable}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\definecolor{linkblue}{RGB}{22,68,105}
+\hypersetup{colorlinks=true,linkcolor=linkblue,citecolor=linkblue,urlcolor=linkblue,
+  pdftitle={T228: A contractive nonlinear SGD model with a positive exact power tail},
+  pdfauthor={T228 research campaign - synthesis with credited Math Brain proofs},
+  pdfsubject={Concrete registry row T228; research proof with internal audit}}
+\urlstyle{same}
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{0.2em}
+\setlength{\emergencystretch}{1.5em}
+\setlist[enumerate]{itemsep=0.35em,topsep=0.45em}
+\setlist[itemize]{itemsep=0.2em,topsep=0.4em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\Lip}{Lip}
+\DeclareMathOperator{\Law}{Law}
+\DeclareMathOperator{\Leb}{Leb}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\supp}{supp}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\bigabs}[1]{\left|#1\right|}
+\newcommand{\sourcehash}[1]{{\small\texttt{#1}}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small T228: nonlinear SGD with an exact power tail}
+\fancyhead[R]{\small 23 October 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\title{\vspace{-1.4em}\textbf{A contractive nonlinear SGD model\\with a positive exact power tail}\\[0.55em]
+  \large A complete proof for the concrete-model requirement in registry row T228}
+\author{\normalsize T228 research campaign --- synthesis with credited Math Brain proofs}
+\date{23 October 2026}
+
+\begin{document}
+\maketitle
+\thispagestyle{plain}
+\begin{center}
+\small\textbf{Research proof; independent internal audit, no external peer review}
+\end{center}
+
+\begin{abstract}
+For the smooth nonlinear activation $\sigma(z)=z+10^{-3}\tanh z$, we study
+ordinary constant-step, batch-one squared-loss SGD with Gaussian inputs,
+independent Gaussian label noise, and regression teacher $\theta\in[-1,1]$.
+For every fixed $\eta\in[0.99,1.01]$, the actual random update maps satisfy
+$\E\Lip(\Psi_\theta)<0.99010707<1$. There is a unique stationary law,
+geometric convergence in Wasserstein distance of order one, and a finite
+strictly positive exact absolute-tail constant. The tail exponent is the
+unique $\alpha\in(1,2)$ satisfying $\E|1-\eta A^2|^\alpha=1$; it does not
+depend on the teacher. We verify every input to the scalar implicit renewal
+theorem and give the full forward-excursion proof of strict positivity.
+The theorem supplies a concrete nonlinear example for T228. It builds on
+credited Math Brain proofs and makes no general deep-network theorem,
+external acceptance, or novelty certification claim.
+\end{abstract}
+
+\section{Registry requirement, model, and main theorem}
+\label{sec:main}
+
+\paragraph{The T228 requirement (paraphrase).}
+Choose a concrete nonlinear regression model with Gaussian inputs and
+persistent label noise, run unmodified constant-step SGD at batch size $b$,
+and prove existence of a stationary law, average contraction, asymptotic
+linearity, a nonarithmetic multiplier, and a nonzero tail constant. Identify
+the power-tail index through the multiplier's Lyapunov equation and exhibit
+a nonempty parameter regime with index below two. This is an example
+requirement, not a universal assertion about deep neural networks.
+
+The registry is titled \emph{Heavy-tailed stationary behaviour of SGD on
+neural-network losses}. Its motivation includes the linear-regression
+results of G\"urb\"uzbalaban, \c{S}im\c{s}ekli, and Zhu
+\cite{Gurbuzbalaban2021}. We use a smooth bounded \emph{perturbation of the
+identity}; the activation itself is unbounded. The row's bounded-activation
+network is an illustrative option, not the model proved here. Scope and
+source attribution are recorded in \cref{sec:attribution}.
+
+Fix, throughout a trajectory,
+\begin{equation}
+\delta=\frac1{1000},\qquad \sigma(z)=z+\delta\tanh z,\qquad
+\theta\in[-1,1],\qquad \eta\in\left[\frac{99}{100},\frac{101}{100}\right],
+\qquad b=1.\label{eq:model-parameters}
+\end{equation}
+Let $(A_k,E_k)_{k\geq1}$ be independent and identically distributed pairs,
+each pair consisting of two independent standard normal variables. Set
+$Y_k=\sigma(A_k\theta)+E_k$. For a fresh pair $(A,E)$ and its label
+$Y=\sigma(A\theta)+E$, define
+\begin{align}
+ f_\theta(x;A,E)&=\frac12\bigl(\sigma(Ax)-\sigma(A\theta)-E\bigr)^2,
+ \label{eq:loss}\\
+ \Psi_\theta(x)&=x-\eta A\sigma'(Ax)\bigl(\sigma(Ax)-Y\bigr),
+ \qquad X_{k+1}=\Psi_{\theta,k+1}(X_k).\label{eq:update}
+\end{align}
+This is ordinary, unclipped, constant-step SGD on the sample loss
+\eqref{eq:loss}. For $\theta\ne0$, labels and inputs are dependent.
+
+\begin{theorem}[Explicit nonlinear model for T228]\label{thm:main}
+For every fixed pair $(\eta,\theta)$ in \eqref{eq:model-parameters}, the
+following conclusions hold.
+\begin{enumerate}[label=\textnormal{(\roman*)}]
+\item The smooth sample maps are nonaffine almost surely, and
+\begin{equation}
+ \E\Lip(\Psi_\theta)<q:=\frac{99010707}{100000000}
+ =0.99010707<1.\label{eq:q-main}
+\end{equation}
+They therefore contract on average, also in the logarithmic sense.
+\item There is exactly one invariant probability law $\pi_{\eta,\theta}$,
+including among laws without an assumed first moment. It has a finite
+first moment, has support $\R$, and for every deterministic $x\in\R$,
+\begin{equation}
+ W_1\bigl(\Law(X_n^x),\pi_{\eta,\theta}\bigr)
+ \le q^n W_1\bigl(\delta_x,\pi_{\eta,\theta}\bigr).
+ \label{eq:wasserstein}
+\end{equation}
+Here $\delta_x$ is the unit point mass at $x$.
+\item There is exactly one positive solution $\alpha=\alpha(\eta)$ of
+\begin{equation}
+ h_\eta(\alpha):=\E\abs{1-\eta A^2}^\alpha=1,
+ \qquad 1<\alpha<2.\label{eq:alpha-main}
+\end{equation}
+The law of $\log|1-\eta A^2|$ is nonarithmetic. The exponent is independent
+of $\theta$.
+\item A finite strictly positive constant $C_{\eta,\theta}$ satisfies
+\begin{equation}
+ \lim_{t\to\infty}t^\alpha\pi_{\eta,\theta}
+ \bigl(\{x:\abs{x}>t\}\bigr)=C_{\eta,\theta}\in(0,\infty).
+ \label{eq:tail-main}
+\end{equation}
+The same limit and constant hold with $|x-\theta|$ in place of $|x|$.
+For every $p>0$, both the absolute $p$th moment and the estimation-error
+$p$th moment are finite exactly when $p<\alpha$. Their second moments
+are infinite.
+\end{enumerate}
+If $X\sim\pi_{\eta,\theta}$ is independent of the fresh step $(A,E)$, then
+\begin{equation}
+ C_{\eta,\theta}
+ =\frac{\E\!\left[\abs{\Psi_\theta(X)}^\alpha
+                   -\abs{(1-\eta A^2)X}^\alpha\right]}
+ {\alpha\,\E\!\left[\abs{1-\eta A^2}^\alpha
+                         \log\abs{1-\eta A^2}\right]}.
+ \label{eq:constant-main}
+\end{equation}
+The numerator is an absolutely integrable \emph{coupled difference}, not
+a subtraction of two separately finite expectations.
+\end{theorem}
+
+\begin{remark}[Symmetry and uniformity]\label{rem:symmetry}
+When $\theta=0$, the stationary law is symmetric and each one-sided tail
+has constant $C_{\eta,0}/2$. No one-sided tail limit or equality of one-sided
+constants is asserted for a fixed nonzero teacher. Indeed, its stationary
+law is not symmetric about zero; see \cref{sec:symmetry}. The contraction
+bound is uniform on the stated rectangle. No uniform positive lower bound
+for $C_{\eta,\theta}$ is claimed.
+\end{remark}
+
+The proof of \cref{thm:main} occupies \cref{sec:bounds,sec:exponent,sec:invariance,sec:minorization,sec:renewal,sec:positive,sec:moments}.
+The nonzero-signal example $\theta=\eta=1$ is made explicit in
+\cref{sec:signal}.
+
+\section{Bounds on the actual nonlinear update}\label{sec:bounds}
+
+\begin{lemma}[Global derivative and uniform remainder]\label{lem:bounds}
+Put $M=1-\eta A^2$ and $\xi=|M|$. Define
+\begin{align}
+ L_\theta&=\xi+\eta A^2(4\delta+3\delta^2+2\delta|Y|),
+ \label{eq:L}\\
+ B_\theta&=\eta|A|\bigl[\delta+(1+\delta)(\delta+|Y|)\bigr].
+ \label{eq:B}
+\end{align}
+Then $\Lip(\Psi_\theta)\le L_\theta$ and
+\begin{equation}
+ \Psi_\theta(x)=Mx+R_\theta(x),\qquad
+ \sup_{x\in\R}|R_\theta(x)|\le B_\theta.\label{eq:remainder}
+\end{equation}
+Both $L_\theta$ and $B_\theta$ have moments of every positive order. The
+map $\Psi_\theta$ is nonaffine almost surely.
+\end{lemma}
+
+\begin{proof}
+Write $z=Ax$, $t=\tanh z$, and $u=\sech^2 z$. Differentiating the
+\emph{actual} update yields
+\begin{align}
+ \sigma'(z)&=1+\delta u,&\sigma''(z)&=-2\delta ut,\nonumber\\
+ \Psi_\theta'(x)&=1-\eta A^2 H(z,Y),&
+ H(z,Y)&=(1+\delta u)^2-2\delta ut(z+\delta t-Y).
+ \label{eq:derivative}
+\end{align}
+We have $|t|\le1$, $0\le u\le1$, and $|z|u\le1$. For the last bound,
+$\cosh^2 z=1+\sinh^2 z\ge1+z^2\ge|z|$. Expansion gives
+\begin{align}
+ |H-1|&\le2\delta u+\delta^2u^2+2\delta|z|u|t|
+              +2\delta^2ut^2+2\delta u|t||Y|\nonumber\\
+       &\le4\delta+3\delta^2+2\delta|Y|.\label{eq:H-bound}
+\end{align}
+The mean value theorem on $\R$ proves the global Lipschitz bound
+\eqref{eq:L}. It bounds the actual nonlinear map, not merely its
+asymptotic multiplier.
+
+For the remainder, use the exact identity
+\begin{equation}
+ \sigma'(z)(\sigma(z)-Y)
+   =z+\delta zu+(1+\delta u)(\delta t-Y).
+ \label{eq:gradient-expansion}
+\end{equation}
+Multiplication by $\eta A$ and the preceding bounds give
+\eqref{eq:remainder} with \eqref{eq:B}.
+
+The label envelope keeps the input-label dependence:
+\begin{equation}
+ |Y|\le(1+\delta)|\theta||A|+|E|.
+ \label{eq:label-envelope}
+\end{equation}
+In particular, throughout the parameter rectangle,
+\begin{equation}
+ B_\theta\le\frac{101}{100}|A|
+ \bigl[\delta+(1+\delta)\bigl(\delta+(1+\delta)|A|+|E|\bigr)\bigr].
+ \label{eq:uniform-B}
+\end{equation}
+The envelopes for $B_\theta$, $L_\theta$, and $Y$ are polynomials in
+$|A|$ and $|E|$, hence have all positive moments. Neither $B_\theta$ nor
+$Y$ is required to be independent of $M$.
+
+At zero, the derivative is $1-\eta A^2(1+\delta)^2$. For $A\ne0$,
+the terms involving $u$ or $zu$ vanish as $|x|\to\infty$, and
+$\Psi_\theta'(x)\to1-\eta A^2$. These values differ for every $A\ne0$,
+an event of probability one. Thus the map is nonaffine almost surely.
+\end{proof}
+
+\section{Exact contraction arithmetic and the exponent}\label{sec:exponent}
+
+\begin{lemma}[Uniform average contraction]\label{lem:contraction}
+The constant $q$ in \eqref{eq:q-main} bounds $\E L_\theta$ strictly. Also
+$\E\log L_\theta$ exists as a finite number and is negative; in particular,
+$\E\log\Lip(\Psi_\theta)<0$ in the extended sense.
+\end{lemma}
+
+\begin{proof}
+Let $\varphi$ be the standard normal density. Splitting at $|A|=1$,
+using $\E(1-A^2)=0$ and $(a\varphi(a))'=(1-a^2)\varphi(a)$, gives
+\begin{equation}
+ \E|1-A^2|=4\varphi(1)=\frac4{\sqrt{2\pi e}}<\frac{97}{100}.
+ \label{eq:normal-identity}
+\end{equation}
+The strict inequality needs no numerical quadrature. The elementary bounds
+$\pi>157/50$ and $e>1359/500$ imply
+\begin{equation}
+ \left(\frac{97}{100}\right)^2
+ 2\frac{157}{50}\frac{1359}{500}-16
+ =\frac{7532467}{125000000}>0.\label{eq:rational-normal}
+\end{equation}
+Since $|1-\eta A^2|\le|1-A^2|+|\eta-1|A^2$, it follows that
+\begin{equation}
+ \E\xi<\frac{98}{100}.\label{eq:xi-first-moment}
+\end{equation}
+
+The mixed label moment must retain the dependence between $A$ and $Y$.
+By \eqref{eq:label-envelope},
+\begin{align}
+ \E[A^2|Y|]
+ &\le(1+\delta)|\theta|\E|A|^3+\E[A^2|E|]\nonumber\\
+ &=(1+\delta)|\theta|\,2\sqrt{\frac2\pi}+\sqrt{\frac2\pi}
+ \le(3+2\delta)\sqrt{\frac2\pi}
+ <3+2\delta=\frac{1501}{500}.\label{eq:mixed-label}
+\end{align}
+Only the second summand uses independence, namely that of $A$ and $E$.
+There is no factorization of $\E[A^2|Y|]$. Thus
+\begin{align}
+ \E\Lip(\Psi_\theta)\le\E L_\theta
+ &<\frac{98}{100}+\frac{101}{100}
+  \left[\frac4{1000}+\frac3{10^6}
+             +\frac2{1000}\frac{1501}{500}\right]\nonumber\\
+ &=\frac{98}{100}+\frac{101}{100}\frac{10007}{10^6}
+ =\frac{99010707}{10^8}=q<1.\label{eq:q-proof}
+\end{align}
+The exact margin is $1-q=989293/10^8=0.00989293$.
+
+Jensen's inequality gives
+$\E\log\Lip(\Psi_\theta)\le\log\E\Lip(\Psi_\theta)<\log q<0$,
+allowing a negative infinite expectation. For the envelope itself, set
+$c_0=4\delta+3\delta^2<1$. With $v=\eta A^2\ge0$,
+$L_\theta\ge|1-v|+c_0v\ge c_0$, whereas
+$\log^+L_\theta\le L_\theta$. Hence $\E|\log L_\theta|<\infty$ and
+$\E\log L_\theta<\log q<0$.
+\end{proof}
+
+\begin{lemma}[Lyapunov root and logarithmic coefficient]\label{lem:root}
+There is a unique positive root $\alpha\in(1,2)$ of
+$h_\eta(p)=\E\xi^p=1$. For $0<p<\alpha$, $h_\eta(p)<1$. Moreover
+\begin{equation}
+ m_\alpha:=\E[\xi^\alpha\log\xi]\in(0,\infty),
+ \label{eq:m-alpha}
+\end{equation}
+and $\log\xi$ is nonarithmetic.
+\end{lemma}
+
+\begin{proof}
+The distribution of $M=1-\eta A^2$ is absolutely continuous. Its zeros
+as a function of $A$ are $\pm\eta^{-1/2}$, with nonzero derivatives
+there. Local logarithmic integrability near these roots and Gaussian decay
+at infinity give
+\begin{equation}
+ \Pp(\xi=0)=0,\qquad \E|\log\xi|<\infty,\qquad
+ \E[\xi^p|\log\xi|]<\infty\quad(p>0).
+ \label{eq:log-moments}
+\end{equation}
+The law of $\log\xi$ is absolutely continuous and thus nonarithmetic.
+Also $\E\log\xi\le\log\E\xi<0$.
+
+The function $h_\eta$ is finite for all $p\ge0$, and its logarithm is
+strictly convex because $\log\xi$ is nonconstant. We have
+\begin{align}
+ h_\eta(0)&=1,& h_\eta(1)&<0.98<1,\nonumber\\
+ h_\eta(2)&=1-2\eta+3\eta^2
+ \ge1-2\frac{99}{100}+3\left(\frac{99}{100}\right)^2
+ =\frac{19603}{10000}>1.\label{eq:second-multiplier}
+\end{align}
+The quadratic is increasing on the permitted interval. Since
+$\Pp(\xi>1)>0$, $h_\eta(p)\to\infty$ as $p\to\infty$.
+Strict log-convexity therefore yields exactly one positive root, lying
+between one and two, and $h_\eta(p)<1$ for $0<p<\alpha$.
+The integrability in \eqref{eq:log-moments} makes $m_\alpha$ finite.
+The derivative of $\log h_\eta$ at $\alpha$ is at least its strictly
+positive secant slope from $1$ to $\alpha$, so $m_\alpha>0$.
+All of these quantities depend on $\eta$ and not on $\theta$.
+\end{proof}
+
+Equivalently, the equation specifying the index is
+\begin{equation}
+ \frac1{\sqrt{2\pi}}\int_\R |1-\eta a^2|^\alpha
+            e^{-a^2/2}\dd a=1.\label{eq:alpha-integral}
+\end{equation}
+For a general batch $b$, the corresponding scalar asymptotic multiplier
+is $1-(\eta/b)\chi_b^2$. The present theorem fixes $b=1$; the interval
+in \eqref{eq:model-parameters} already supplies a nonempty regime.
+
+\section{Invariant law, uniqueness, and lower moments}\label{sec:invariance}
+
+\begin{proposition}[Invariant law and convergence]\label{prop:invariant}
+There is a unique invariant probability $\pi=\pi_{\eta,\theta}$ on $\R$.
+It has a finite first moment, satisfies \eqref{eq:wasserstein}, and
+\begin{equation}
+ \E_\pi|X|^p<\infty\qquad(0<p<\alpha).\label{eq:lower-moments}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+At zero,
+\begin{equation}
+ \Psi_\theta(0)=\eta(1+\delta)AY,\qquad
+ \E|\Psi_\theta(0)|<\infty.\label{eq:update-zero}
+\end{equation}
+The Markov operator consequently maps probability laws with finite first
+moment into themselves. Coupling two inputs by the same independent fresh
+step gives
+\begin{equation}
+ W_1(\mu P_\theta,\nu P_\theta)
+ \le(\E L_\theta)W_1(\mu,\nu)\le qW_1(\mu,\nu).
+ \label{eq:W-contraction}
+\end{equation}
+Completeness of the space of such laws for $W_1$ and the contraction
+mapping theorem provide an invariant law in that space and the geometric
+bound \eqref{eq:wasserstein}.
+
+To prove uniqueness without a hidden moment restriction, start a second
+chain from any finite random value $Z$, independent of its future steps,
+and couple it to the chain from zero using the same steps. Then
+\begin{equation}
+ |X_n^Z-X_n^0|\le |Z|\prod_{j=1}^n L_{\theta,j}
+   \longrightarrow0\quad\text{almost surely}.\label{eq:path-coupling}
+\end{equation}
+Indeed, the product has expectation $(\E L_\theta)^n\le q^n$;
+Markov's inequality followed by Borel--Cantelli proves that the product
+tends to zero. If $Z$ has any invariant law, bounded Lipschitz test
+functions and dominated convergence identify that law with $\pi$.
+No moment of $Z$ is used.
+
+For $0<p\le1$ with $p<\alpha$, \eqref{eq:remainder} and subadditivity
+give
+\begin{equation}
+ \E|\Psi_\theta(x)|^p\le h_\eta(p)|x|^p+\E B_\theta^p.
+ \label{eq:drift-small-p}
+\end{equation}
+For $1<p<\alpha$, use
+$(a+b)^p\le(1+\varepsilon)a^p+C_{p,\varepsilon}b^p$ and choose
+$\varepsilon>0$ so that $r_p=(1+\varepsilon)h_\eta(p)<1$.
+In both cases this yields
+\begin{equation}
+ \E|\Psi_\theta(x)|^p\le r_p|x|^p+d_p,
+ \qquad r_p<1,\quad d_p<\infty.\label{eq:moment-drift}
+\end{equation}
+The chain started from zero has uniformly bounded $p$th moments. Its
+weak convergence to $\pi$ and the lower semicontinuity of $|x|^p$ imply
+\eqref{eq:lower-moments}.
+\end{proof}
+
+\section{Explicit compact minorization and full support}\label{sec:minorization}
+
+\begin{lemma}[Compact-to-compact minorization]\label{lem:minorization}
+For every finite $R,T>0$ there is an explicit $\varepsilon_{R,T}>0$,
+uniform over the parameter rectangle, such that for every Borel $F$,
+\begin{equation}
+ P_\theta(x,F)\ge\varepsilon_{R,T}
+        \Leb(F\cap[-T,T])\qquad(|x|\le R).\label{eq:minorization}
+\end{equation}
+Consequently $\supp\pi_{\eta,\theta}=\R$.
+\end{lemma}
+
+\begin{proof}
+Conditionally on $A=a$, the fresh $E$ remains standard normal and
+\begin{align}
+ \Psi_\theta(x)&=\mu_\theta(x,a)+\eta a\sigma'(ax)E,\nonumber\\
+ \mu_\theta(x,a)&=x-\eta a\sigma'(ax)
+                    [\sigma(ax)-\sigma(a\theta)].\label{eq:conditional-mean}
+\end{align}
+For $a\in[1,2]$ and $|x|\le R$, the inequalities
+$\sigma'\le1+\delta$ and $|\sigma(v)|\le(1+\delta)|v|$ imply
+\begin{equation}
+ |\mu_\theta(x,a)|\le D_R
+ :=R+4\frac{101}{100}(1+\delta)^2(R+1).\label{eq:D-R}
+\end{equation}
+The conditional standard deviation belongs to
+\begin{equation}
+ [s_{\min},s_{\max}]
+ :=\left[\frac{99}{100},\;2\frac{101}{100}(1+\delta)\right].
+ \label{eq:s-bounds}
+\end{equation}
+At each $|y|\le T$ its density is therefore at least
+\begin{equation}
+ d_{R,T}:=\frac1{s_{\max}\sqrt{2\pi}}
+ \exp\!\left[-\frac{(T+D_R)^2}{2s_{\min}^2}\right]>0.
+ \label{eq:density-bound}
+\end{equation}
+Integrate over $a\in[1,2]$ and set
+$\varepsilon_{R,T}=\Pp(1\le A\le2)d_{R,T}>0$ to obtain
+\eqref{eq:minorization}. In particular, every nonempty open interval
+has positive transition probability from every point. Integrating this
+strictly positive transition probability against $\pi$ proves that every
+such interval has positive stationary mass.
+\end{proof}
+
+\section{Exact absolute-tail limit and the constant formula}\label{sec:renewal}
+
+The external tail-limit input is the $N=1$ specialization of
+Jelenkovi\'c--Olvera-Cravioto \cite[Theorem 3.1, printed p.~5]{JO2012Thm31}.
+This is a discrepancy theorem for a nonnegative variable independent of
+its coefficient. Its use does not require the nonlinear update itself
+to be an affine fixed-point recursion.
+
+\begin{lemma}[The scalar renewal input]\label{lem:renewal-input}
+Let $R_0\ge0$ be independent of $\xi>0$. Suppose $\log\xi$ is
+nonarithmetic, $\E\xi^\alpha=1$,
+$0<\E[\xi^\alpha\log\xi]<\infty$, $\E\xi^\gamma<\infty$ for some
+$0\le\gamma<\alpha$, and $\E R_0^p<\infty$ for every $0<p<\alpha$.
+If
+\begin{equation}
+ \int_0^\infty t^{\alpha-1}
+  \bigabs{\Pp(R_0>t)-\Pp(\xi R_0>t)}\dd t<\infty,
+ \label{eq:renewal-condition}
+\end{equation}
+then $\lim_{t\to\infty}t^\alpha\Pp(R_0>t)=C\in[0,\infty)$, where
+\begin{equation}
+ C=\frac1{m_\alpha}\int_0^\infty t^{\alpha-1}
+       [\Pp(R_0>t)-\Pp(\xi R_0>t)]\dd t.
+ \label{eq:renewal-constant}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Apply \cite[Theorem 3.1]{JO2012Thm31} with $N=1$ and $C_1=\xi$.
+The stated conditions are its scalar hypotheses. The conclusion is
+expressed as a scaled limit, also covering the possibility $C=0$.
+\end{proof}
+
+\begin{proposition}[Existence of the finite tail limit]\label{prop:tail-exists}
+The limit in \eqref{eq:tail-main} exists in $[0,\infty)$ and has the
+formula \eqref{eq:constant-main}. Its numerator is absolutely integrable.
+\end{proposition}
+
+\begin{proof}
+Choose $X\sim\pi$ independently of the fresh $(A,E)$ and take
+$R_0=|X|$. Then $R_0$ is independent of $\xi$. Lemma~\ref{lem:root}
+provides the multiplier equation, logarithmic nonarithmeticity, and
+$0<m_\alpha<\infty$. Taking $\gamma=0$ supplies the auxiliary coefficient
+moment. Proposition~\ref{prop:invariant} supplies every stationary moment
+below $\alpha$. Thus only \eqref{eq:renewal-condition} remains.
+
+Let $U=|\Psi_\theta(X)|$ and $W=|MX|=\xi|X|$. Stationarity gives $U$
+the law of $R_0$, and \eqref{eq:remainder} gives $|U-W|\le B_\theta$.
+Tonelli's theorem and the indicator-tail integral yield
+\begin{align}
+ &\int_0^\infty t^{\alpha-1}
+   \bigabs{\Pp(R_0>t)-\Pp(\xi R_0>t)}\dd t\nonumber\\
+ &\hspace{2em}\le
+ \E\int_0^\infty t^{\alpha-1}
+       |\ind_{\{U>t\}}-\ind_{\{W>t\}}|\dd t
+ =\frac1\alpha\E|U^\alpha-W^\alpha|.\label{eq:tail-discrepancy}
+\end{align}
+Because $1<\alpha<2$, the mean value theorem and subadditivity at
+exponent $\alpha-1$ imply
+\begin{align}
+ |U^\alpha-W^\alpha|
+ &\le\alpha B_\theta(W+B_\theta)^{\alpha-1}\nonumber\\
+ &\le\alpha\left[B_\theta^\alpha
+        +B_\theta\xi^{\alpha-1}|X|^{\alpha-1}\right].
+ \label{eq:coupled-difference}
+\end{align}
+The right side is integrable. The stationary moment of order $\alpha-1$
+is finite; $X$ is independent of the step; and the polynomial Gaussian
+envelopes give $\E[B_\theta\xi^{\alpha-1}]<\infty$. This is a
+\emph{joint} moment: independence of $B_\theta$ and $\xi$ is neither
+asserted nor needed.
+
+Lemma~\ref{lem:renewal-input} now gives a finite nonnegative limit.
+Signed Fubini is legitimate by \eqref{eq:coupled-difference}, and gives
+\begin{equation}
+ \int_0^\infty t^{\alpha-1}
+       [\Pp(U>t)-\Pp(W>t)]\dd t
+ =\frac1\alpha\E[U^\alpha-W^\alpha].\label{eq:signed-fubini}
+\end{equation}
+Substitution into \eqref{eq:renewal-constant} proves
+\eqref{eq:constant-main}. Strict positivity requires the separate
+argument that follows.
+\end{proof}
+
+\section{Strict positivity by forward excursions}\label{sec:positive}
+
+This section gives the complete positivity mechanism of the existing T228
+work of \texttt{claude-b1e26540}, in particular
+\texttt{T3\_STEP3.md} \cite{BrainT3Positive}, with every bound checked for
+the nonzero-teacher law. The steps $(A_j,E_j)$ are iid, so
+$(\xi_j,B_{\theta,j})$ are iid pairs. Their two components may be
+dependent. The tilt below acts on the \emph{complete step}; no teacher
+symmetry or rotation argument is used.
+
+\subsection{Radial comparison and the stopped likelihood ratio}
+
+Set
+\begin{equation}
+ S_0=0,\qquad S_n=\sum_{j=1}^n\log\xi_j,\qquad
+ V_n=\sum_{j=1}^n e^{-S_j}B_{\theta,j}.\label{eq:S-V}
+\end{equation}
+Repeated reverse triangle inequalities in \eqref{eq:remainder} give,
+pathwise,
+\begin{equation}
+ |X_n|\ge e^{S_n}(|X_0|-V_n).\label{eq:radial-lower}
+\end{equation}
+To see this directly, multiply
+$|X_j|\ge\xi_j|X_{j-1}|-B_{\theta,j}$ by $e^{-S_j}$ and sum the
+resulting telescoping inequalities.
+
+Tilt each complete step by $\xi^\alpha$ and call the iid product law
+$\Q$. It is a probability law because $\E\xi^\alpha=1$.
+On the sigma-field $\mathcal F_n$ of the first $n$ complete steps,
+$\mathrm d\Q/\mathrm d\Pp=e^{\alpha S_n}$. For any stopping time $\tau$
+and stopped event $F\in\mathcal F_\tau$, summing over the disjoint
+events $\{\tau=n\}$ proves
+\begin{equation}
+ \Pp(F,\tau<\infty)
+ =\E_\Q\!\left[e^{-\alpha S_\tau}
+                    \ind_{F\cap\{\tau<\infty\}}\right].
+ \label{eq:stopped-change}
+\end{equation}
+This identity makes no infinite-path absolute-continuity or uniform-
+integrability assertion. Under $\Q$, the increment $Z=\log\xi$ satisfies
+$\E_\Q|Z|<\infty$ and $\E_\Q Z=m_\alpha>0$. Hence
+$S_n\to\infty$ almost surely under $\Q$. Fix
+\begin{equation}
+ \beta=\frac12,\qquad
+ r:=\E_\Q e^{-\beta Z}=h_\eta(\alpha-\beta)<1.
+ \label{eq:r-tilt}
+\end{equation}
+The inequality holds because $0<\alpha-\beta<\alpha$.
+
+\subsection{Positive survival, tight overshoots, and finite remainder}
+
+\begin{lemma}[Three tilted-walk estimates]\label{lem:tilted-estimates}
+Under $\Q$, the following hold:
+\begin{enumerate}[label=\textnormal{(\alph*)}]
+\item The positive-survival probability obeys
+\begin{equation}
+ p_+:=\Q(S_j>0\text{ for every }j\ge1)
+ \ge p_0:=\Q(Z>1)(1-e^{-\beta})>0.\label{eq:survival}
+\end{equation}
+\item If $\tau_u=\inf\{n\ge1:S_n>u\}$ for $u\ge0$ and
+$O_u=S_{\tau_u}-u$, then the overshoots $O_u$ are uniformly tight:
+\begin{equation}
+ \sup_{u\ge0}\Q(O_u>z)
+ \le K_U\left[\Q(Z>z)+\int_z^\infty\Q(Z>v)\dd v\right]
+ \longrightarrow0,\qquad z\to\infty,\label{eq:overshoot-final}
+\end{equation}
+where $K_U=e^\beta/(1-r)$.
+\item The discounted remainder is finite almost surely, and
+\begin{equation}
+ \E_\Q V_\infty^\beta
+ \le\frac{\E_\Pp[\xi^{\alpha-\beta}B_\theta^\beta]}
+             {1-h_\eta(\alpha-\beta)}<\infty,
+ \qquad V_\infty:=\sum_{j\ge1}e^{-S_j}B_{\theta,j}.
+ \label{eq:V-infinite}
+\end{equation}
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+\emph{(a) Survival.} By \eqref{eq:r-tilt}, $e^{-\beta S_n}$ is a
+nonnegative supermartingale. Stop it at the first time an independent
+walk reaches $(-\infty,-1]$, truncated at $n$. On the event that this
+time is at most $n$, its stopped value is at least $e^\beta$.
+The supermartingale inequality and then monotone convergence give
+\begin{equation}
+ \Q\!\left(\inf_{n\ge0}S_n\le-1\right)\le e^{-\beta}.
+ \label{eq:survival-ruin}
+\end{equation}
+A first increment exceeding one followed by a fresh walk that never
+reaches $-1$ stays strictly positive. Independence proves
+\eqref{eq:survival}. The Gaussian input is unbounded, and the tilt has
+strictly positive density where $\xi>0$, so $\Q(Z>1)>0$.
+
+\emph{(b) Overshoots.} Positive drift makes $\tau_u$ finite almost surely
+under $\Q$. Chernoff's inequality and \eqref{eq:r-tilt} give
+\begin{equation}
+ \sum_{n\ge0}\Q(S_n\le1)
+ \le\sum_{n\ge0}e^\beta r^n
+ =\frac{e^\beta}{1-r}=K_U.\label{eq:occupation-base}
+\end{equation}
+For $I=(a,a+1]$, let $\nu_I$ be its first entry time, allowing time zero.
+Conditionally on $S_{\nu_I}\in I$, a later visit to $I$ entails a
+fresh-walk displacement at most one. The strong Markov property and
+\eqref{eq:occupation-base} therefore give the translated occupation bound
+\begin{equation}
+ U(I):=\sum_{n\ge0}\Q(S_n\in I)\le K_U.\label{eq:occupation-translated}
+\end{equation}
+Partition $(-\infty,u]$ into the intervals $(u-k-1,u-k]$, $k\ge0$.
+Dropping the restriction that no earlier crossing has occurred, and using
+independence of the next increment from the past, yields for $z\ge0$
+\begin{align}
+ \Q(O_u>z)
+ &\le\sum_{n\ge1}\E_\Q\!
+  \left[\ind_{\{S_{n-1}\le u\}}\,
+        \Q(Z>u+z-S_{n-1})\right]\nonumber\\
+ &\le K_U\sum_{k\ge0}\Q(Z>z+k)\nonumber\\
+ &\le K_U\left[\Q(Z>z)+\int_z^\infty\Q(Z>v)\dd v\right].
+ \label{eq:overshoot-proof}
+\end{align}
+The last expression is independent of $u$ and tends to zero because
+$\E_\Q Z^+<\infty$.
+
+\emph{(c) Discounted remainders.} Subadditivity at $\beta=1/2$, Tonelli's
+theorem, and independence of a complete step from its past imply
+\begin{align}
+ \E_\Q\left(\sum_{j\ge1}e^{-S_j}B_{\theta,j}\right)^\beta
+ &\le\sum_{j\ge1}r^{j-1}\E_\Q[\xi^{-\beta}B_\theta^\beta]\nonumber\\
+ &=\frac{\E_\Pp[\xi^{\alpha-\beta}B_\theta^\beta]}
+              {1-h_\eta(\alpha-\beta)}<\infty.
+ \label{eq:discounted-proof}
+\end{align}
+The numerator is the correct joint moment. It is finite by the polynomial
+Gaussian envelopes and $\alpha-\beta>0$; there is no inverse-multiplier
+singularity. Finite $\beta$th moment implies $V_\infty<\infty$
+almost surely under $\Q$.
+\end{proof}
+
+\subsection{A uniform excursion lower bound}
+
+\begin{lemma}[Annulus-to-tail excursion]\label{lem:excursion}
+There exist $K\ge1$ and $z\ge0$, depending on the fixed parameters but
+not on the tail threshold, such that for $t>4K$,
+\begin{equation}
+ \inf_{2K\le|y|\le4K}\Pp_y(\tau_{D_t}<\tau_C)
+ \ge\frac{p_0}{2}e^{-\alpha z}\left(\frac Kt\right)^\alpha,
+ \quad C=[-K,K],\quad D_t=\{x:|x|>t\}.
+ \label{eq:annulus-bound}
+\end{equation}
+The hitting times here start at time one.
+\end{lemma}
+
+\begin{proof}
+Choose $z\ge0$ so that \eqref{eq:overshoot-final} is at most $p_0/4$.
+Next choose $K\ge1$ so that $\Q(V_\infty>K/2)\le p_0/4$.
+Both choices precede the choice of $t$. Put $u=\log(t/K)$ and use the
+stopped event
+\begin{equation}
+ F_u=\{\tau_u<\infty,\ S_j>0\ (1\le j\le\tau_u),\
+           V_{\tau_u}\le K/2,\ O_u\le z\}.
+ \label{eq:stopped-event}
+\end{equation}
+This event belongs to $\mathcal F_{\tau_u}$. The survival event in
+\eqref{eq:survival}, minus the two exceptional events just bounded,
+is contained in $F_u$. The union bound thus gives $\Q(F_u)\ge p_0/2$.
+
+For every initial point with $2K\le|y|\le4K$, the pathwise inequality
+\eqref{eq:radial-lower} yields on $F_u$
+\begin{align}
+ |X_j|&\ge\frac{3K}{2}e^{S_j}>K\qquad(1\le j\le\tau_u),
+ \nonumber\\
+ |X_{\tau_u}|&>\frac{3K}{2}\frac tK>t.\label{eq:excursion-path}
+\end{align}
+Thus $F_u$ forces a visit to $D_t$ before $C$. Since
+$S_{\tau_u}\le u+z$ on $F_u$, the stopped identity
+\eqref{eq:stopped-change} gives
+\begin{equation}
+ \Pp(F_u)\ge e^{-\alpha(u+z)}\Q(F_u)
+ \ge\frac{p_0}{2}e^{-\alpha z}(K/t)^\alpha.
+ \label{eq:excursion-likelihood}
+\end{equation}
+This proves \eqref{eq:annulus-bound}. The initial annulus lies outside
+both target sets. Under $\Pp$, $\tau_u$ need not be almost surely finite;
+\eqref{eq:stopped-change} already restricts to the finite-crossing event.
+\end{proof}
+
+\subsection{Stationary last-exit transfer}
+
+\begin{lemma}[Last-exit inequality]\label{lem:last-exit}
+For disjoint Borel sets $C,D$ and
+$\tau_C^+=\inf\{n\ge1:X_n\in C\}$, a stationary chain satisfies
+\begin{equation}
+ \pi(D)\ge\int_C\pi(\dd x)\,\Pp_x(\tau_D<\tau_C^+).
+ \label{eq:last-exit-main}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Fix $N\ge1$. Among trajectories with $X_N\in D$, classify those having
+a visit to $C$ at a time $0,\ldots,N-1$ according to their last such
+visit. These events are disjoint. If the last visit occurs at $N-j$,
+stationarity and the Markov property express its probability as
+$\int_C\pi(\dd x)\Pp_x(X_j\in D,\ j<\tau_C^+)$. Consequently
+\begin{align}
+ \pi(D)
+ &\ge\int_C\pi(\dd x)\sum_{j=1}^N
+               \Pp_x(X_j\in D,\ j<\tau_C^+)\nonumber\\
+ &\xrightarrow[N\to\infty]{}
+ \int_C\pi(\dd x)\E_x
+     \left[\sum_{j\ge1}\ind_{\{X_j\in D,\ j<\tau_C^+\}}\right]
+ \nonumber\\
+ &\ge\int_C\pi(\dd x)\Pp_x(\tau_D<\tau_C^+).
+ \label{eq:last-exit-proof}
+\end{align}
+The passage to the infinite sum uses monotone convergence. The stationary
+integral is unnormalized; no return-time or regeneration factor is omitted.
+\end{proof}
+
+\begin{proposition}[Strictly positive tail constant]\label{prop:positive}
+For the constant from \cref{prop:tail-exists},
+$C_{\eta,\theta}>0$.
+\end{proposition}
+
+\begin{proof}
+Take $K,z$ from \cref{lem:excursion}, $C=[-K,K]$, and
+$J=\{y:2K\le|y|\le4K\}$. Lemma~\ref{lem:minorization}, with
+$R=K$ and $T=4K$, gives
+\begin{equation}
+ \inf_{x\in C}P_\theta(x,J)
+ \ge d_K:=4K\varepsilon_{K,4K}>0.\label{eq:compact-annulus}
+\end{equation}
+Here $4K$ is the Lebesgue measure of the two-component annulus $J$.
+The Markov property after the first step and \eqref{eq:annulus-bound}
+yield, uniformly for $x\in C$,
+\begin{equation}
+ \Pp_x(\tau_{D_t}<\tau_C^+)
+ \ge d_K\frac{p_0}{2}e^{-\alpha z}K^\alpha t^{-\alpha},
+ \qquad t>4K.\label{eq:central-excursion}
+\end{equation}
+Full support implies $\pi(C)>0$. Applying \cref{lem:last-exit} now gives
+\begin{equation}
+ \pi(D_t)\ge c_{\eta,\theta}t^{-\alpha},\qquad
+ c_{\eta,\theta}:=\pi(C)d_K\frac{p_0}{2}e^{-\alpha z}K^\alpha>0,
+ \quad t>4K.\label{eq:positive-lower-limit}
+\end{equation}
+Thus $\liminf_{t\to\infty}t^\alpha\pi(D_t)\ge c_{\eta,\theta}>0$.
+Combining this with the existing finite limit in
+\cref{prop:tail-exists} proves
+$C_{\eta,\theta}\ge c_{\eta,\theta}>0$.
+\end{proof}
+
+\section{Exact moment threshold and estimation error}\label{sec:moments}
+
+For a nonnegative random variable $R$ and $p>0$, Tonelli's theorem gives
+\begin{equation}
+ \E R^p=p\int_0^\infty t^{p-1}\Pp(R>t)\dd t.
+ \label{eq:tail-moment}
+\end{equation}
+The positive limit in \eqref{eq:tail-main} makes this integral diverge
+for every $p\ge\alpha$, including the logarithmic divergence at
+$p=\alpha$. Proposition~\ref{prop:invariant} proves finiteness for
+$0<p<\alpha$.
+
+A bounded translation preserves the exact tail constant. For $t>|\theta|$,
+the triangle inequality gives
+\begin{equation}
+ \Pp(|X|>t+|\theta|)
+ \le\Pp(|X-\theta|>t)
+ \le\Pp(|X|>t-|\theta|).\label{eq:shift-sandwich}
+\end{equation}
+Multiply by $t^\alpha$ and use
+$t^\alpha/(t\pm|\theta|)^\alpha\to1$. Both endpoints converge to
+$C_{\eta,\theta}$, so the estimation-error tail has the same limit.
+The same tail integral, together with bounded-shift moment inequalities,
+gives its identical moment threshold. Since $\alpha<2$, both second
+moments are infinite. This completes the proof of \cref{thm:main}.
+
+\section{The concrete nonzero-signal example}\label{sec:signal}
+
+At $\theta=1$, the labels are $Y=A+\delta\tanh A+E$, with
+\begin{equation}
+ \E[AY]=1+\delta\E[A\tanh A]>1.\label{eq:nonzero-signal}
+\end{equation}
+They contain a nonconstant input-dependent regression signal.
+More generally, the population risk has the unique minimizer $\theta$:
+\begin{align}
+ F_\theta(x):=\E f_\theta(x;A,E)
+ &=\frac12+\frac12\E[\sigma(Ax)-\sigma(A\theta)]^2\nonumber\\
+ &\ge\frac12+\frac12(x-\theta)^2.\label{eq:risk}
+\end{align}
+Here independence and the mean-zero noise remove the cross term, and
+$\sigma'\ge1$ together with $\E A^2=1$ proves the inequality.
+At $x=\theta$, the risk is exactly $1/2$, proving uniqueness.
+
+At $\eta=1$, the arithmetic in \eqref{eq:q-proof} sharpens to
+\begin{equation}
+ \E\Lip(\Psi_\theta)<\frac{97}{100}+\frac{10007}{10^6}
+ =0.980007,
+ \quad h_1(1)=\frac4{\sqrt{2\pi e}}<0.97,
+ \quad h_1(2)=2.\label{eq:eta-one}
+\end{equation}
+In particular, $\theta=\eta=1$ is a genuine nonzero-teacher example
+with an exact positive stationary estimation-error tail of index
+$\alpha(1)\in(1,2)$, uniquely specified by $\E|1-A^2|^{\alpha(1)}=1$.
+
+\section{The precise symmetry statement}\label{sec:symmetry}
+
+Oddness of $\sigma$ and evenness of $\sigma'$ imply the exact identity
+\begin{equation}
+ \Psi_{-\theta,A,-E}(-x)=-\Psi_{\theta,A,E}(x).
+ \label{eq:reflection}
+\end{equation}
+The additive noise is symmetric and the invariant law is unique, so
+$\pi_{\eta,-\theta}$ is the reflection of $\pi_{\eta,\theta}$.
+At $\theta=0$, one law is therefore symmetric, and for every $t>0$,
+$\pi_{\eta,0}((t,\infty))=\pi_{\eta,0}((-\infty,-t))
+=\pi_{\eta,0}(|x|>t)/2$. Each one-sided tail constant is
+$C_{\eta,0}/2$. Reflection also gives
+$C_{\eta,-\theta}=C_{\eta,\theta}$ for the absolute tails.
+
+At fixed $\theta\ne0$, reflection changes the parameter and is not a
+symmetry of that model. In fact exact stationary symmetry about zero is
+impossible. Stationarity, the finite first moment, and averaging out the
+fresh mean-zero noise give
+\begin{equation}
+ 0=\E\!\left[A\sigma'(AX)
+                   \bigl(\sigma(AX)-\sigma(A\theta)\bigr)\right].
+ \label{eq:mean-stationarity}
+\end{equation}
+Both terms are integrable because $\sigma'\le1+\delta$,
+$|\sigma(v)|\le(1+\delta)|v|$, and $\E_\pi|X|<\infty$.
+If $\pi$ were symmetric, $\E[A\sigma'(AX)\sigma(AX)]=0$ since its
+integrand is odd in $X$ for each fixed $A$. But
+$A\sigma'(AX)\sigma(A\theta)$ has the strict sign of $\theta$ almost
+surely when $A\ne0$, contradicting \eqref{eq:mean-stationarity}.
+Equality of asymptotic one-sided constants would require a separate
+signed-tail argument; it is not deduced here.
+
+\section{Attribution, source pins, and scope}\label{sec:attribution}
+
+The original Math Brain T228 materials already contain scalar smooth
+asymptotically linear results, a leaky-ReLU analysis, and finite-dimensional
+radial-tail arguments under their stated stability assumptions
+\cite{BrainT1,BrainT2,BrainT3Setup,BrainT3Stability,BrainT3Tail,BrainT3Positive}.
+The forward tilted-walk, overshoot, and stationary last-exit mechanism in
+\cref{sec:positive} is credited specifically to
+\texttt{claude-b1e26540}'s \texttt{T3\_STEP3.md}. This manuscript retains
+that attribution and rechecks the changed teacher-dependent label,
+remainder, complete-step tilt, and conditional Gaussian mean. The direct
+exponential-supermartingale survival bound and explicit finite-horizon
+last-exit sum are supplied in the campaign's nonzero-teacher proof.
+No discovery credit is reassigned.
+
+The principal campaign source is
+\texttt{T228\_NONZERO\_TEACHER.md}, version 1, 23 October 2026, by the
+campaign's A09 extension and verification. The baseline is
+\texttt{T228\_EXPLICIT\_CLOSURE.md}, version 2 of the same date. The
+baseline supplies an explicit average-contraction regime in addition to
+the prior stability-based arguments. The internal campaign proof-source
+SHA-256 values are recorded in \cref{app:provenance}. Independent internal
+audits are research checks; they are not external peer review or a
+journal acceptance.
+
+The sole external exact-tail theorem used in this proof is
+\cite[Theorem 3.1]{JO2012Thm31}, in the primary arXiv v5 PDF. The arXiv
+HTML rendering numbers the corresponding Section 3 statement differently;
+the citation here is to the printed PDF theorem. The background
+SGD reference \cite{Gurbuzbalaban2021} motivates the problem and does not
+replace the hypothesis verification above.
+
+The result is confined to the concrete scalar model and parameter
+rectangle in \eqref{eq:model-parameters}. It is not a theorem for arbitrary
+step sizes, all bounded activations, arbitrary nonlinear networks, or
+deep-network architectures. It does not establish monotonicity in
+$\eta/b$, vary the batch size, or certify first-in-the-literature priority.
+No simulation, numerical tail fit, or quadrature substitutes for any part
+of the proof. Unreviewed campaign extensions are excluded from this
+manuscript.
+
+\appendix
+\section{Exact arithmetic and proof-source identification}\label{app:provenance}
+
+The following identities are rational arithmetic checks, not numerical
+approximations used in place of proof.
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{@{}X>{\raggedleft\arraybackslash}p{0.37\textwidth}@{}}
+\toprule
+Quantity & Exact value \\
+\midrule
+Conservative mixed-label bound $3+2\delta$ & $1501/500=3.002$ \\
+Expected derivative perturbation $4\delta+3\delta^2+2\delta(3+2\delta)$
+ & $10007/10^6=0.010007$ \\
+Uniform contraction upper bound $q$ & $99010707/10^8=0.99010707$ \\
+Contraction margin $1-q$ & $989293/10^8=0.00989293$ \\
+Upper bound at $\eta=1$ & $980007/10^6=0.980007$ \\
+Minimum of $h_\eta(2)$ on the interval & $19603/10000=1.9603$ \\
+Squared rational normal-bound margin in \eqref{eq:rational-normal}
+ & $7532467/125000000>0$ \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\paragraph{Campaign proof inputs.}
+The exact source content used for this typesetting is identified by
+SHA-256; these are local proof revisions, not claims of publication.
+\noindent\emph{Main proof: \texttt{T228\_NONZERO\_TEACHER.md}, version 1.}\\
+\sourcehash{f95fa6fade82ba0dca4dab8e311fc61bb57b3267f3953b465c94228cb1315933}
+
+\noindent\emph{Baseline: \texttt{T228\_EXPLICIT\_CLOSURE.md}, version 2.}\\
+\sourcehash{a1dbdbb1e99a85749143f44dd8b7d7e264fb550d285c5667f69f1a35ff87c38f}
+
+\paragraph{Math Brain content pins.}
+The references below give the source paths and immutable Git blob SHA-1
+pins recovered in \texttt{a01/SOURCE\_MANIFEST.json}. A branch URL is a
+convenience link; the accompanying blob pin identifies the exact retrieved
+content. The repository is
+\href{https://github.com/<private-repo>}
+{\texttt{<private-repo>}}.
+The path prefix for the T228 entries is
+\texttt{06\_math\_research/frontier/rows/T228/}.
+The dossier itself has Git blob pin
+\sourcehash{5d95a5f8a9d830ca673e75321d66f66d9dccad45}.
+
+% Reserved appendix hook: reviewed campaign extensions may be added here
+% only after the coordinator explicitly supplies a frozen, audited source.
+% No A14/A15 theorem is imported in this version.
+
+\begin{thebibliography}{10}
+\raggedright
+\addcontentsline{toc}{section}{References}
+
+\bibitem{JO2012Thm31}
+P.~R. Jelenkovi\'c and M.~Olvera-Cravioto.
+\emph{Implicit Renewal Theory and Power Tails on Trees}.
+arXiv:1006.3295v5, 31 May 2012.
+Theorem 3.1, printed p.~5.
+\href{https://arxiv.org/abs/1006.3295v5}{Versioned primary record};
+\href{https://arxiv.org/pdf/1006.3295}{primary PDF}.
+
+\bibitem{Gurbuzbalaban2021}
+M.~G\"urb\"uzbalaban, U.~\c{S}im\c{s}ekli, and L.~Zhu.
+The Heavy-Tail Phenomenon in SGD.
+In \emph{Proceedings of the 38th International Conference on Machine
+Learning}, PMLR \textbf{139}, 3964--3975, 2021.
+\href{https://proceedings.mlr.press/v139/gurbuzbalaban21a.html}
+{Primary proceedings record};
+\href{https://arxiv.org/abs/2006.04740}{arXiv:2006.04740}.
+
+\bibitem{BrainT1}
+\texttt{codex-w688} (Math Brain).
+\emph{T228 target 1: scalar asymptotically linear SGD}, version 1.
+Path: \texttt{w688\_target1/proofs/T228\_A\_v1.md}.
+Git blob pin: \sourcehash{6056b253ff1d4b9eb2411d6dec7d25c5ce8d7523}.
+\href{https://github.com/<private-repo>/blob/main/06_math_research/frontier/rows/T228/w688_target1/proofs/T228_A_v1.md}
+{Source path}.
+
+\bibitem{BrainT2}
+\texttt{claude-4af6ff1a} (Math Brain).
+\emph{T228 target 2: scalar leaky-ReLU SGD has an exact power tail},
+version 2, 21 October 2026.
+Path: \texttt{claude\_4af6ff1a/T228\_B\_v2.md}.
+Git blob pin: \sourcehash{b7b358985ff34a9ea3fa7b35339047f0fe793822}.
+\href{https://github.com/<private-repo>/blob/main/06_math_research/frontier/rows/T228/claude_4af6ff1a/T228_B_v2.md}
+{Source path}.
+
+\bibitem{BrainT3Setup}
+\texttt{claude-b1e26540} (Math Brain).
+T228 target 3 setup, 22 October 2026.
+Path: \texttt{claude\_b1e26540/T3\_SETUP.md}.
+Git blob pin: \sourcehash{de30be030e66bf30700ba818a5155c9d6c4e3562}.
+\href{https://github.com/<private-repo>/blob/main/06_math_research/frontier/rows/T228/claude_b1e26540/T3_SETUP.md}
+{Source path}.
+
+\bibitem{BrainT3Stability}
+\texttt{claude-b1e26540} (Math Brain).
+T228 target 3, step 1, 22 October 2026.
+Path: \texttt{claude\_b1e26540/T3\_STEP1.md}.
+Git blob pin: \sourcehash{c169b975cd3a5d8ed1f554214d010da1c587e96d}.
+\href{https://github.com/<private-repo>/blob/main/06_math_research/frontier/rows/T228/claude_b1e26540/T3_STEP1.md}
+{Source path}.
+
+\bibitem{BrainT3Tail}
+\texttt{claude-b1e26540} (Math Brain).
+T228 target 3, step 2, 22 October 2026.
+Path: \texttt{claude\_b1e26540/T3\_STEP2.md}.
+Git blob pin: \sourcehash{04d08036877af25a6d083247fdbfbf834ae0206e}.
+\href{https://github.com/<private-repo>/blob/main/06_math_research/frontier/rows/T228/claude_b1e26540/T3_STEP2.md}
+{Source path}.
+
+\bibitem{BrainT3Positive}
+\texttt{claude-b1e26540} (Math Brain).
+\emph{T228 target 3, step 3: the tail constant is strictly positive},
+22 October 2026.
+Path: \texttt{claude\_b1e26540/T3\_STEP3.md}.
+Git blob pin: \sourcehash{a3adfc7537b6a8f51b796539c5063b07a23fca39}.
+\href{https://github.com/<private-repo>/blob/main/06_math_research/frontier/rows/T228/claude_b1e26540/T3_STEP3.md}
+{Source path}.
+
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-23",
+  "corrections": [
+    {
+      "id": "A02",
+      "current_path": "a02/CONTINUOUS_KERNEL_EXTENSION.md",
+      "current_sha256": "5cd1bdd401d2efbd15433e9fa5fc1834e792424fa70fba552da85b776ef45566",
+      "historical_path": "campaign/history/A02_CONTINUOUS_KERNEL_EXTENSION_v1.md",
+      "historical_sha256": "0eb859b59c44b6396b65c98b90b5874eab1bfdf8262dc1710dfc024b4efe0543",
+      "change": "Clarified that boundedness alone is insufficient for all kernels, without asserting continuity is necessary for every kernel/regime.",
+      "review": "A19",
+      "status": "CORRECTED_WITH_HISTORY_PRESERVED"
+    },
+    {
+      "id": "A05",
+      "current_path": "a05/ERM_BRIDGE.md",
+      "current_sha256": "97eeb783f610ea4ce4ead20c547a0ec65ebc4ca0320d7a07e4d38c05bf936d96",
+      "historical_path": "campaign/history/A05_ERM_BRIDGE_v1.md",
+      "historical_sha256": "c7fcd6fdfa4b0a3d0c7af44e4760db75fd59fabd6c2114629c6bc0b64677144f",
+      "change": "W bounds every fixed or trainable core and readout coefficient; external clips are handled separately.",
+      "review": "A20",
+      "status": "CORRECTED_WITH_HISTORY_PRESERVED"
+    },
+    {
+      "id": "A06",
+      "current_path": "a06/T421_conditional_classification.md",
+      "current_sha256": "c70f7b419ba161a21c53dfd86ea629e11f173fe920effbb8086770094c1ebd2e",
+      "historical_path": "campaign/history/A06_T421_conditional_classification_v1.md",
+      "historical_sha256": "f7e1a52a4126001fa26180e1b2832d215eeb4e97d9d161a65ae6136202096400",
+      "change": "Specialize beta1=0.9 before using threshold 38; general K retained elsewhere.",
+      "review": "A21 recommends; root applied; A30 final scope check",
+      "status": "CORRECTED_WITH_HISTORY_PRESERVED"
+    },
+    {
+      "id": "A06-claims",
+      "current_path": "a06/CLAIMS.jsonl",
+      "current_sha256": "1025c9f7e428b28f683db2a006a09a9cd768ffa4c6fca555b35e35f0da80ff4c",
+      "historical_path": "campaign/history/A06_CLAIMS_v1.jsonl",
+      "historical_sha256": "bddd571a75d22177c064194ff1381c682f1ae85e1d19336d9f29e1f96ad35784",
+      "change": "State beta1=0.9 in claim C2.",
+      "review": "Root scope reconciliation",
+      "status": "CORRECTED_WITH_HISTORY_PRESERVED"
+    },
+    {
+      "id": "A13",
+      "current_path": "campaign/checks/A13_tail_index_certificate.py",
+      "current_sha256": "ce9e6b42e901d7ffa06c11cbc6e35e6f2ad8b3216e957896374a9e4527a0bb58",
+      "historical_path": "campaign/history/A13_tail_index_certificate_v1.py",
+      "historical_sha256": "f3b81bb6b7b3520c842e21dfa7faa919c104e0ff21b68e44d85864b66d359ff4",
+      "change": "Reject optimized Python before computation, retaining the numerical algorithm; historical false-PASS fixture is invalid negative-test evidence.",
+      "review": "A24",
+      "status": "CORRECTED_WITH_HISTORY_PRESERVED"
+    },
+    {
+      "id": "BASELINE-V1",
+      "historical_sha256": "9d0ef065e10642dbc8967870bdc3f368300424659f9316456355775264133287",
+      "status": "HISTORICAL_DRAFT_BYTES_NOT_RETAINED",
+      "reason": "The earliest editable candidate was superseded before a separate snapshot was retained. Its recorded hash is preserved; no replacement bytes are claimed. Current version 2 retains the theorem and all estimates and explicitly adds gamma=0 and the finite-stopping-time likelihood convention. All current proof inputs and the full self-contained extension are retained and independently accepted.",
+      "current_path": "campaign/proofs/T228_EXPLICIT_CLOSURE.md",
+      "current_sha256": "a1dbdbb1e99a85749143f44dd8b7d7e264fb550d285c5667f69f1a35ff87c38f",
+      "mathematical_dependency_on_missing_bytes": false
+    },
+    {
+      "id": "result-counting-clarification",
+      "historical_path": "campaign/history/RESULT_before_counting_clarification.md",
+      "historical_sha256": "70f1a221d08b1b784ea9d2ea11f963483666092662fbf24cbf51c8f855de1555",
+      "current_path": "campaign/RESULT.md",
+      "current_sha256": "7ad4e48754b5384d433ce3ca1dcee9134d770be51da6159f29027911a90f6274",
+      "reason": "A30 follow-up removed the ordinal second-solved-row endorsement after checking a concurrent provenance notice. Mathematical acceptance and all proof bytes are unchanged. See campaign/reviews/A30_followup_scope.md."
+    }
+  ]
+}

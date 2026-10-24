@@ -1,0 +1,7 @@
+# Root integration audit
+
+Read the complete frozen entrance, all-mixed entrance, local network proof and independent global reviews. The important new step is the one-sided certificate valid beyond strict attraction; its induction uses only bounded mixed-sign coefficients and the exact increasing tangential coordinate. Horizon-sized barrier constants are chosen before finite certificate matching. Random maximum certificate indices are localized before fixed-grid convergence. The prior unselected action has nonnegative off-diagonal for rho>0, so mixed-sign persistence is established before selecting atoms; there is no circular reliance on the desired law.
+
+The limiting support is proved strictly positive by its integral lower bound, rather than inferred from positive finite-width gates. Finite cutoffs and uniform small-square-mass removal avoid a fictitious common margin across infinitely many atoms. Signs of the negative-z reflected population and factors of z² in the residual identity check. The two reflection maps are prefix Lipschitz, giving global Volterra uniqueness. Independent stable masses and gamma independence are confined to the double cone. No kernel L1/J1 claim or full T384 closure follows.
+
+The exact-rational script was rerun and its entire stdout matched the saved output. It checks deterministic endpoint algebra, not stochastic network convergence. Verdict: internal PROVED status for the explicitly scoped all-mixed positive-correlation theorem; external priority and native ingestion remain unverified.

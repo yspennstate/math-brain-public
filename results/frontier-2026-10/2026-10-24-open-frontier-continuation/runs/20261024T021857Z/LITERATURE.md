@@ -1,0 +1,7 @@
+# Literature and dependencies
+
+Primary sources re-opened 2026-10-24 UTC: Min, Mallada and Vidal, Early Neuron Alignment in Two-layer ReLU Networks with Small Initialization, ICLR 2024, https://arxiv.org/html/2307.12851v2; Bastien and Schatzman, Numerical precision for differential inclusions with uniqueness, ESAIM M2AN 36 (2002), 427–460, https://www.numdam.org/item/M2AN_2002__36_3_427_0/. These provide related activation-cone and monotone-inclusion context. Our proofs are direct; no implicit-Euler result is substituted for actual explicit GD. External novelty is UNVERIFIED, and the general reflection mechanism is classical.
+
+Favaro, Fortini and Peluchetti's published TMLR November 2024 stable-ReLU manuscript was read in prior checkpoints. Its Bocconi PDF returned HTTP 403 on this run's attempted open; no retry or alternate access to denied content was used. This run makes no new claim based on unread portions. Prior literature records remain the provenance for stable-network background.
+
+Exact private mathematical dependencies: run20261023T232238Z BOUNDARY_GRID.md and MACRO_COMPACTNESS.md (Math proof commit 49f658c55db49d7da3b5f7410ccf9e17e797d76c, Brain 59e2e1cfccb81c8e58439e2acd9156739c1e44c8); run20261024T012528Z monotone relay/reflection/phase results (Math 4c83c5bc956c8578b2d865ac64ac7edd1c5dbc00, Brain 1179b6c36ebb777aecf775c97432efee7c2d2929). They retain their original model, normalization, compactness and cutoff assumptions. The new theorem is not a settlement of deep stable-network training.

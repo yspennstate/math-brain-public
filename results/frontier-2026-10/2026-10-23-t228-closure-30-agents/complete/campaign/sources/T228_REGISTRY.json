@@ -1,0 +1,30 @@
+{
+  "rank": 206,
+  "problem_id": "T228",
+  "title": "Heavy-tailed stationary behaviour of SGD on neural-network losses",
+  "domain": "NNT",
+  "domain_name": "Deep learning: training dynamics and optimization",
+  "statement": "Simsekli et al. observed that SGD gradient noise in deep networks is heavy-tailed, and Gurbuzbalaban, Simsekli and Zhu proved for linear regression that the SGD iterates converge to a stationary law with power-law tails whose index alpha decreases as eta/b (step over batch) grows. The same paper states a criterion for nonlinear recursions (its Theorem 1, Mirek-type asymptotically linear random maps). Verify it for a concrete nonlinear model: e.g. constant-step SGD with batch b on a generalized linear model or a two-layer network with a smooth bounded activation, Gaussian inputs and persistent label noise. Prove that the iterates have a stationary law, that the recursion contracts on average and is asymptotically linear with a non-arithmetic multiplier and a nonzero tail constant, so that the stationary tail is a power law with index given by the Lyapunov equation, with alpha < 2 in a nonempty range of (eta, b).",
+  "statement_caveat": "For linear regression the result follows from Kesten's theory of random affine recursions; nonlinear networks give non-affine random iterations. Monotonicity of the index in eta/b is proved under Gaussian data (assumption A3) and alpha >= 1 (auditor codex-w687, 16 Oct).",
+  "source": "M. Gurbuzbalaban, U. Simsekli and L. Zhu, The Heavy-Tail Phenomenon in SGD, arXiv:2006.04740 (2020); U. Simsekli, L. Sagun and M. Gurbuzbalaban, A Tail-Index Analysis of Stochastic Gradient Noise in Deep Neural Networks, arXiv:1901.06053 (2019)",
+  "locator": "2006.04740 Theorem 1 (PDF p4); Theorems 2-4 and Proposition 5 (PDF pp7-8). Read by codex-w687, 16 Oct.",
+  "url": "https://arxiv.org/abs/2006.04740",
+  "why_important": "Heavy tails change what 'SGD finds' (Lévy-driven rather than Brownian exploration) and have been tied to generalization; a theorem for nonlinear models would turn an empirical claim into probability.",
+  "where_it_stands": "Linear case proved; nonlinear results under strong assumptions only (to verify). Open in general.",
+  "where_it_stands_checked": false,
+  "note": "Fame: connects SGD to Kesten's random recursion theory; widely cited line.",
+  "ledger_status": "unverified",
+  "retired_reason": "",
+  "list": "TOP200_DL",
+  "list_version": "2026-10-14",
+  "audit": {
+    "at": "2026-10-16T02:21:14.458199+03:00",
+    "status": "PARTLY",
+    "status_ref": "arXiv:2006.04740, Theorem 1 (Mirek-type nonlinear recursions), PDF p4; Theorems 2-4 and Proposition 5, PDF pp7-8",
+    "statement_ok": "NO: specify nonlinear model, loss, sample law, persistent label noise, recurrence/contraction assumptions and tail observable; without these a stationary distribution need not exist, nor be heavy-tailed",
+    "replace_with": "Choose a concrete nonlinear regression law and prove average contraction, asymptotic linearity, a nonarithmetic multiplier and a nondegenerate tail constant before asking for the tail index.",
+    "solver_shape": "DAYS: a scalar smooth bounded perturbation of linear regression may satisfy the already-stated Mirek criterion; verify all recurrence and tail-nondegeneracy hypotheses explicitly.",
+    "locator": "2006.04740 Section 3.1 Theorem 1, PDF p4; Section 3.2 Theorems 2-4 and Proposition 5, PDF pp7-8; 1901.06053 Section 5 Conclusion and Open Problems, PDF pp10-11"
+  },
+  "changed_since_audit": true
+}

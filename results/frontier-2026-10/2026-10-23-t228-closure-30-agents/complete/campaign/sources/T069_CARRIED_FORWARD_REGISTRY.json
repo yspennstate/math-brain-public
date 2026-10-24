@@ -1,0 +1,22 @@
+{
+  "rank": null,
+  "problem_id": "T069",
+  "title": "The storage capacity of the binary perceptron (Krauth–Mézard)",
+  "domain": "RG",
+  "domain_name": "Random graphs and random constraint satisfaction",
+  "statement": "For the binary perceptron, find σ ∈ {−1, 1}^N with ⟨g_a, σ⟩ ≥ 0 for M = αN iid standard Gaussian vectors g_a; the satisfiability threshold is α_c ≈ 0.833, the value of the Krauth–Mézard replica formula.",
+  "statement_caveat": "",
+  "source": "W. Krauth and M. Mézard, Storage capacity of memory networks with binary couplings, J. Phys. France 50 (1989); E. Gardner and B. Derrida, Optimal storage properties of neural network models, J. Phys. A 21 (1988)",
+  "locator": "",
+  "url": "",
+  "why_important": "The classical capacity question for neural networks with discrete weights, and a test case for replica predictions in a model with frozen, isolated solutions.",
+  "where_it_stands": "Claimed proof: Y. Shmalo (arXiv:2607.11010), computer-assisted, Gaussian and subgaussian disorder, awaiting independent reproduction. Before that: the lower bound matching Krauth–Mézard (Ding–Sun 2019), a sharp threshold sequence (Xu 2021), the threshold under a numerical hypothesis (Huang 2024); the symmetric binary perceptron threshold (Perkins–Xu 2021; Abbe–Li–Sly 2022).",
+  "where_it_stands_checked": false,
+  "note": "",
+  "ledger_status": "retired",
+  "retired_reason": "SOLVED (claimed): Y. Shmalo (arXiv:2607.11010) gives a computer-assisted proof, at κ = 0, that the capacity satisfies M_N/N → α_⋆ ∈ [0.833078599, 0.833078600], verifying the Ding–Sun and Huang conditions in Arb interval arithmetic, for Gaussian disorder and for every fixed iid mean-zero unit-variance subgaussian law, Bernoulli included. Reproduced internally and audited by a second system; not yet independently reproduced or peer reviewed (brain memory ising_perceptron_release_verified_2026_07_13). Read from the arXiv abstract 14 Oct.",
+  "list": "TOP200_RETIRED",
+  "list_version": "2026-10-14",
+  "audit": {},
+  "changed_since_audit": false
+}

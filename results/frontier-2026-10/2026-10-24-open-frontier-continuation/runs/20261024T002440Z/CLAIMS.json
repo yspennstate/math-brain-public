@@ -1,0 +1,74 @@
+{
+  "run": "20261024T002440Z",
+  "catalog_row": "T384",
+  "catalog_status": "OPEN",
+  "status_meaning": "PROVED means internally derived and reviewed under explicit dependencies; not external peer review or novelty clearance.",
+  "claims": [
+    {
+      "id": "T384-R002440-01",
+      "status": "PROVED",
+      "claim": "Exact discrete frozen two-input negative-correlation mixed-cone entrance selector, including open overshoot discrepancy from continuous entrance.",
+      "proof": "agents/f01_entrance.md",
+      "reviews": [
+        "agents/f04_audit.md",
+        "reviews/ROOT_PROOF_REVIEW.md"
+      ]
+    },
+    {
+      "id": "T384-R002440-02",
+      "status": "PROVED",
+      "claim": "Conditional on R1<0<R2, actual critical-step GD has selected global fixed-horizon output law r=exp(-Qt)R, Q=C+diag(P1,P2); L1 and positive-time uniform pre-step Gram convergence. Two unit inputs, -1<rho<0, fixed gamma>0, iid symmetric alpha-stable original coordinates, shallow network.",
+      "proof": "agents/f03_cone.md",
+      "reviews": [
+        "reviews/f04_f02_f03_review.md",
+        "reviews/ROOT_PROOF_REVIEW.md"
+      ]
+    },
+    {
+      "id": "T384-R002440-03",
+      "status": "PROVED",
+      "claim": "For rho=-.5 and gamma 1 versus .1, same-initialization fixed-time output separation has positive limiting probability.",
+      "proof": "agents/f02_separation.md",
+      "reviews": [
+        "reviews/f04_f02_f03_review.md",
+        "reviews/ROOT_PROOF_REVIEW.md"
+      ]
+    },
+    {
+      "id": "T384-R002440-04",
+      "status": "PROVED",
+      "claim": "For rho=-.5, gamma 1 and .1 have distinct selected conditional path laws and disjoint sets of unconditioned subsequential output path laws; unconditioned full convergence not asserted.",
+      "proof": "reviews/MARGINAL_LAW_REVIEW.md",
+      "reviews": [
+        "reviews/ROOT_PROOF_REVIEW.md"
+      ]
+    },
+    {
+      "id": "T384-R002440-05",
+      "status": "PROVED",
+      "claim": "Conditional independent Levy-thinned selected masses; finite-gamma masses nonstable; almost-sure iterated gamma\u21920 and gamma\u2192infinity limits; nested-grid ordering.",
+      "proof": "CONDITIONAL_LAW.md",
+      "reviews": [
+        "reviews/f03_conditional_law_review.md",
+        "reviews/f04_conditional_law_review.md"
+      ]
+    },
+    {
+      "id": "T384-R002440-06",
+      "status": "DISPROVED",
+      "claim": "The same mark selector is monotone in every real gamma, or always equals the continuous entrance selector.",
+      "counterexample": "agents/f01_entrance.md"
+    },
+    {
+      "id": "T384-R002440-07",
+      "status": "OPEN",
+      "claim": "General residual-dependent nonorthogonal sliding/exit selection, full T384 deep training, simultaneous gamma_m\u21920 limit, test predictions."
+    },
+    {
+      "id": "T384-R002440-08",
+      "status": "OPEN",
+      "claim": "External priority and native ingestion confirmation."
+    }
+  ],
+  "native_claim_ids": []
+}

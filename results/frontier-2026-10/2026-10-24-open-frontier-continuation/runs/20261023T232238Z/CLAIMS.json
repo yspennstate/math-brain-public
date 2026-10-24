@@ -1,0 +1,124 @@
+{
+  "run": "20261023T232238Z",
+  "catalog_row": "T384",
+  "full_row_status": "OPEN",
+  "external_priority": "UNVERIFIED",
+  "native_claim_ids": null,
+  "claims": [
+    {
+      "id": "R2322-NONORTHOGONAL-GRID",
+      "status": "PROVED",
+      "statement": "For fixed full-row-rank inputs, iid symmetric alpha-stable initialization, and actual simultaneous GD h=gamma/(log m)^(1/alpha), joint marked-Poisson limits for every fixed finite boundary-step vector of tangent Grams and scaled output increments; gates may reactivate.",
+      "proof": "BOUNDARY_GRID.md",
+      "reviews": [
+        "reviews/e04_boundary_review.md",
+        "reviews/e03_boundary_review.md",
+        "reviews/e01_boundary_grid_review.md"
+      ],
+      "dependency": "Prior joint signed-ray initialization; extension uses full row rank, not orthogonality.",
+      "excludes": [
+        "growing step count",
+        "macroscopic nonorthogonal limit",
+        "absorbed projected gates",
+        "deep networks"
+      ]
+    },
+    {
+      "id": "R2322-POINTWISE-FLOW-EXISTS",
+      "status": "DISPROVED",
+      "statement": "The pointwise ReLU derivative 1{v>0} always defines a continuable parameter-gradient Caratheodory flow for nonorthogonal squared-loss inputs.",
+      "counterexample": "agents/e01_obstruction.md",
+      "reviews": [
+        "reviews/e02_obstruction_review.md",
+        "reviews/ROOT_REVIEW.md"
+      ],
+      "scope": "Fixed labels (-1,1), rho=1/2, each fixed m>=2; an open iid-stable positive-probability initial event. No uniform-in-width probability claim."
+    },
+    {
+      "id": "R2322-FINITE-WIDTH-SLIDE",
+      "status": "PROVED",
+      "statement": "On the constructed event, the local full-loss Clarke and Filippov hulls agree and force the explicit unique sliding continuation, with Schur-complement output action.",
+      "proof": "agents/e01_obstruction.md",
+      "reviews": [
+        "reviews/e02_obstruction_review.md",
+        "reviews/ROOT_REVIEW.md"
+      ]
+    },
+    {
+      "id": "R2322-FROZEN-PAIR",
+      "status": "PROVED",
+      "statement": "For a nondegenerate frozen residual and nonorthogonal pair, generic interior marks have unique Filippov endpoint evolution with finitely many sector/face events and an eventual affine ray; original marks can select different collapsed-origin limits.",
+      "proof": "agents/e02_endpoint.md",
+      "reviews": [
+        "reviews/e01_endpoint_review.md",
+        "reviews/ROOT_REVIEW.md"
+      ],
+      "excludes": [
+        "evolving network residual",
+        "arbitrary degenerate or exceptional marks"
+      ]
+    },
+    {
+      "id": "R2322-FACE-CAPTURE",
+      "status": "PROVED",
+      "statement": "A local frozen endpoint face with z*r_B<0 and strict feasible fractional gates has unique convex-inclusion flow, vanishing-Euler-step selection, finite-time capture and Schur-complement output action.",
+      "proof": "FACE_SCHUR.md",
+      "review": "reviews/e04_face_review.md",
+      "scope": "Before any other active/inactive projection changes sign; full-rank fixed X."
+    },
+    {
+      "id": "R2322-EULER-CHATTER",
+      "status": "PROVED",
+      "statement": "Frozen two-input attracting-face Euler dynamics admit exact strip, occupation and tangent-elimination identities, O(gamma) output/path error, and explicit phase-sensitive secant averages.",
+      "proof": "agents/e03_discrete.md",
+      "review": "reviews/ROOT_REVIEW.md",
+      "execution": "outputs/e03_chatter_check.txt"
+    },
+    {
+      "id": "R2322-AVERAGED-TANGENT-LAW",
+      "status": "DISPROVED",
+      "statement": "Averaging the pre-step binary tangent Gram necessarily gives the output-generating matrix on a sliding endpoint.",
+      "counterexample": "agents/e03_discrete.md",
+      "exact_example": "rho=1/2,z=1,r=(-1,1): averaged pre-step action (-1/4,3/4), actual output action (0,3/4)."
+    },
+    {
+      "id": "R2322-KERNEL-L1-MEAN",
+      "status": "DISPROVED",
+      "statement": "The rapidly switching frozen-endpoint tangent kernel converges in L1 to its time mean as the Euler step vanishes.",
+      "counterexample": "agents/e03_discrete.md",
+      "scope": "The explicit deterministic sliding toy; not a stochastic network impossibility theorem."
+    },
+    {
+      "id": "R2322-VARYING-RESIDUAL-CONE",
+      "status": "CONDITIONAL",
+      "statement": "For frozen endpoint z, varying residual, positive second gate and bounded strictly inward normal drifts, the invariant strip and discrete Schur output identity persist.",
+      "proof": "agents/e03_discrete.md equation (10a)",
+      "review": "reviews/ROOT_REVIEW.md",
+      "unpaid_gap": "Prove network entrance/persistence/exit of cone, control changing W, and sum over endpoint cohorts."
+    },
+    {
+      "id": "R2322-MACRO-COMPACTNESS",
+      "status": "PROVED",
+      "statement": "For actual simultaneous GD with h=gamma/L and arbitrary fixed full-row-rank inputs, output tightness on every fixed physical horizon and a marked-endpoint differential-inclusion representation of every subsequential limit; uniform small-atom removal and PSD limiting residual action imply exponential residual decay.",
+      "proof": "MACRO_COMPACTNESS.md",
+      "reviews": [
+        "reviews/e04_macro_review.md",
+        "reviews/e03_macro_review.md"
+      ],
+      "scope": "Subsequential characterization only; no selected unique law, no tangent-Gram convergence, no width/infinite-time interchange.",
+      "dependency": "Established joint signed-ray/marked-endpoint initialization."
+    },
+    {
+      "id": "R2322-MACROSCOPIC-NONORTHOGONAL",
+      "status": "OPEN",
+      "statement": "Mark-dependent entrance/transition selection and uniqueness for the nonorthogonal macroscopic inclusion.",
+      "unpaid_gap": "MACRO_COMPACTNESS pays growing-step tightness, frozen Gram, small-atom uniformity and residual action. Still unpaid: initial-mark entrance selection, residual-dependent face transitions, stability and uniqueness of the selected system, and any pre-step kernel topology."
+    },
+    {
+      "id": "R2322-FULL-T384",
+      "status": "OPEN",
+      "statement": "General deep stable network training dynamics, test-input prediction and feature-learning law.",
+      "unpaid_gap": "Current results are shallow fixed-dimensional scopes; no general deep or prediction law."
+    }
+  ]
+}

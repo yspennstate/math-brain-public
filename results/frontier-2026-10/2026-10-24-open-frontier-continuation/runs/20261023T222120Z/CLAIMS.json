@@ -1,0 +1,75 @@
+{
+  "run": "20261023T222120Z",
+  "catalog_row": "T384",
+  "full_row_status": "OPEN",
+  "external_priority": "UNVERIFIED",
+  "native_claim_ids": null,
+  "claims": [
+    {
+      "id": "R2221-INIT",
+      "status": "PROVED",
+      "statement": "Joint rotated two-input F,C,marked-output-weight PPP initialization with independent primitive components and full target support.",
+      "proof": "agents/c01.md#1-joint-initialization-lemma",
+      "review": "reviews/c03_root_review.md"
+    },
+    {
+      "id": "R2221-LATER",
+      "status": "PROVED",
+      "statement": "For all fixed 0<alpha<2, rotated x1=(1,1)/sqrt2,x2=(1,-1)/sqrt2 and y=0 under absorbing ReLU flow, some fixed 0<delta<2,eta,p>0 satisfy liminf P(sup_[delta,2]||H_m(t)-H_m(delta)||op>eta)>=p.",
+      "proof": "ROTATED_NONFREEZING.md",
+      "review": "reviews/c03_root_review.md",
+      "assumptions": [
+        "iid standard symmetric alpha-stable initialization in original coordinate basis",
+        "no biases; output scale (m log m)^(-1/alpha)",
+        "both layers trained on half squared loss with multiplier (log m)^(2/alpha)",
+        "explicit absorption of each zero projected coordinate"
+      ]
+    },
+    {
+      "id": "R2221-GLOBAL-FREEZE",
+      "status": "DISPROVED",
+      "statement": "The standard-coordinate constant post-initial-layer kernel conclusion extends to every orthogonal rotation.",
+      "counterexample": "ROTATED_NONFREEZING.md",
+      "review": "reviews/c03_root_review.md"
+    },
+    {
+      "id": "R2221-EULER1",
+      "status": "PROVED",
+      "statement": "Exact joint one-step critical-Euler endpoint kernel, integrated output increment and nonzero initial-tangent residual correction; h_m=gamma/(log m)^(1/alpha).",
+      "proof": "agents/c02.md",
+      "review": "reviews/c01_discrete_review.md",
+      "limitations": [
+        "scalar input",
+        "one simultaneous explicit gradient step",
+        "no many-step or macroscopic GD theorem"
+      ]
+    },
+    {
+      "id": "R2221-EULER-PATH",
+      "status": "DISPROVED",
+      "statement": "A zero-order-held Euler boundary path at fixed critical gamma obeys the continuous-flow boundary J1 law.",
+      "proof": "agents/c02.md",
+      "review": "reviews/c01_discrete_review.md"
+    },
+    {
+      "id": "R2221-LOCAL-CLOCK",
+      "status": "CONDITIONAL",
+      "statement": "Constant-phase approximation under strict signed cumulative-residual margin.",
+      "proof": "agents/c01.md#2-a-rigorous-reduction-before-cumulative-residual-reversal",
+      "unpaid_gap": "Separate full audit of the stopped-clock proof, especially uniform stopping-time passage; source author supplies a proof but main reviewer only audited initialization and nonfreezing."
+    },
+    {
+      "id": "R2221-MIXED-SIGN",
+      "status": "PROVED",
+      "statement": "Strict mixed-sign residual cone is invariant for the orthogonal two-input flow with nonnegative C12; this route cannot produce a cumulative sign reversal.",
+      "proof": "agents/c03.md",
+      "review": "Root checked transformed Metzler sign cone; no separate review file."
+    },
+    {
+      "id": "R2221-HYBRID",
+      "status": "OPEN",
+      "statement": "Full rotated-input path convergence, first cumulative-return switching law, and post-switch uniqueness.",
+      "precise_gap": "Uniform gate control through the shrinking transverse-crossing interval; path topology and random hitting-time convergence; subsequent population bookkeeping."
+    }
+  ]
+}

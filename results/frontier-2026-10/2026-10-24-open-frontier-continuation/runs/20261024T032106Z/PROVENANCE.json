@@ -1,0 +1,159 @@
+{
+  "run": "20261024T032106Z",
+  "catalog_row": "T384",
+  "catalog_status": "OPEN",
+  "prior_checkpoint": "20261024T021857Z",
+  "root_actual_model": "UNKNOWN",
+  "root_actual_reasoning": "UNKNOWN",
+  "workers": [
+    {
+      "name": "i01_entrance",
+      "selected_model": "gpt-6-sol",
+      "selected_reasoning": "max",
+      "actual_backend": "UNKNOWN"
+    },
+    {
+      "name": "i02_matching",
+      "selected_model": "gpt-6-sol",
+      "selected_reasoning": "max",
+      "actual_backend": "UNKNOWN"
+    },
+    {
+      "name": "i03_audit",
+      "selected_model": "gpt-6-sol",
+      "selected_reasoning": "max",
+      "actual_backend": "UNKNOWN"
+    }
+  ],
+  "concurrency_limit": 7,
+  "workers_used": 3,
+  "continuation_tree_at_start": "33ca3bf14bae08229d204bd79b91544904b03f52",
+  "catalog_blob": "b8d4607e60eafcce5b3e8286cf882e8931737bd6",
+  "catalog_rows": 422,
+  "row_moves_blob": "6289f46595e36a85cd9388d16c84f89bc57fc774",
+  "prior_reads_both_brains": [
+    {
+      "repo": "yspennstate/math-research-brain",
+      "path": "CLAIMS.json",
+      "sha": "662aa10ee7451b081cac0ad91adeff05d6572dfc"
+    },
+    {
+      "repo": "yspennstate/math-research-brain",
+      "path": "ALL_MIXED_ENTRANCE.md",
+      "sha": "f02c08489173602dde9808aca6c69effc18a62d9"
+    },
+    {
+      "repo": "yspennstate/math-research-brain",
+      "path": "ALL_MIXED_LIMIT.md",
+      "sha": "4cb18ad70ef8918eba80d854353701f9d080f464"
+    },
+    {
+      "repo": "yspennstate/math-research-brain",
+      "path": "GLOBAL_REFLECTION.md",
+      "sha": "ed936939562760f0fed487cd0db886b229be472f"
+    },
+    {
+      "repo": "yspennstate/math-research-brain",
+      "path": "agents/h02_local_law.md",
+      "sha": "1c7497fcaae7e8ba82b2f8dce069833ed28eeaf9"
+    },
+    {
+      "repo": "yspennstate/math-research-brain",
+      "path": "reviews/h03_all_mixed_review.md",
+      "sha": "99304f7a21a3bf2b3307f7e12ea78e397d090c0e"
+    },
+    {
+      "repo": "yspennstate/math-research-brain",
+      "path": "DIRECTIONS.md",
+      "sha": "c74bd6e8ae4760af0674afb303b0364da10b10b8"
+    },
+    {
+      "repo": "<private-repo>",
+      "path": "CLAIMS.json",
+      "sha": "662aa10ee7451b081cac0ad91adeff05d6572dfc"
+    },
+    {
+      "repo": "<private-repo>",
+      "path": "ALL_MIXED_ENTRANCE.md",
+      "sha": "f02c08489173602dde9808aca6c69effc18a62d9"
+    },
+    {
+      "repo": "<private-repo>",
+      "path": "ALL_MIXED_LIMIT.md",
+      "sha": "4cb18ad70ef8918eba80d854353701f9d080f464"
+    },
+    {
+      "repo": "<private-repo>",
+      "path": "GLOBAL_REFLECTION.md",
+      "sha": "ed936939562760f0fed487cd0db886b229be472f"
+    },
+    {
+      "repo": "<private-repo>",
+      "path": "agents/h02_local_law.md",
+      "sha": "1c7497fcaae7e8ba82b2f8dce069833ed28eeaf9"
+    },
+    {
+      "repo": "<private-repo>",
+      "path": "reviews/h03_all_mixed_review.md",
+      "sha": "99304f7a21a3bf2b3307f7e12ea78e397d090c0e"
+    },
+    {
+      "repo": "<private-repo>",
+      "path": "DIRECTIONS.md",
+      "sha": "c74bd6e8ae4760af0674afb303b0364da10b10b8"
+    }
+  ],
+  "prior_full_contents_equal": true,
+  "latest_transport": {
+    "action": "delivered",
+    "request": "REQ-20261023-CODEX30-OPEN-PROBLEM-FRONTIER",
+    "revision": 11,
+    "event_id": "868e2d68-8cb7-4321-9154-1bbde5439672",
+    "from": "relay:live-inbox-<machine>",
+    "to": [
+      "codex:open-frontier-20261023-b6cbf133"
+    ],
+    "reply_to": "REQ-20261023-CODEX30-OPEN-PROBLEM-FRONTIER--codex--completed-11-reflected-021857Z.json",
+    "source": {
+      "repository": "yspennstate/math-research-brain",
+      "path": "scheduled_tasks/handoffs/brain-inbox/messages/REQ-20261023-CODEX30-OPEN-PROBLEM-FRONTIER--codex--completed-11-reflected-021857Z.json",
+      "commit": "33680f25521667f367260032c43ba227203ef37f",
+      "blob": "90d118b0a94a21658710b4f8956134c544fd4eee",
+      "sha256": "3e3cb87aba63b3e677a66dae84249e2eab70813ab3094b4cb4a582eadbba5569"
+    },
+    "committed_at": "2026-10-24T02:30:24Z",
+    "observed_at": "2026-10-24T02:31:34.760Z",
+    "delivered_at": "2026-10-24T02:32:33.725Z",
+    "delivered_to": [
+      "claude-a08bb916"
+    ],
+    "not_delivered": {},
+    "recipient_state": {
+      "claude-a08bb916": "live"
+    },
+    "unrouted": [],
+    "protocol_error": null,
+    "transport": "live_inbox.py relay on this machine: the inbox's git tree polled every 3 s, GitHub -> agent mesh -> the session's hook at its next tool call, or its idle waiter",
+    "text": "Transport receipt: the message reached the inboxes of the named local sessions, which see it at their next tool call or prompt (an idle session with a waiter armed is woken). It is not RECEIVED; the receiving agent records RECEIVED itself after reading the message."
+  },
+  "native_claim_ids": [],
+  "external_priority": "UNVERIFIED",
+  "storage": "Private continuation packages; not native claim ingestion",
+  "holds": [
+    "HOUSE",
+    "RECENT",
+    "reason1k",
+    "hard1k",
+    "prospective banks",
+    "PR229 held source",
+    "REQ-2026100617117951 payload",
+    "held19:38 reroute"
+  ],
+  "runtime": "Work only in actual invoked runtime; no claim of uninterrupted work between invocations",
+  "literature_checked_this_run": [
+    "https://arxiv.org/html/2307.12851v2",
+    "https://www.numdam.org/item/M2AN_2002__36_3_427_0/",
+    "https://arxiv.org/abs/1806.07572"
+  ],
+  "literature_denied_previous_run": "Previously denied Bocconi PDF not retried or rerouted"
+}

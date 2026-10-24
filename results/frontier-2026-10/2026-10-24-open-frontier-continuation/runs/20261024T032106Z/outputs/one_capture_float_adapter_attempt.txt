@@ -1,0 +1,10 @@
+Exact ell coefficients: ('13/23', '-2/23')
+Exact active/face ratio field at rho: 17/8
+Traceback (most recent call last):
+  File "/workspace/scratch/b6cbf133045d/continuation_2026_10_24/runs/20261024T032106Z/code/one_capture_check.py", line 64, in <module>
+    B=mp.matrix([0, Bs[1]+mp.mpf('.75')*J[1]])
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/b6cbf133045d/continuation_2026_10_24/runs/20261024T032106Z/code/one_capture_check.py", line 15, in matrix
+    a=np.asarray(x,dtype=float)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (2,) + inhomogeneous part.
