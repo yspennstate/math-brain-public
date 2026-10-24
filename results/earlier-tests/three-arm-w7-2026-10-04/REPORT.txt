@@ -1,0 +1,42 @@
+W7 (our own mathematics) - five arms, blind graders - 2026-10-04 18:48
+solver sonnet; 80 problems graded (store 50, conjecture 10, control 20 in the bank)
+
+FULL CREDIT (mark 1) and mean mark, by kind
+                  n  nodata             data               data_brain         membrane           data_recall      
+  ALL            80   27  mean 0.41       62  mean 0.82       68  mean 0.89       53  mean 0.73       71  mean 0.92    
+  store          50    6  mean 0.21       39  mean 0.83       40  mean 0.86       28  mean 0.66       44  mean 0.93    
+  conjecture     10    2  mean 0.30        4  mean 0.50        8  mean 0.80        5  mean 0.55        7  mean 0.70    
+  control        20   19  mean 0.97       19  mean 0.97       20  mean 1.00       20  mean 1.00       20  mean 1.00    
+
+PAIRED on full credit (exact McNemar)
+  brain vs documents               all         n= 80  only data_brain 14, only data  8  diff  +7.5 pts  p=0.286
+                                   store+conj  n= 60  only data_brain 13, only data  8  diff  +8.3 pts  p=0.383
+                                   control     n= 20  only data_brain  1, only data  0  diff  +5.0 pts  p=1
+  documents vs nothing             all         n= 80  only data 37, only nodata  2  diff +43.8 pts  p=2.84e-09
+                                   store+conj  n= 60  only data 37, only nodata  2  diff +58.3 pts  p=2.84e-09
+                                   control     n= 20  only data  0, only nodata  0  diff  +0.0 pts  p=1
+  brain vs nothing                 all         n= 80  only data_brain 41, only nodata  0  diff +51.2 pts  p=9.09e-13
+                                   store+conj  n= 60  only data_brain 40, only nodata  0  diff +66.7 pts  p=1.82e-12
+                                   control     n= 20  only data_brain  1, only nodata  0  diff  +5.0 pts  p=1
+  membrane alone vs nothing        all         n= 80  only membrane 27, only nodata  1  diff +32.5 pts  p=2.16e-07
+                                   store+conj  n= 60  only membrane 26, only nodata  1  diff +41.7 pts  p=4.17e-07
+                                   control     n= 20  only membrane  1, only nodata  0  diff  +5.0 pts  p=1
+  served block on top of search    all         n= 80  only data_brain  5, only data_recall  8  diff  -3.8 pts  p=0.581
+                                   store+conj  n= 60  only data_brain  5, only data_recall  8  diff  -5.0 pts  p=0.581
+                                   control     n= 20  only data_brain  0, only data_recall  0  diff  +0.0 pts  p=1
+  recall on top of documents       all         n= 80  only data_recall 14, only data  5  diff +11.2 pts  p=0.0636
+                                   store+conj  n= 60  only data_recall 13, only data  5  diff +13.3 pts  p=0.0963
+                                   control     n= 20  only data_recall  1, only data  0  diff  +5.0 pts  p=1
+
+HARMFUL (a false claim made with confidence) and UNKNOWN-or-zero, by arm
+  nodata      harmful  5   zero marks 41
+  data        harmful  8   zero marks 10
+  data_brain  harmful  7   zero marks  6
+  membrane    harmful  4   zero marks 16
+  data_recall harmful  9   zero marks  4
+
+THE MEMBRANE on our own mathematics
+  fired on 70 of 80 problems; on the 60 store/conjecture problems whose key names store claims, the block carried one of them (the right card, unasked) on 36
+  right card served            n= 36  full credit: nodata 4, data 30, data_brain 29, membrane 27, data_recall 33
+  served, not the right card   n= 16  full credit: nodata 3, data 7, data_brain 12, membrane 5, data_recall 11
+  nothing served               n=  8  full credit: nodata 1, data 6, data_brain 7, membrane 1, data_recall 7

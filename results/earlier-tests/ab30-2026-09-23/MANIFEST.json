@@ -1,0 +1,238 @@
+{
+ "built_from": "the AB30 local run tree (not in the repository)",
+ "files": {
+  "CLAIMS.json": {
+   "bytes": 4488,
+   "sha256": "1a5bc08bc75a1b4cc8fea489ceaf0f0e63f2730678eb5ee6564fe1e2acccdca7",
+   "source": "written 28 Sep for this release from REPORT.md's tables and STATUS.json"
+  },
+  "PRIVATE_HOLDER_RECEIPT_2026-09-28.json": {
+   "bytes": 2200,
+   "sha256": "59eed14ff459c1ea8bdf4fe0ba7ded041b2637693476f014748102a79df55cf9",
+   "source": "written 28 Sep 16:5x by tools/ab30_private_holder_check.py, run by the holder of the private streams: every commitment and event row recomputed and compared (counts and hashes only); rewritten 28 Sep 17:4x by the checker's second version, which counts rows before keying them, names each failure and requires verify_disclosure.py --files to print PASS (account03/B17 r66); rewritten 28 Sep 18:4x by the third version, which also fails an object naming a member twice (account03/B17 r67)"
+  },
+  "README.md": {
+   "bytes": 9567,
+   "sha256": "6cb9fc0c5ae200202de665b248a589c7875a0d7069fbe680aafafb11b29af92d",
+   "source": "written 28 Sep for this release; 28 Sep 12:2x: the v2 root and the verifier's checks; 28 Sep 16:5x: the row-field checks and the holder's recomputation; 28 Sep 17:4x: the holder's check counts rows before keying them; 28 Sep 18:4x: the strict JSON loader"
+  },
+  "STATUS.json": {
+   "bytes": 2720,
+   "sha256": "cbd7b2df2f129757afc7905b8a6a0f819ec502cf09715e8a3fbca29c1a7f8477",
+   "source": "copy of the campaign's STATUS.json (blob db35ae7787f5), 29 Sep, so the status claim does not depend on a file outside the release (account04/B20 r37); private labels replaced 24 Oct before publication"
+  },
+  "TREATMENT_COMMITMENTS.jsonl": {
+   "bytes": 116551,
+   "sha256": "f80c52e194092492d6ce0a15768d4267d73873716018f50a424be54cde7d780f",
+   "source": "written 28 Sep by tools/ab30_treatment_commitments.py from the private run tree (hashes and counts only; events_root_sha256 added 08:5x; events_root_v2_sha256 added 12:2x by the same tool on the same streams, every earlier field byte-identical)"
+  },
+  "TREATMENT_EVENTS.jsonl": {
+   "bytes": 707678,
+   "sha256": "e85ea17f99a00475963ac9d2b9003c296106ad0cff2db6a19f59e6636c5176d0",
+   "source": "written 28 Sep by tools/ab30_treatment_commitments.py (one hash per hook response)"
+  },
+  "check.py": {
+   "bytes": 7743,
+   "sha256": "cdd9c7d3c1807f761110bd85a4697f3ed5533d4c7d6dcd45321b0d749480ebde",
+   "source": "written 28 Sep for this release; 29 Sep: checks the manifest before any claim, requires every claim's source, reads STATUS.json from this folder (account04/B20 r37)"
+  },
+  "derive.py": {
+   "bytes": 5187,
+   "sha256": "df832c71b4e9ddabbb4c9c1511c693486b9fe57d7b56d764274d2216c42cbec7",
+   "source": "written 28 Sep for this release"
+  },
+  "recompute.py": {
+   "bytes": 1276,
+   "sha256": "cf356bf6ad220ef563c65c4aca04ee46d648eed301524cdd14f1af30a7133bc2",
+   "source": "written 28 Sep for this release (now runs derive.py and check.py); 24 Oct: reads the STATUS.json copy inside the release"
+  },
+  "results.json": {
+   "bytes": 1654,
+   "sha256": "14903277006d66b4710232c0bedc5123d7f9789cbe2d782962fb30b5f7475540",
+   "source": "written by recompute.py from the rows"
+  },
+  "round1/AGREEMENT_final.json": {
+   "bytes": 275,
+   "sha256": "4e8dddc0cdbb19825adb0b1e34206ed9311022a202025b6ecaf79f2879c075db",
+   "source": "runs/AGREEMENT_final.json"
+  },
+  "round1/AUDIT.json": {
+   "bytes": 3573,
+   "sha256": "0672dc742554aeed2295919bf77a1da87984216bbc06706dda4cb2521e34f17a",
+   "source": "runs/AUDIT.json"
+  },
+  "round1/BRAIN_CONTRIB.json": {
+   "bytes": 9566,
+   "sha256": "c124ab1ff2dc25162768de0ddba1dbb4e7f053caa49d1dda5dec1ecb63b7f78f",
+   "source": "runs/BRAIN_CONTRIB.json; private labels replaced 24 Oct before publication"
+  },
+  "round1/GRADER_TOKENS.jsonl": {
+   "bytes": 1173,
+   "sha256": "15c65f395d8fdc8a8da03b89396dfa1e2f8eb24eb71981fe7a91c06d03807ea4",
+   "source": "runs/GRADER_TOKENS.jsonl"
+  },
+  "round1/RESULT_final.json": {
+   "bytes": 4596,
+   "sha256": "62020001c4579e80e8a99fbdc67932f1aa3c4cdc37c926ab8dc72c2179f6b8fd",
+   "source": "runs/RESULT_final.json"
+  },
+  "round1/RESULT_final_A.json": {
+   "bytes": 4596,
+   "sha256": "538f1e8444d490237e8f81af8357b7d2968c3d7c52bc668d6e68282fd6816a05",
+   "source": "runs/RESULT_final_A.json"
+  },
+  "round1/RESULT_final_B.json": {
+   "bytes": 4596,
+   "sha256": "62020001c4579e80e8a99fbdc67932f1aa3c4cdc37c926ab8dc72c2179f6b8fd",
+   "source": "runs/RESULT_final_B.json"
+  },
+  "round1/RESULT_final_C.json": {
+   "bytes": 178,
+   "sha256": "b6528f07f90910f2c61c84328c6429c6c216a3912e71fc64b6c9c80fa3b4c935",
+   "source": "runs/RESULT_final_C.json"
+  },
+  "round1/RESULT_interim_p01_11.json": {
+   "bytes": 1993,
+   "sha256": "c7e129ff8e6a4ec4190fc30bd69f3a76a4f241962ba8bc9a95231883b16f3135",
+   "source": "runs/RESULT_interim_p01_11.json"
+  },
+  "round1/TOKENS.csv": {
+   "bytes": 6672,
+   "sha256": "ae8c1d3bb77c86cbcaf9225763aa3d6e1232709b1b43226fd3f4712af0cbae7f",
+   "source": "runs/TOKENS.csv"
+  },
+  "round1/TOKENS.json": {
+   "bytes": 34819,
+   "sha256": "a53d49bd400e24897fdea05e4c9ddbb3b61ab36c83b0f08e76259cdae0d8afed",
+   "source": "runs/TOKENS.json"
+  },
+  "round1/results.jsonl": {
+   "bytes": 126714,
+   "sha256": "09307f4bed638d488beeb8fdb690564ecc8d4b26e3fe75ef7f97d00f144aeaee",
+   "source": "runs/results.jsonl"
+  },
+  "round2/TOKENS.csv": {
+   "bytes": 1795,
+   "sha256": "3d28e8fe31aed37180148ccfd5a6a3a75b276fe80d5ffdf8aac8969120f41d6d",
+   "source": "runs_r2/TOKENS.csv"
+  },
+  "round2/TOKENS.json": {
+   "bytes": 13917,
+   "sha256": "19264f32f28115d3760a8c85b9cd7be48c126c692acf31767b090868a62d5639",
+   "source": "runs_r2/TOKENS.json"
+  },
+  "round2/results.jsonl": {
+   "bytes": 41763,
+   "sha256": "d5d2ef225213e1899f807b5ec0664dea2c1f7b06ae84480610af7b5939e610ac",
+   "source": "runs_r2/results.jsonl"
+  },
+  "round3/GRADER_TOKENS.jsonl": {
+   "bytes": 573,
+   "sha256": "5dce76ab4abbd8a0c16cbcd6ae606a2048e50b66f4723689abb081ae5029d82d",
+   "source": "runs_r3/GRADER_TOKENS.jsonl"
+  },
+  "round3/RESULT_r3_A.json": {
+   "bytes": 3061,
+   "sha256": "57f44c0de90383d2c948a35d5326c6d9bab8dfbd7aa8edf84c5a45d8170246a2",
+   "source": "runs_r3/RESULT_r3_A.json"
+  },
+  "round3/RESULT_r3_B.json": {
+   "bytes": 3061,
+   "sha256": "57f44c0de90383d2c948a35d5326c6d9bab8dfbd7aa8edf84c5a45d8170246a2",
+   "source": "runs_r3/RESULT_r3_B.json"
+  },
+  "round3/TOKENS.csv": {
+   "bytes": 4271,
+   "sha256": "e61729c1057be259cd2677fbbfcd9f3327b3d431b2ccc46b40a1247d49060912",
+   "source": "runs_r3/TOKENS.csv"
+  },
+  "round3/TOKENS.json": {
+   "bytes": 22956,
+   "sha256": "0b977debbee590dae2992ca86b2441ec35ec8371fdd2f1829e50e4eb5d64586f",
+   "source": "runs_r3/TOKENS.json"
+  },
+  "round3/results.jsonl": {
+   "bytes": 77218,
+   "sha256": "41084e2dac28b0fd462f9e641323cb0e5a00a604f2b347f890d81aaf1d0dcfb3",
+   "source": "runs_r3/results.jsonl"
+  },
+  "round4/AGREEMENT_r4_final.json": {
+   "bytes": 141,
+   "sha256": "bdba4f3a83537c072dd19cf392bb91255c93b96912dc92b4d7acf94bc6197186",
+   "source": "runs_r4/AGREEMENT_r4_final.json"
+  },
+  "round4/AGREEMENT_r4x_final.json": {
+   "bytes": 141,
+   "sha256": "d99ea601761cee56b24445935243034c997521601a8545d2fd80729601d47402",
+   "source": "runs_r4/AGREEMENT_r4x_final.json"
+  },
+  "round4/REPORT_r4_final.json": {
+   "bytes": 12394,
+   "sha256": "faaa34c72395b0861e8da9b941e6fa278ac94cc7e672a3032c1d3d353a6c966b",
+   "source": "runs_r4/REPORT_r4_final.json"
+  },
+  "round4/RESULT_r4_final.json": {
+   "bytes": 2674,
+   "sha256": "b8aa0bda4e3046d982336c4b672a24ca75f3b4882b5df88da4ed0a125fb309e0",
+   "source": "runs_r4/RESULT_r4_final.json"
+  },
+  "round4/RESULT_r4x_final.json": {
+   "bytes": 178,
+   "sha256": "b6528f07f90910f2c61c84328c6429c6c216a3912e71fc64b6c9c80fa3b4c935",
+   "source": "runs_r4/RESULT_r4x_final.json"
+  },
+  "round4/results.jsonl": {
+   "bytes": 87082,
+   "sha256": "6e1a21efa99ade99b4896f551b59946bb4cf2d20f349d5025469dc762899ff88",
+   "source": "runs_r4/results.jsonl"
+  },
+  "round5a/AGREEMENT_r5a_final.json": {
+   "bytes": 143,
+   "sha256": "8c750bdfbda742800bd2e3529f83b771500b0e25751f6add800420408866f158",
+   "source": "runs_r5a/AGREEMENT_r5a_final.json"
+  },
+  "round5a/AGREEMENT_r5ax_final.json": {
+   "bytes": 143,
+   "sha256": "db382c75698c89e2f0469a3e3eb9c388c9483a7ce1b3d77522ec3213ab0e407b",
+   "source": "runs_r5a/AGREEMENT_r5ax_final.json"
+  },
+  "round5a/REPORT_r5a_final.json": {
+   "bytes": 7134,
+   "sha256": "0af873a5960a9be50eff29f7103d99b21c603f76eee97080d6ba5f9bc730b9d0",
+   "source": "runs_r5a/REPORT_r5a_final.json"
+  },
+  "round5a/RESULT_r5a_final.json": {
+   "bytes": 1197,
+   "sha256": "fc351ece42d7d70cc05eab7c13ee72cd6712318ab1f4f72dcce1685ce2053401",
+   "source": "runs_r5a/RESULT_r5a_final.json"
+  },
+  "round5a/RESULT_r5ax_final.json": {
+   "bytes": 178,
+   "sha256": "b6528f07f90910f2c61c84328c6429c6c216a3912e71fc64b6c9c80fa3b4c935",
+   "source": "runs_r5a/RESULT_r5ax_final.json"
+  },
+  "round5a/results.jsonl": {
+   "bytes": 66844,
+   "sha256": "2d48ceb62a65ac23c71c9e27860738d7fe8ed90b524a426f74b9cf38dc5af3b1",
+   "source": "runs_r5a/results.jsonl"
+  },
+  "timeout_items_grades.jsonl": {
+   "bytes": 1080,
+   "sha256": "6cf543e2b1c0279f7f7a233c95569571bab1bc73ed96c682e28e1919b84e6512",
+   "source": "written 28 Sep from the graders' grade files (grade only) and their masked-id maps"
+  },
+  "verify_disclosure.py": {
+   "bytes": 15073,
+   "sha256": "3cde0f61b5422ade9bafe9478f0a958ca0edee4ce1fe2849ca623ef558b876a4",
+   "source": "written 28 Sep for this release; 28 Sep 12:2x: requires both roots, well formed, on every run, rejects repeated rows, checks a disclosed output's length and the v2 root (account01/B19, account02/B19); 28 Sep 16:5x: checks each run's own fields and redoes the hook-bytes match from the round files; private digests reported UNVERIFIED_PRIVATE (account01/B19 R44); 28 Sep 18:4x: an object naming a JSON member twice fails as duplicate_json_member (account03/B17 r67)"
+  }
+ },
+ "note": "MANIFEST.json cannot list its own hash; the commit that carries it binds it.",
+ "external": {
+  "REPORT.md": {
+   "path": "../REPORT.md",
+   "git_blob": "257eed0af01cd2824749f6e7172cf50eefac3060",
+   "note": "the campaign report as the claims copied it (commit 7bfbf33c11, 28 Sep 08:22); check.py reports when the file beside the release is no longer this version"
+  }
+ }
+}

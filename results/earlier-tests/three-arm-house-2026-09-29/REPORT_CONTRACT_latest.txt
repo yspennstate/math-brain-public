@@ -1,0 +1,58 @@
+Three versions, one test - reported by cohort (2026-09-30 00:01)
+solver sonnet; A = no data, B = the memory folder and one store export (Read, Grep, Glob), C = the same plus brain.py recall and the block the live math hook served; graded blind by two graders, a third on a correct-or-not disagreement; numbers checked against the key's tolerance
+
+snapshot: not sealed (a pilot); measured afterwards: store unchanged since the export (18:49:04): no claim or node changed, added or removed; all 479 claims served to C in 238 blocks byte-identical in the export B read; 150 of 151 statement keys rebuild identically from the export, the other differs only by a redacted private repository name in a provenance clause; 11 memory files written during the run, none names an item's claim id, numeric matches are coincidences or index lines rewritten in place (measured 29 Sep 20:0x, snapshot_drift.py; B08-R80-THREE-ARM-SNAPSHOT-NOT-SEALED-083)
+
+ALLOCATION: 281 items (cards_v4 14, carry46 44, fei_heldout 16, house_blind 77, locate_l1 60, locate_l2 40, locate_l3 30)
+  allocation: derived from the banks at report time, not sealed: 281 items
+  cells: 281 items x 3 arms = 843 allocated, every one with an outcome
+  estimand: latest after retry (a sensitivity)
+  A no data     rows 281; operational failures: first attempt 9, after one retry 3; 9 first attempts reconstructed from the serve log and the retry window
+  B data        rows 281; operational failures: first attempt 3, after one retry 1; 3 first attempts reconstructed from the serve log and the retry window
+  C data+brain  rows 281; operational failures: first attempt 0, after one retry 0
+  statement answers labelled by both graders: 453 of 453; graders agree on correct-or-not for 412
+  labels: graded on the sheet built from each cell's latest record, which equals the latest sheet on 151 of 151 statement items
+  C was served a block for 238 of 281 items
+
+OUTCOMES (correct / partial / wrong / unknown / failed), every allocated item
+  bank              n  A no data              B data                 C data+brain          
+  cards_v4         14    2/ 1/ 2/  8/ 1        10/ 0/ 2/  1/ 1         9/ 1/ 3/  1/ 0      
+  carry46          44    8/ 3/ 5/ 28/ 0        34/ 8/ 1/  1/ 0        33/ 9/ 2/  0/ 0      
+  fei_heldout      16    7/ 3/ 2/  4/ 0        11/ 2/ 3/  0/ 0        13/ 2/ 1/  0/ 0      
+  house_blind      77   22/10/ 9/ 36/ 0        62/ 4/ 7/  4/ 0        67/ 4/ 2/  4/ 0      
+  locate_l1        60    5/ 0/ 0/ 53/ 2        56/ 0/ 0/  4/ 0        60/ 0/ 0/  0/ 0      
+  locate_l2        40    0/ 0/ 0/ 40/ 0        40/ 0/ 0/  0/ 0        40/ 0/ 0/  0/ 0      
+  locate_l3        30    1/ 0/ 0/ 29/ 0        18/ 0/ 1/ 11/ 0        30/ 0/ 0/  0/ 0      
+  ALL             281   45/17/18/198/ 3       231/14/14/ 21/ 1       252/16/ 8/  5/ 0      
+  A no data     wrong when it answered: 18 of 80 (22.5%)
+  B data        wrong when it answered: 14 of 259 (5.4%)
+  C data+brain  wrong when it answered: 8 of 276 (2.9%)
+
+PAIRED (an operational failure counts as not correct / per protocol: items neither arm failed)
+  C - B (the brain's addition) n=281: C only 35, B only 14; difference +7.5 points (95% +2.7 to +12.4), exact McNemar p=0.0038
+     per protocol              n=280: C only 35, B only 14; difference +7.5 points (95% +2.7 to +12.4), exact McNemar p=0.0038
+  B - A (the data)             n=281: B only 188, A only  2; difference +66.2 points (95% +59.9 to +71.3), exact McNemar p=2.31e-53
+     per protocol              n=278: B only 186, A only  2; difference +66.2 points (95% +59.9 to +71.3), exact McNemar p=9.06e-53
+  C - A                        n=281: C only 208, A only  1; difference +73.7 points (95% +67.8 to +78.3), exact McNemar p=5.1e-61
+     per protocol              n=278: C only 206, A only  1; difference +73.7 points (95% +67.8 to +78.4), exact McNemar p=2.02e-60
+
+C - B BY STRATUM
+    cards_v4                   n= 14: C only  1, B only  2; difference -7.1 points (95% -29.3 to +15.9), exact McNemar p=1
+    carry46                    n= 44: C only  4, B only  5; difference -2.3 points (95% -15.7 to +11.2), exact McNemar p=1
+    fei_heldout                n= 16: C only  3, B only  1; difference +12.5 points (95% -11.5 to +35.4), exact McNemar p=0.625
+    house_blind                n= 77: C only 11, B only  6; difference +6.5 points (95% -4.1 to +17.2), exact McNemar p=0.332
+    locate_l1                  n= 60: C only  4, B only  0; difference +6.7 points (95% -0.6 to +15.9), exact McNemar p=0.125
+    locate_l2                  n= 40: C only  0, B only  0; difference +0.0 points (95% -8.8 to +8.8), exact McNemar p=1
+    locate_l3                  n= 30: C only 12, B only  0; difference +40.0 points (95% +20.9 to +57.7), exact McNemar p=0.000488
+    C was served a block       n=238: C only 32, B only 13; difference +8.0 points (95% +2.5 to +13.6), exact McNemar p=0.00661
+    C was served nothing       n= 43: C only  3, B only  1; difference +4.7 points (95% -5.1 to +15.0), exact McNemar p=0.625
+  C's losses to B: 14 (partial 8, unknown 4, wrong 2); C's gains over B: 35 (B was partial 8, unknown 20, wrong 7)
+
+COST, every allocated item (dollars as the CLI reports them)
+  arm              n  usd_sum usd_mean   usd_med tok_in_med  turns sec_med no_usage
+  A no data      281     3.72    0.013     0.005       2984      1     4.9        2
+  B data         281    14.06    0.050     0.037      36017      7    16.6        0
+  C data+brain   281     4.45    0.016     0.013       7320      1     5.6        0
+  (no_usage: cells whose record carries no usage - a first attempt reconstructed from the logs, or a failure that returned nothing; the mean, median and sum are over the others, so usd_sum is a floor)
+
+POWER: C and B disagreed on 17.4% of items; at that rate a 5-point effect needs about 548 independent items for 80% power (normal approximation; a planning figure, not a result)

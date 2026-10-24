@@ -1,0 +1,58 @@
+{
+ "campaign": "campaign_2026-09-23_ab30_tokens",
+ "goal": "23 Sep: two days improving the brain, vanilla brain and math brain and testing all three; 30 brain-on/brain-off comparisons on the math tests with every test agent's tokens saved; use them to improve the brain",
+ "start": "2026-09-23T16:51+03:00",
+ "deadline": "2026-09-25T16:51+03:00",
+ "as_of": "2026-09-28T05:17+03:00 (pairs_done and result_files corrected; the rest unchanged)",
+ "agent": "three Claude sessions in turn (the last from 24 Sep)",
+ "source": "release/ (the committed rows; release/README.md) - the local run tree it was copied from is not in the repository",
+ "pairs_done": 30,
+ "pairs_total": 30,
+ "interim_grade_pairs_1_11": {
+  "brain_on": 10,
+  "brain_off": 10,
+  "n": 11,
+  "brain_better": 0,
+  "brain_worse": 0,
+  "grader": "one separate brain-free headless session on a masked packet; not the final grade"
+ },
+ "tokens_pairs_1_11": {
+  "cost_on_usd_list": 23.37,
+  "cost_off_usd_list": 14.88,
+  "median_pair_cost_ratio": 2.23,
+  "median_cache_write_on": 98664,
+  "median_cache_write_off": 4510
+ },
+ "status": "ROUNDS 1-5a FINAL. Round 4 (14 research questions) 13 against 13; round 5a (8 items, the feeling-of-knowing fix) on 7, off 6, onlegacy 6. All 50 graded answers full credit with both blind graders agreeing on every one; every difference between arms is a 90-minute timeout. Brain median cost 1.81x (round 4), 1.56x (5a). Details in REPORT.md.",
+ "concurrent": "a separate math-brain build ran beside this campaign",
+ "round4_final": {
+  "items": 14,
+  "on": 13,
+  "off": 13,
+  "ondigest": "5 of 5",
+  "brain_wins": 1,
+  "brain_losses": 1,
+  "decided_by": "timeouts only (r4_12 control, r4_06 brain arm)",
+  "median_cost_on_over_off": 1.807,
+  "grader_agreement": "31 of 31",
+  "result_files": "release/round4/RESULT_r4_final.json, REPORT_r4_final.json; release/timeout_items_grades.jsonl"
+ },
+ "round5a_final": {
+  "items": 8,
+  "on": 7,
+  "off": 6,
+  "onlegacy": 6,
+  "decided_by": "r5_04: control and old-line arms timed out",
+  "r5_02": "all three arms timed out on the counted attempt",
+  "median_cost_on_over_off": 1.564,
+  "median_cost_on_over_onlegacy": 0.92,
+  "grader_agreement": "19 of 19",
+  "result_files": "release/round5a/RESULT_r5a_final.json, REPORT_r5a_final.json; release/timeout_items_grades.jsonl"
+ },
+ "pairs_done_note": "round 1's thirty pairs are all done and graded; this counter read 11 from the interim of 24 Sep until 28 Sep (found by a scheduled audit)",
+ "release": {
+  "folder": "release/",
+  "check": "python release/recompute.py (exit 0 when every reported number is reproduced)",
+  "counting_rule": "the counted run of an item and arm is the last row for that (id, arm) in results.jsonl"
+ }
+}

@@ -1,0 +1,74 @@
+{
+ "checked_at": "2026-09-28T18:44:25+0300",
+ "checker_sha256": "732524a5e2ace231048fcc984e4046d69960e1ad0e6fe3dc85aea896a6c17bb1",
+ "commitments": {
+  "duplicate_rows_in_recomputation": 0,
+  "duplicate_rows_in_release": 0,
+  "field_mismatches": {
+   "arm": 0,
+   "events_root_sha256": 0,
+   "events_root_v2_sha256": 0,
+   "hook_context_sha256": 0,
+   "hook_output_bytes": 0,
+   "hook_responses": 0,
+   "id": 0,
+   "matches_row": 0,
+   "round": 0,
+   "status": 0,
+   "stream_bytes": 0,
+   "stream_sha256": 0
+  },
+  "identical": 177,
+  "objects_naming_a_member_twice": {
+   "recomputation": 0,
+   "release": 0
+  },
+  "only_in_recomputation": 0,
+  "only_in_release": 0,
+  "recomputed_raw": 177,
+  "recomputed_unique": 177,
+  "release_raw": 177,
+  "release_unique": 177
+ },
+ "commitments_sha256": "f80c52e194092492d6ce0a15768d4267d73873716018f50a424be54cde7d780f",
+ "events": {
+  "duplicate_rows_in_recomputation": 0,
+  "duplicate_rows_in_release": 0,
+  "field_mismatches": {
+   "arm": 0,
+   "hook_name": 0,
+   "id": 0,
+   "output_bytes": 0,
+   "output_sha256": 0,
+   "round": 0,
+   "seq": 0
+  },
+  "identical": 3499,
+  "objects_naming_a_member_twice": {
+   "recomputation": 0,
+   "release": 0
+  },
+  "only_in_recomputation": 0,
+  "only_in_release": 0,
+  "recomputed_raw": 3499,
+  "recomputed_unique": 3499,
+  "release_raw": 3499,
+  "release_unique": 3499
+ },
+ "events_sha256": "e85ea17f99a00475963ac9d2b9003c296106ad0cff2db6a19f59e6636c5176d0",
+ "failures": [],
+ "generator_sha256": "db16ce324e53169866777258856f8b70b480a3071566fd57214f468d6e6b52ff",
+ "private_fields_now_verified_by_holder": [
+  "stream_sha256",
+  "stream_bytes",
+  "hook_context_sha256"
+ ],
+ "release_commit_of_commitments": "b13b04086f26d785681e235f5bc13e69d2a4aee6",
+ "result": "MATCH",
+ "verifier_files": {
+  "exit": 0,
+  "last_line": "PASS"
+ },
+ "verifier_sha256": "3cde0f61b5422ade9bafe9478f0a958ca0edee4ce1fe2849ca623ef558b876a4",
+ "what": "every field of every commitment row and every event row recomputed from the private streams by their holder and compared with the release; rows counted before they are keyed, so a repeated row in either file fails; MATCH also needs release/verify_disclosure.py --files to print PASS"
+}
